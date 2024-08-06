@@ -1,0 +1,200 @@
+---
+theme: default
+background: https://source.unsplash.com/collection/94734566/1920x1080
+class: text-center
+highlighter: shiki
+lineNumbers: false
+info: |
+  ## Dynamic Return Types in TypeScript
+  How to type a fetch function to return an entity derived from the path parameter
+drawings:
+  persist: false
+transition: slide-left
+title: Dynamic Return Types in TypeScript
+---
+
+# Dynamic Return Types in TypeScript
+Typing Fetch Functions Based on Path Parameters
+
+<!--
+- Welcome to this presentation on dynamic return types in TypeScript
+- We'll explore how to create a fetch function that returns different types based on its path parameter
+- This technique showcases the power of TypeScript's type system for creating flexible and type-safe APIs
+-->
+
+---
+
+# The Challenge
+
+- Create a single fetch function for multiple API endpoints
+- Return type should change based on the endpoint called
+- Maintain type safety throughout the process
+- Support query parameters without breaking type inference
+
+<!--
+- Our goal is to create a versatile fetch function that works with multiple API endpoints
+- The function should return different types depending on which endpoint is called
+- We want to maintain full type safety, leveraging TypeScript's static type checking
+- The function should also support query parameters without compromising type inference
+- This challenge demonstrates advanced TypeScript techniques for real-world scenarios
+-->
+
+---
+
+# Key TypeScript Features Used
+
+1. Generic Types
+2. String Literal Types
+3. Template Literal Types
+4. Mapped Types
+5. Conditional Types
+
+<!--
+- To solve this challenge, we'll use several advanced TypeScript features
+- Generic types allow us to create flexible, reusable code
+- String literal types let us use specific string values as types
+- Template literal types enable us to create complex string-based types
+- Mapped types allow us to transform the properties of an existing type
+- Conditional types let us select types based on conditions
+- Together, these features allow for powerful type manipulations
+-->
+
+---
+
+# Defining Our Data Structures
+
+<<< snippets/data-structures.ts ts
+
+<!--
+- First, we define the structure of our data using interfaces
+- The User interface represents a user with id, name, and password
+- The Task interface represents a task with id and name
+- These interfaces will be used to type our API responses
+- Clear data structures are crucial for maintaining type safety across our application
+-->
+
+---
+
+# Mapping Endpoints to Response Types
+
+<<< snippets/response-mapping.ts ts
+
+<!--
+- Here we define a mapped type that links API endpoints to their response types
+- Each key is a string literal representing an API endpoint
+- The corresponding value is the type of data that endpoint returns
+- This mapping is crucial for our dynamic typing system
+- It allows TypeScript to infer the correct return type based on the endpoint
+-->
+
+---
+
+# The Dynamic Fetch Function
+
+<<< snippets/fetch-function.ts ts {all|1|2|3|4-5|all}
+
+<!--
+- This is our dynamic fetch function, the core of our solution
+- Let's break it down:
+  1. We use a generic type Endpoint, constrained to keys of ResponseJsonByEndpoint
+  2. The function accepts an endpoint parameter, which can be an Endpoint or a template literal type
+  3. The return type is a Promise of the type mapped to the Endpoint in ResponseJsonByEndpoint
+  4. Inside the function, we make the fetch call and return the JSON response
+- This structure allows TypeScript to infer the correct return type based on the endpoint parameter
+-->
+
+---
+
+# Using the Fetch Function
+
+<<< snippets/usage-example.ts {monaco}
+
+<!--
+- Here's how we use our dynamically typed fetch function
+- When we call get('/tasks'), TypeScript infers the return type as Task[]
+- We can also use query parameters, like in get('/tasks?limit=10')
+- TypeScript still correctly infers the return type as Task[]
+- This demonstrates the flexibility and type safety of our solution
+-->
+
+---
+
+# Extended Example: Multiple HTTP Methods
+
+<<< snippets/multi-method-fetch.ts ts {*} twoslash
+
+<!--
+- This example demonstrates how to extend our approach to handle multiple HTTP methods
+- We use conditional types to determine the return type based on both the endpoint and the method
+- The ResponseType type uses nested conditional types to select the appropriate return type
+- The fetch function now takes both an endpoint and a method as parameters
+- This approach allows for even more fine-grained type control in our API interactions
+- Note how TypeScript can infer different return types for different method calls to the same endpoint
+-->
+
+---
+
+# Benefits of This Approach
+
+1. Type Safety: Catch errors at compile-time
+2. Code Reusability: One function for multiple endpoints
+3. Flexibility: Supports various endpoints and query parameters
+4. Self-Documenting: Types serve as documentation
+5. IDE Support: Better autocomplete and error checking
+
+<!--
+- This approach offers several key benefits:
+  1. We get strong type safety, catching potential errors before runtime
+  2. We can reuse the same function for different endpoints, reducing code duplication
+  3. The function is flexible, supporting various endpoints and query parameters
+  4. The types themselves serve as a form of documentation
+  5. IDEs can provide better support, including autocomplete and error checking
+- These benefits contribute to more robust and maintainable code
+-->
+
+---
+
+# Potential Extensions
+
+- Add support for POST, PUT, DELETE methods
+- Include request body types
+- Handle nested routes dynamically
+- Integrate with API documentation tools
+
+<!--
+- While powerful, our current implementation can be extended further:
+  - We could add support for other HTTP methods like POST, PUT, DELETE
+  - We might include types for request bodies, not just responses
+  - The system could be extended to handle nested routes dynamically
+  - It could be integrated with API documentation tools for even better developer experience
+- These extensions would make the system even more versatile and powerful
+-->
+
+---
+
+# Conclusion
+
+- TypeScript enables creation of flexible, type-safe APIs
+- Dynamic return types improve developer experience
+- Combining advanced TS features leads to powerful solutions
+- This approach scales well for large, complex APIs
+
+<!--
+- To wrap up, we've seen how TypeScript enables the creation of flexible, type-safe APIs
+- Dynamic return types significantly improve the developer experience
+- By combining advanced TypeScript features, we can create powerful, scalable solutions
+- This approach is particularly valuable for large, complex APIs with many endpoints
+- Remember, with great power comes great responsibility - use these techniques judiciously!
+-->
+
+---
+
+# Questions?
+
+Thank you for your attention!
+
+<!--
+- Thank you all for your attention!
+- I hope this presentation has demonstrated the power of TypeScript for creating dynamic, type-safe APIs
+- Are there any questions? I'd be happy to discuss further or clarify any points.
+-->

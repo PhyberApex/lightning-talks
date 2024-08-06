@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base pages/jwalliser/typescript-lightning-talks/01-branded-types/ --out ../dist/01-branded-types",
+    "export": "slidev export --per-slide --output ../pdfs/01-branded-types.pdf"
+  }
+}
