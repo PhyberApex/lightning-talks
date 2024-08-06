@@ -1,22 +1,26 @@
 ---
-theme: default
-class: text-center
+background: /cover.jpg
 highlighter: shiki
-lineNumbers: false
+css: unocss
+colorSchema: dark
+transition: fade-out
+mdc: true
 info: |
   ## Dynamic Return Types in TypeScript
   How to type a fetch function to return an entity derived from the path parameter
 drawings:
   persist: false
-transition: slide-left
 title: Dynamic Return Types in TypeScript
+fonts:
+  mono: Operator Mono
+  local: Operator Mono
 ---
 
 # Dynamic Return Types in TypeScript
 Supercharge Your API Calls with Smart Types
 
 <!--
-Welcome, TypeScript enthusiasts! Today, we're diving into the exciting world of dynamic return types.
+Welcome, TypeScript enthusiasts! Today, we're diving into the exciting world of dynamic return types. 
 We'll explore how to create a fetch function so smart, it knows what type to return based on the URL you give it.
 Buckle up for a journey into the heart of TypeScript's type system!
 -->
@@ -38,19 +42,9 @@ layout: two-cols
 
 ::right::
 
-<div v-click class="ml-4">
+<div v-click>
 
-```ts
-// Our dream API call
-const users = await api('/users')
-// users is User[]
-
-const task = await api('/task/1')
-// task is Task
-
-const limitedUsers = await api('/users?limit=10')
-// limitedUsers is still User[]!
-```
+<<< ./snippets/api-dream.ts {monaco}
 
 </div>
 
@@ -72,8 +66,8 @@ Let's set the stage for our TypeScript adventure.
 
 # The Building Blocks
 
-<div grid="~ cols-2 gap-4">
-<div v-click>
+<div class="grid grid-cols-2 gap-4">
+<div>
 
 ## Key TypeScript Features
 
@@ -87,23 +81,11 @@ Let's set the stage for our TypeScript adventure.
 </v-clicks>
 
 </div>
-<div v-click>
+<div>
 
 ## Our Data Structures
 
-```ts
-interface User {
-  id: number
-  name: string
-  email: string
-}
-
-interface Task {
-  id: number
-  title: string
-  completed: boolean
-}
-```
+<<< ./snippets/data-structures.ts {monaco}
 
 </div>
 </div>
@@ -126,26 +108,15 @@ Understanding these is crucial for building our type-safe fetch function.
 
 # The Magic Ingredient
 
-<div v-click>
+<div>
 
-```ts
-interface ResponseJsonByEndpoint {
-  '/users': User[]
-  '/user': User
-  '/tasks': Task[]
-  '/task': Task
-}
-```
+<<< ./snippets/response-mapping.ts {monaco}
 
 </div>
-
-<v-click>
 
 <div class="mt-4 text-center">
   <carbon-arrow-down class="text-4xl animate-bounce" />
 </div>
-
-</v-click>
 
 <div v-click>
 
@@ -158,9 +129,9 @@ type Endpoint = keyof ResponseJsonByEndpoint
 <!--
 Now, let's reveal the secret sauce of our solution.
 
-[click] Behold, the ResponseJsonByEndpoint type! This is where we map our API endpoints to their corresponding response types.
+Behold, the ResponseJsonByEndpoint type! This is where we map our API endpoints to their corresponding response types.
 
-[click] It's like a menu for our API. When we order from '/users', we expect to get a User array. When we ask for '/task', we should receive a single Task.
+It's like a menu for our API. When we order from '/users', we expect to get a User array. When we ask for '/task', we should receive a single Task.
 
 [click] And from this mapping, we can derive our Endpoint type. It's simply the keys of our ResponseJsonByEndpoint.
 
@@ -172,19 +143,12 @@ This mapping is the foundation that allows our fetch function to be so smart abo
 # Putting It All Together
 
 <div class="grid grid-cols-2 gap-4">
-<div v-click>
+<div>
 
-```ts
-async function api<E extends Endpoint>(
-  endpoint: E | `${E}?${string}`
-): Promise<ResponseJsonByEndpoint[E]> {
-  const response = await fetch(`/api${endpoint}`)
-  return await response.json()
-}
-```
+<<< ./snippets/fetch-function.ts {monaco}
 
 </div>
-<div v-click>
+<div>
 
 ## What's happening here?
 
@@ -202,9 +166,9 @@ async function api<E extends Endpoint>(
 <!--
 Now, let's bring it all together with our api function.
 
-[click] Here's the code that makes the magic happen. It might look intimidating at first, but let's break it down.
+Here's the code that makes the magic happen. It might look intimidating at first, but let's break it down.
 
-[click] On the right, we'll explain what's going on:
+On the right, we'll explain what's going on:
 
 [click] First, we use a generic type E that extends our Endpoint type. This ensures we only accept valid endpoints.
 
@@ -241,7 +205,7 @@ const limitedUsers = await api('/users?limit=10')
 
 ::right::
 
-<div v-after class="ml-4">
+<div class="ml-4">
 
 # Benefits
 
@@ -267,7 +231,7 @@ Let's put our creation to the test and see it in action!
 
 [click] And look at this - even with query parameters, we still get the correct User array type!
 
-[click] On the right, let's recap the benefits of this approach:
+On the right, let's recap the benefits of this approach:
 
 [click] We get fully type-safe API calls. No more guessing what the response will look like!
 
