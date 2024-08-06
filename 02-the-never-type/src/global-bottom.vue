@@ -19,24 +19,24 @@ const { currentSlideRoute } = useNav()
 export type Range = [number, number]
 
 export type Distribution =
-    | 'full'
-    | 'top'
-    | 'bottom'
-    | 'left'
-    | 'right'
-    | 'top-left'
-    | 'top-right'
-    | 'bottom-left'
-    | 'bottom-right'
-    | 'center'
+  | 'full'
+  | 'top'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'top-left'
+  | 'top-right'
+  | 'bottom-left'
+  | 'bottom-right'
+  | 'center'
 
 const formatter = computed(() => (currentSlideRoute.value.meta?.slide as any)?.frontmatter || {})
 const distribution = computed(() => (formatter.value.glow || 'full') as Distribution)
 const opacity = computed<number>(() => +(formatter.value.glowOpacity || 0.4))
 const hue = computed<number>(() => +(formatter.value.glowHue || 0))
 const seed = computed<string>(() => (formatter.value.glowSeed === 'false' || formatter.value.glowSeed === false)
-    ? Date.now().toString()
-    : formatter.value.glowSeed || 'default',
+  ? Date.now().toString()
+  : formatter.value.glowSeed || 'default',
 )
 const overflow = 0.3
 const disturb = 0.3
@@ -106,11 +106,11 @@ function usePloy(number = 16) {
       return rng() < disturbChance ? random + (rng() - 0.5) * disturb : random
     }
     return Array.from({ length: number })
-        .fill(0)
-        .map(() => [
-          applyOverflow(randomBetween(limits.x), overflow),
-          applyOverflow(randomBetween(limits.y), overflow),
-        ])
+      .fill(0)
+      .map(() => [
+        applyOverflow(randomBetween(limits.x), overflow),
+        applyOverflow(randomBetween(limits.y), overflow),
+      ])
   }
 
   const points = ref(getPoints())
@@ -147,21 +147,21 @@ const poly3 = usePloy(3)
 
 <template>
   <div
-      class="bg transform-gpu overflow-hidden pointer-events-none"
-      :style="{ filter: `blur(70px) hue-rotate(${hue}deg)` }"
-      aria-hidden="true"
+    class="bg transform-gpu overflow-hidden pointer-events-none"
+    :style="{ filter: `blur(70px) hue-rotate(${hue}deg)` }"
+    aria-hidden="true"
   >
     <div
-        class="clip bg-gradient-to-r from-[#2f96ad] to-white/10"
-        :style="{ 'clip-path': `polygon(${poly1})`, 'opacity': opacity }"
+      class="clip bg-gradient-to-r from-[#2f96ad] to-white/10"
+      :style="{ 'clip-path': `polygon(${poly1})`, 'opacity': opacity }"
     />
     <div
-        class="clip bg-gradient-to-l from-[#4B32C3] to-white/10"
-        :style="{ 'clip-path': `polygon(${poly2})`, 'opacity': opacity }"
+      class="clip bg-gradient-to-l from-[#4B32C3] to-white/10"
+      :style="{ 'clip-path': `polygon(${poly2})`, 'opacity': opacity }"
     />
     <div
-        class="clip bg-gradient-to-t from-[#8080f2] to-white/10"
-        :style="{ 'clip-path': `polygon(${poly3})`, 'opacity': 0.2 }"
+      class="clip bg-gradient-to-t from-[#8080f2] to-white/10"
+      :style="{ 'clip-path': `polygon(${poly3})`, 'opacity': 0.2 }"
     />
   </div>
 </template>

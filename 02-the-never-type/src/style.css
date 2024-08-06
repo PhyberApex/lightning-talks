@@ -47,9 +47,9 @@ h6 {
 /* Transitions */
 .slidev-vclick-target {
   transition:
-          opacity 500ms ease,
-          filter 200ms ease,
-          color 300ms ease;
+    opacity 500ms ease,
+    filter 200ms ease,
+    color 300ms ease;
 }
 
 .slidev-vclick-hidden {
@@ -60,14 +60,14 @@ h6 {
 
 .fade-out-leave-active {
   transition:
-          opacity calc(var(--slidev-transition-duration) * 0.6) ease-out,
-          filter 200ms ease;
+    opacity calc(var(--slidev-transition-duration) * 0.6) ease-out,
+    filter 200ms ease;
 }
 
 .fade-out-enter-active {
   transition:
-          opacity calc(var(--slidev-transition-duration) * 0.8) ease-in,
-          filter 200ms ease;
+    opacity calc(var(--slidev-transition-duration) * 0.8) ease-in,
+    filter 200ms ease;
   transition-delay: calc(var(--slidev-transition-duration) * 0.6);
 }
 
@@ -89,7 +89,7 @@ h6 {
   line-height: 100%;
   color: #000b;
   --uno: gap-1 transition rounded px1 py1 mx--0.5 important-border-0
-  font-condensed;
+    font-condensed;
 }
 
 .dark .markdown-magic-link {

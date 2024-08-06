@@ -40,14 +40,13 @@ layout: two-cols
 
 ::right::
 
-<div v-click class="ml-4">
+<div v-click>
 
 <<< ./snippets/01-example.ts {monaco}
 
 </div>
 
 <!--
-
 Let's start by unraveling the mystery of the 'never' type.
 
 [click] First off, it's what we call TypeScript's "bottom type". Don't worry if that sounds like jargon - we'll make sense of it!
@@ -67,7 +66,7 @@ The first one always throws an error, and the second... well, it's stuck in an i
 # When is 'never' Inferred?
 
 <div class="grid grid-cols-2 gap-4">
-<div v-click>
+<div>
 
 ## Common Scenarios
 
@@ -81,7 +80,7 @@ The first one always throws an error, and the second... well, it's stuck in an i
 </v-clicks>
 
 </div>
-<div v-click>
+<div>
 
 ## The Power of 'never'
 
@@ -120,13 +119,12 @@ Now, let's explore when TypeScript decides to bring out the 'never' type.
 # 'never' in Action: Unreachable Code Detection
 
 <div class="grid grid-cols-2 gap-4">
-<div v-click>
-
+<div>
 
 <<< ./snippets/02-unreachable-code.ts {monaco}
 
 </div>
-<div v-click>
+<div>
 
 ## What's happening here?
 
@@ -145,9 +143,9 @@ Now, let's explore when TypeScript decides to bring out the 'never' type.
 <!--
 Let's see 'never' in action with a practical example.
 
-[click] Here we have a function that processes a response that can only be "yes" or "no".
+Here we have a function that processes a response that can only be "yes" or "no".
 
-[click] Let's break down what's happening:
+Let's break down what's happening:
 
 [click] We've covered all possible values of `response` in our if-else statements.
 [click] This means the final else block should be unreachable. It's impossible to get here!
@@ -162,12 +160,12 @@ This pattern is incredibly useful for catching bugs early. If we ever add a new 
 # Exhaustive Checks with 'never'
 
 <div class="grid grid-cols-2 gap-4">
-<div v-click>
+<div>
 
 <<< ./snippets/03-exhaustive-check.ts {monaco}
 
 </div>
-<div v-click>
+<div>
 
 ## The Power of Exhaustiveness
 
@@ -186,9 +184,9 @@ This pattern is incredibly useful for catching bugs early. If we ever add a new 
 <!--
 Now, let's explore one of the most powerful uses of 'never': exhaustive checks.
 
-[click] Here's an example using shapes. We have a union type `Shape` and a function to calculate its area.
+Here's an example using shapes. We have a union type `Shape` and a function to calculate its area.
 
-[click] Let's break down why this is so powerful:
+Let's break down why this is so powerful:
 
 [click] By using 'never' in our `assertNever` function, we ensure that all possible shapes are handled in our switch statement.
 [click] If we ever add a new shape to our union type and forget to handle it in the `area` function, TypeScript will give us a compiler error.
@@ -202,27 +200,23 @@ This pattern is incredibly useful in large codebases where it's easy to forget t
 
 # 'never' in Conditional Types
 
-<div v-click>
+<div>
 
 ```ts
-type ArrayElement<T> = T extends (infer E)[] ? E : never;
+type ArrayElement<T> = T extends (infer E)[] ? E : never
 
-type StringArrayElement = ArrayElement<string[]>; // string
-type NumberArrayElement = ArrayElement<number[]>; // number
-type NeverElement = ArrayElement<string>; // never
+type StringArrayElement = ArrayElement<string[]> // string
+type NumberArrayElement = ArrayElement<number[]> // number
+type NeverElement = ArrayElement<string> // never
 ```
 
 </div>
-
-<v-click>
 
 <div class="mt-4 text-center">
   <carbon-arrow-down class="text-4xl animate-bounce" />
 </div>
 
-</v-click>
-
-<div v-click>
+<div>
 
 ## What's happening here?
 
@@ -239,9 +233,9 @@ type NeverElement = ArrayElement<string>; // never
 <!--
 Let's take our 'never' adventure a step further into the realm of conditional types.
 
-[click] Here's a nifty type that extracts the element type from an array.
+Here's a nifty type that extracts the element type from an array.
 
-[click] Let's break it down:
+Let's break it down:
 
 [click] In this conditional type, 'never' acts as our fallback. If T isn't an array, we get 'never'.
 [click] This allows us to create more precise mapped types. We're not just transforming types, we're filtering them too!
@@ -267,7 +261,7 @@ layout: two-cols
 
 ::right::
 
-<div v-after class="ml-4">
+<div class="ml-4">
 
 # Remember
 
@@ -293,7 +287,7 @@ As we wrap up our 'never' journey, let's review some best practices.
 
 [click] But be wary of 'any' - it's the kryptonite to 'never's superpowers. 'any' can be assigned to 'never', potentially breaking your carefully crafted type safety.
 
-[click] Now, let's recap what we've learned:
+Now, let's recap what we've learned:
 
 [click] Remember, 'never' represents the logically impossible in your code.
 

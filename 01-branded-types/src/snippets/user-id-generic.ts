@@ -1,5 +1,5 @@
-type Brand<T, B> = T & { [brand]: B }
 declare const brand: unique symbol
+type Brand<T, B> = T & { [brand]: B }
 
 type UserId = Brand<string, 'UserId'>
 

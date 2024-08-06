@@ -16,7 +16,7 @@ title: Dynamic Return Types in TypeScript
 Supercharge Your API Calls with Smart Types
 
 <!--
-Welcome, TypeScript enthusiasts! Today, we're diving into the exciting world of dynamic return types. 
+Welcome, TypeScript enthusiasts! Today, we're diving into the exciting world of dynamic return types.
 We'll explore how to create a fetch function so smart, it knows what type to return based on the URL you give it.
 Buckle up for a journey into the heart of TypeScript's type system!
 -->
@@ -129,7 +129,7 @@ Understanding these is crucial for building our type-safe fetch function.
 <div v-click>
 
 ```ts
-type ResponseJsonByEndpoint = {
+interface ResponseJsonByEndpoint {
   '/users': User[]
   '/user': User
   '/tasks': Task[]
@@ -294,4 +294,3 @@ Remember, TypeScript is here to make our lives easier. By leveraging its powerfu
 
 Thank you for joining me on this TypeScript journey. Now go forth and create amazing, type-safe applications!
 -->
-

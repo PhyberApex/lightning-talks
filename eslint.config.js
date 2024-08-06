@@ -11,4 +11,10 @@ export default antfu({
     //   ],
     // },
   },
+}, {
+  files: ['**/*.ts'],
+  rules: {
+    'no-console': 'off',
+    'unused-imports/no-unused-vars': 'off',
+  },
 })
