@@ -42,24 +42,11 @@ layout: two-cols
 
 <div v-click class="ml-4">
 
-```ts
-// The function that never returns
-function throwError(message: string): never {
-    throw new Error(message);
-}
-
-// The infinite loop
-function infiniteLoop(): never {
-    while (true) {
-        console.log("I'm running forever!");
-    }
-}
-```
+<<< ./snippets/01-example.ts {monaco}
 
 </div>
 
 <!--
-
 
 Let's start by unraveling the mystery of the 'never' type.
 
@@ -135,19 +122,8 @@ Now, let's explore when TypeScript decides to bring out the 'never' type.
 <div class="grid grid-cols-2 gap-4">
 <div v-click>
 
-```ts
-function processResponse(response: "yes" | "no") {
-  if (response === "yes") {
-    // Process "yes"
-  } else if (response === "no") {
-    // Process "no"
-  } else {
-    // This else block is unreachable
-    const unreachable: never = response;
-    console.log("We should never get here!", unreachable);
-  }
-}
-```
+
+<<< ./snippets/02-unreachable-code.ts {monaco}
 
 </div>
 <div v-click>
@@ -188,23 +164,7 @@ This pattern is incredibly useful for catching bugs early. If we ever add a new 
 <div class="grid grid-cols-2 gap-4">
 <div v-click>
 
-```ts
-type Shape = Circle | Square | Triangle;
-
-function assertNever(x: never): never {
-    throw new Error("Unexpected object: " + x);
-}
-
-function area(s: Shape) {
-    switch (s.kind) {
-        case "circle": return Math.PI * s.radius ** 2;
-        case "square": return s.size ** 2;
-        case "triangle": return (s.base * s.height) / 2;
-        default: 
-            return assertNever(s);
-    }
-}
-```
+<<< ./snippets/03-exhaustive-check.ts {monaco}
 
 </div>
 <div v-click>

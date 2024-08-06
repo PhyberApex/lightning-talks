@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /typescript-lightning-talks/02-the-never-type/ --out ../../dist/02-the-never-type",
+    "export": "slidev export --per-slide --output ../02-the-never-type.pdf"
+  }
+}

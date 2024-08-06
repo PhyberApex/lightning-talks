@@ -7,7 +7,7 @@
     "dev": "esno scripts/picker.ts dev",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "git submodule update --init --recursive"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.22.0",
@@ -24,7 +24,6 @@
     "eslint-plugin-format": "^0.1.2",
     "esno": "^4.7.0",
     "execa": "^9.3.0",
-    "husky": "^9.1.1",
     "fast-glob": "^3.3.2",
     "markdown-it": "14.1.0",
     "markdown-it-magic-link": "^0.1.4",
