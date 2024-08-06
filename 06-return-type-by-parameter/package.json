@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /pages/jwalliser/typescript-lightning-talks/06-return-type-by-parameter/ --out ../dist/06-return-type-by-parameter",
+    "build": "slidev build --base /typescript-lightning-talks/06-return-type-by-parameter/ --out ../dist/06-return-type-by-parameter",
     "export": "slidev export --per-slide --output ./06-return-type-by-parameter.pdf"
   }
 }

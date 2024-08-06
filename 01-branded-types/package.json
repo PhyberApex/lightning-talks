@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /pages/jwalliser/typescript-lightning-talks/01-branded-types/ --out ../dist/01-branded-types",
+    "build": "slidev build --base /typescript-lightning-talks/01-branded-types/ --out ../dist/01-branded-types",
     "export": "slidev export --per-slide --output ./01-branded-types.pdf"
   }
 }
