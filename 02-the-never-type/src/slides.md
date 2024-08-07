@@ -4,6 +4,8 @@ highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
+drawings:
+  enabled: false
 mdc: true
 presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/02-the-never-type/02-the-never-type.pdf

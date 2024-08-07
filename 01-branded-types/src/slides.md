@@ -9,7 +9,7 @@ info: |
   ## Branded Types in TypeScript
   A 5-10 minute introduction to branded types and their benefits.
 drawings:
-  persist: false
+  enabled: false
 transition: slide-left
 title: Branded Types in TypeScript
 author: Janis Walliser
