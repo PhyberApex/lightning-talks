@@ -1,6 +1,6 @@
 # TypeScript Lightning Talks
 
-These are the presentations from the _Lightning Talks_ series by [Janis Walliser](@PhyberApex)
+These are the presentations from the _Lightning Talks_ series by [me](@PhyberApex)
 
 | Topic          | Date       | Live                                                                               |
 |----------------|------------|------------------------------------------------------------------------------------|
