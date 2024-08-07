@@ -1,4 +1,4 @@
-function processResponse(response: 'yes' | 'no') {
+export function processResponse(response: 'yes' | 'no') {
   if (response === 'yes') {
     console.log('yes')
   }

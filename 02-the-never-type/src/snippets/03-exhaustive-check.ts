@@ -4,16 +4,16 @@ interface Triangle { kind: 'triangle', base: number, height: number }
 
 type Shape = Circle | Square
 
-function assertNever(x: never): never {
+export function assertNever(x: never): never {
   throw new Error(`Unexpected object: ${x}`)
 }
 
-export function area(s: Shape) {
-  switch (s.kind) {
-    case 'circle': return Math.PI * s.radius ** 2
-    case 'square': return s.size ** 2
-      // case "triangle": return (s.base * s.height) / 2;
+export function area(shape: Shape) {
+  switch (shape.kind) {
+    case 'circle': return Math.PI * shape.radius ** 2
+    case 'square': return shape.size ** 2
+      // case "triangle": return (shape.base * shape.height) / 2;
     default:
-      return assertNever(s)
+      return assertNever(shape)
   }
 }

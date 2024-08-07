@@ -104,15 +104,21 @@ The first one always throws an error, and the second... well, it's stuck in an i
 Now, let's explore when TypeScript decides to bring out the 'never' type.
 
 [click] We've seen functions that never return, like our error-throwing friend from earlier.
+
 [click] It also appears in code branches that should be unreachable. If TypeScript sees 'never', it's saying "this code should never run!"
+
 [click] In switch statements, 'never' helps us ensure we've covered all our bases.
+
 [click] And in some type operations, like empty arrays or intersections of types that can't coexist, 'never' pops up.
 
 But why should we care? Let's look at the power of 'never':
 
 [click] It's great at catching logical errors. If you see 'never' where you don't expect it, something's probably wrong!
+
 [click] It ensures you've handled all possible cases in your code. No more forgotten edge cases!
+
 [click] It allows you to make certain states in your program truly impossible at the type level.
+
 [click] In complex scenarios, 'never' enhances type safety by eliminating impossible cases.
 -->
 
@@ -150,8 +156,11 @@ Here we have a function that processes a response that can only be "yes" or "no"
 Let's break down what's happening:
 
 [click] We've covered all possible values of `response` in our if-else statements.
+
 [click] This means the final else block should be unreachable. It's impossible to get here!
+
 [click] In this unreachable block, TypeScript infers that `response` must be of type `never`.
+
 [click] By trying to assign this to our `unreachable` variable of type `never`, we catch any logical errors.
 
 This pattern is incredibly useful for catching bugs early. If we ever add a new possible value to our response type and forget to handle it, TypeScript will let us know!
@@ -191,8 +200,11 @@ Here's an example using shapes. We have a union type `Shape` and a function to c
 Let's break down why this is so powerful:
 
 [click] By using 'never' in our `assertNever` function, we ensure that all possible shapes are handled in our switch statement.
+
 [click] If we ever add a new shape to our union type and forget to handle it in the `area` function, TypeScript will give us a compiler error.
+
 [click] This means we can refactor our code with confidence. TypeScript has our back!
+
 [click] It also makes our code more maintainable. Anyone reading this code knows that all cases are handled.
 
 This pattern is incredibly useful in large codebases where it's easy to forget to update all the necessary places when adding new variants to a type.
@@ -234,7 +246,9 @@ Here's a nifty type that extracts the element type from an array.
 Let's break it down:
 
 [click] In this conditional type, 'never' acts as our fallback. If T isn't an array, we get 'never'.
+
 [click] This allows us to create more precise mapped types. We're not just transforming types, we're filtering them too!
+
 [click] It opens up a world of powerful type transformations. Think of 'never' as your safety net in these complex type operations.
 
 This pattern is incredibly useful when you're working with generic types and want to ensure you're only operating on specific shapes of data.
@@ -293,6 +307,15 @@ Now, let's recap what we've learned:
 
 [click] So use it wisely, and it will never let you down in your TypeScript adventures!
 -->
+
+---
+layout: center
+class: text-center
+---
+
+# Questions?
+
+Where 'never' is always an option, but rarely the answer!
 
 ---
 layout: center
