@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /typescript-lightning-talks/03-interface-vs-type-alias/ --out ../../dist/03-interface-vs-type-alias",
+    "export": "slidev export --per-slide --output ../03-interface-vs-type-alias.pdf"
+  }
+}
