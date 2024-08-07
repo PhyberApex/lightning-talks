@@ -16,6 +16,10 @@ title: The 'never' Type in TypeScript
 fonts:
   mono: Operator Mono
   local: Operator Mono
+  sans: DM Sans
+  strong: Rubik Iso
+  fast: Ubuntu
+  hand: Caveat
 ---
 
 # The 'never' Type in TypeScript
