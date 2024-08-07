@@ -3,6 +3,8 @@ theme: seriph
 background: /cover.jpg
 highlighter: shiki
 lineNumbers: false
+presenter: dev
+download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/01-branded-types/01-branded-types.pdf
 info: |
   ## Branded Types in TypeScript
   A 5-10 minute introduction to branded types and their benefits.

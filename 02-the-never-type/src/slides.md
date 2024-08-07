@@ -5,6 +5,8 @@ css: unocss
 colorSchema: dark
 transition: fade-out
 mdc: true
+presenter: dev
+download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/02-the-never-type/02-the-never-type.pdf
 info: |
   ## The 'never' Type in TypeScript
   A deep dive into TypeScript's most mystical type
@@ -99,14 +101,12 @@ The first one always throws an error, and the second... well, it's stuck in an i
 <!--
 Now, let's explore when TypeScript decides to bring out the 'never' type.
 
-[click] On the left, we have some common scenarios where 'never' shows up:
-
 [click] We've seen functions that never return, like our error-throwing friend from earlier.
 [click] It also appears in code branches that should be unreachable. If TypeScript sees 'never', it's saying "this code should never run!"
 [click] In switch statements, 'never' helps us ensure we've covered all our bases.
 [click] And in some type operations, like empty arrays or intersections of types that can't coexist, 'never' pops up.
 
-[click] But why should we care? Let's look at the power of 'never':
+But why should we care? Let's look at the power of 'never':
 
 [click] It's great at catching logical errors. If you see 'never' where you don't expect it, something's probably wrong!
 [click] It ensures you've handled all possible cases in your code. No more forgotten edge cases!
@@ -202,13 +202,7 @@ This pattern is incredibly useful in large codebases where it's easy to forget t
 
 <div>
 
-```ts
-type ArrayElement<T> = T extends (infer E)[] ? E : never
-
-type StringArrayElement = ArrayElement<string[]> // string
-type NumberArrayElement = ArrayElement<number[]> // number
-type NeverElement = ArrayElement<string> // never
-```
+<<< ./snippets/04-conditional-type.ts {monaco}
 
 </div>
 
@@ -315,4 +309,6 @@ From impossible functions to exhaustive checks, we've seen how this seemingly pa
 Remember, in the world of TypeScript, 'never' doesn't mean "don't use it." It means "use it to make the impossible truly impossible!"
 
 Thank you for joining me on this type adventure. Now go forth and let 'never' be your guiding star in the TypeScript galaxy!
+
+Ask for feedback
 -->

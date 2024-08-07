@@ -5,6 +5,8 @@ css: unocss
 colorSchema: dark
 transition: fade-out
 mdc: true
+presenter: dev
+download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/06-return-type-by-parameter/06-return-type-by-parameter.pdf
 info: |
   ## Dynamic Return Types in TypeScript
   How to type a fetch function to return an entity derived from the path parameter
