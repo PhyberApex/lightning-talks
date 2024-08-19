@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://example.com/type-alias-vs-interface.pdf
+download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/03-interface-vs-type-alias/03-interface-vs-type-alias.pdf
 info: |
   ## Type Aliases vs. Interfaces in TypeScript
   Why type aliases should be your go-to choice
@@ -16,6 +16,12 @@ title: Type Aliases vs. Interfaces in TypeScript
 fonts:
   mono: Operator Mono
   local: Operator Mono
+  sans: DM Sans
+  strong: Rubik Iso
+  fast: Ubuntu
+  hand: Caveat
+monacoTypesAdditionalPackages:
+  - "@types/jquery"
 ---
 
 # Type Aliases vs. Interfaces in TypeScript
@@ -114,70 +120,22 @@ Now, let's discuss when to use type aliases versus interfaces.
 
 ---
 
-# The Power of Type Aliases in Action
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-<<< ./snippets/02-type-alias-flexibility.ts {monaco}
-
-</div>
-<div>
-
-## Why This is Powerful
-
-<v-clicks>
-
-- Easily create complex types
-- Combine multiple types with intersections
-- Use conditional types for advanced scenarios
-- Mapped types for transforming existing types
-
-</v-clicks>
-
-</div>
-</div>
-
-<!--
-Let's look at some practical examples of why type aliases are so powerful.
-
-On the left, we have a series of type alias definitions that showcase their flexibility and power.
-
-[click] With type aliases, we can easily create complex types that precisely model our data structures.
-[click] We can use intersections to combine multiple types, creating new types that have all the properties of their constituents.
-[click] Conditional types allow us to create advanced type logic, selecting types based on conditions.
-[click] Mapped types give us the ability to transform existing types, adding modifiers or changing property types systematically.
-
-These capabilities make type aliases incredibly powerful for modeling complex data structures and type relationships in your TypeScript projects.
--->
-
----
-
-# The Few Cases for Interfaces
+# The Few Cases for Interfaces (1/2)
 
 <div>
 
-<<< ./snippets/03-interface-use-cases.ts {monaco}
+<<< ./snippets/02-interface-use-cases-1.ts {monaco}
 
 </div>
 
-<div class="mt-4 text-center">
-  <carbon-arrow-down class="text-4xl animate-bounce" />
-</div>
-
-<div>
+<v-click>
 
 ## When to Consider Interfaces
 
-<v-clicks>
-
 - Declaration merging (augmenting types across files)
 - Defining class contracts with `implements`
-- Extending built-in or library-defined interfaces
 
-</v-clicks>
-
-</div>
+</v-click>
 
 <!--
 While type aliases are generally preferred, let's explore the few cases where interfaces might still be necessary.
@@ -185,10 +143,31 @@ While type aliases are generally preferred, let's explore the few cases where in
 In this example, we see some scenarios where interfaces are uniquely useful.
 
 [click] Declaration merging is a feature unique to interfaces. It allows you to add new members to an interface across multiple declarations, which can be useful for augmenting types across different files or modules.
-[click] When defining contracts for classes to implement, interfaces provide a familiar and clear syntax, especially for developers coming from object-oriented backgrounds.
-[click] If you need to extend built-in interfaces or those defined in third-party libraries, you'll often need to use interfaces to maintain compatibility.
 
-While these use cases exist, they're relatively rare compared to the wide range of scenarios where type aliases excel.
+When defining contracts for classes to implement, interfaces provide a familiar and clear syntax, especially for developers coming from object-oriented backgrounds.
+-->
+
+---
+
+# The Few Cases for Interfaces (2/2)
+<div>
+<<< ./snippets/02-interface-use-cases-2.ts {monaco}
+</div>
+<v-click>
+
+## When to Consider Interfaces Part 2
+
+- Extending library-defined interfaces (e.g., jQuery)
+
+</v-click>
+<!--
+Continuing our exploration of interface use cases, let's look at one more scenario that's common in real-world applications.
+
+[click] Interfaces are particularly useful when you need to extend interfaces defined in third-party libraries. Here, we're extending the jQuery interface to add an i18n method 't'.
+
+This approach allows you to augment existing library types with new functionality in a type-safe manner. It's especially useful when working with plugins or when you need to add custom methods to library objects.
+
+While this use case exists, remember that for most of your type definitions, type aliases will provide more flexibility and power.
 -->
 
 ---
@@ -221,7 +200,7 @@ layout: two-cols
 
 - Type aliases are more versatile and powerful
 - They provide a consistent syntax for all types
-- Interfaces have their place, but are more limited
+- Interfaces have their place, but have different features
 - Choose based on the needs of your project
 - When in doubt, start with a type alias!
 

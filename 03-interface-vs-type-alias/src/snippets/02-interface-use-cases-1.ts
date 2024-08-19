@@ -9,12 +9,7 @@ interface Printable {
 }
 
 class Document implements Printable {
-  print() {
-    console.log("Printing document...");
-  }
-}
-
-// Extending built-in interfaces
-interface MyArray<T> extends Array<T> {
-  customMethod(): void;
+  // print() {
+  //   console.log("Printing document...");
+  // }
 }
