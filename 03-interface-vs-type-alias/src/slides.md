@@ -157,17 +157,17 @@ When defining contracts for classes to implement, interfaces provide a familiar 
 
 ## When to Consider Interfaces Part 2
 
-- Extending library-defined interfaces (e.g., lodash)
+- Extending library-defined interfaces (e.g. axios)
 
 </v-click>
 <!--
-Continuing our exploration of interface use cases, let's look at a scenario that's common when working with popular libraries.
+Let's look at a practical scenario where interfaces shine: extending library types.
 
-[click] Interfaces are particularly useful when you need to extend interfaces defined in third-party libraries with TypeScript support. Here, we're extending the Lodash interface to add a custom method 'myCustomFunction'.
+[click] Here, we're using interfaces to extend Axios, a popular HTTP client with built-in TypeScript support. We're adding a custom method 'getWithAuth' to make authenticated requests.
 
-This approach allows you to augment existing library types with new functionality in a type-safe manner. It's especially useful when you want to add custom utility functions that work seamlessly with the library's existing methods.
+This approach allows us to add new functionality to existing libraries while maintaining full type safety. It's particularly useful when you want to create reusable, typed extensions to third-party libraries.
 
-While this use case exists, remember that for most of your type definitions, type aliases will provide more flexibility and power. Use interfaces when you need to extend or augment existing types from libraries or the TypeScript standard library.
+While this is a valid use case for interfaces, remember that for most of your own type definitions, type aliases often provide more flexibility. Use interfaces when you need to extend or augment existing types from libraries or the TypeScript standard library.
 -->
 
 ---
