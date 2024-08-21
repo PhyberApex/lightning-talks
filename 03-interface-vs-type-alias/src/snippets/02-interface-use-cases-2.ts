@@ -1,19 +1,16 @@
-// Extending library interfaces (e.g., jQuery)
-interface JQuery {
-  t(key: string): string;
+import axios, { AxiosResponse } from 'axios';
+
+// Extend the AxiosInstance interface
+declare module 'axios' {
+  interface AxiosInstance {
+    getWithAuth<T = any>(url: string, token: string): Promise<AxiosResponse<T>>;
+  }
 }
 
-interface JQueryStatic {
-  i18n: {
-    t(key: string): string;
-  };
-}
-
-const translateElement = ($element: JQuery<HTMLElement>) => {
-  $element.find('#someId');
-  $element.t('hello.world');
-}
-
-const translate = ($: JQueryStatic) => {
-  $.i18n.t('hello.world');
+async function fetchUserData(userId: string, token: string) {
+  const response = await axios.getWithAuth<{ name: string, email: string }>(
+      `/users/${userId}`,
+      token
+  );
+  console.log(response.data.name);
 }

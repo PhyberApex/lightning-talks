@@ -29,9 +29,6 @@ importers:
       '@slidev/theme-seriph':
         specifier: 0.25.0
         version: 0.25.0
-      '@types/jquery':
-        specifier: ^3.5.30
-        version: 3.5.30
       '@types/node':
         specifier: ^20.14.10
         version: 20.14.14
@@ -41,6 +38,9 @@ importers:
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
+      axios:
+        specifier: ^1.7.4
+        version: 1.7.4(debug@4.3.6)
       eslint:
         specifier: ^9.6.0
         version: 9.8.0
@@ -100,7 +100,11 @@ importers:
 
   02-the-never-type/src: {}
 
-  03-interface-vs-type-alias/src: {}
+  03-interface-vs-type-alias/src:
+    devDependencies:
+      axios:
+        specifier: ^1.7.4
+        version: 1.7.4(debug@4.3.6)
 
 packages:
 
@@ -1151,9 +1155,6 @@ packages:
   '@types/http-cache-semantics@4.0.4':
     resolution: {integrity: sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==}
 
-  '@types/jquery@3.5.30':
-    resolution: {integrity: sha512-nbWKkkyb919DOUxjmRVk8vwtDb0/k8FKncmUKFi+NY+QXqWltooxTrswvz4LspQwxvLdvzBN1TImr6cw3aQx2A==}
-
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
@@ -1189,9 +1190,6 @@ packages:
 
   '@types/seedrandom@3.0.8':
     resolution: {integrity: sha512-TY1eezMU2zH2ozQoAFAQFOPpvP15g+ZgSfTZt31AUUH/Rxtnz3H+A/Sv1Snw2/amp//omibc+AEkTaA8KUeOLQ==}
-
-  '@types/sizzle@2.3.8':
-    resolution: {integrity: sha512-0vWLNK2D5MT9dg0iOo8GlKguPAU02QjmZitPEsXRuJXU/OGIOt9vT9Fc26wtYuavLxtO45v9PGleoL9Z0k1LHg==}
 
   '@types/unist@2.0.10':
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
@@ -1563,8 +1561,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.7.3:
-    resolution: {integrity: sha512-Ar7ND9pU99eJ9GpoGQKhKf58GpUOgnzuaB7ueNQ5BMi0p+LZ5oaEnfF999fAArcTIBwXTCHAmGcHOZJaWPq9Nw==}
+  axios@1.7.4:
+    resolution: {integrity: sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -5540,10 +5538,6 @@ snapshots:
 
   '@types/http-cache-semantics@4.0.4': {}
 
-  '@types/jquery@3.5.30':
-    dependencies:
-      '@types/sizzle': 2.3.8
-
   '@types/json-schema@7.0.15': {}
 
   '@types/linkify-it@5.0.0': {}
@@ -5581,8 +5575,6 @@ snapshots:
       kleur: 3.0.3
 
   '@types/seedrandom@3.0.8': {}
-
-  '@types/sizzle@2.3.8': {}
 
   '@types/unist@2.0.10': {}
 
@@ -6133,7 +6125,7 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.3(debug@4.3.6):
+  axios@1.7.4(debug@4.3.6):
     dependencies:
       follow-redirects: 1.15.6(debug@4.3.6)
       form-data: 4.0.0
@@ -9204,7 +9196,7 @@ snapshots:
   vite-plugin-remote-assets@0.5.0(vite@5.3.5(@types/node@20.14.14)):
     dependencies:
       '@antfu/utils': 0.7.10
-      axios: 1.7.3(debug@4.3.6)
+      axios: 1.7.4(debug@4.3.6)
       blueimp-md5: 2.19.0
       debug: 4.3.6
       fs-extra: 11.2.0

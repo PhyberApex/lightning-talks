@@ -21,7 +21,7 @@ fonts:
   fast: Ubuntu
   hand: Caveat
 monacoTypesAdditionalPackages:
-  - "@types/jquery"
+  - "axios"
 ---
 
 # Type Aliases vs. Interfaces in TypeScript
@@ -157,17 +157,17 @@ When defining contracts for classes to implement, interfaces provide a familiar 
 
 ## When to Consider Interfaces Part 2
 
-- Extending library-defined interfaces (e.g., jQuery)
+- Extending library-defined interfaces (e.g., lodash)
 
 </v-click>
 <!--
-Continuing our exploration of interface use cases, let's look at one more scenario that's common in real-world applications.
+Continuing our exploration of interface use cases, let's look at a scenario that's common when working with popular libraries.
 
-[click] Interfaces are particularly useful when you need to extend interfaces defined in third-party libraries. Here, we're extending the jQuery interface to add an i18n method 't'.
+[click] Interfaces are particularly useful when you need to extend interfaces defined in third-party libraries with TypeScript support. Here, we're extending the Lodash interface to add a custom method 'myCustomFunction'.
 
-This approach allows you to augment existing library types with new functionality in a type-safe manner. It's especially useful when working with plugins or when you need to add custom methods to library objects.
+This approach allows you to augment existing library types with new functionality in a type-safe manner. It's especially useful when you want to add custom utility functions that work seamlessly with the library's existing methods.
 
-While this use case exists, remember that for most of your type definitions, type aliases will provide more flexibility and power.
+While this use case exists, remember that for most of your type definitions, type aliases will provide more flexibility and power. Use interfaces when you need to extend or augment existing types from libraries or the TypeScript standard library.
 -->
 
 ---
