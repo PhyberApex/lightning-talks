@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./snippets"
+  },
+  "exclude": [
+    "**/*.md"
+  ]
+}

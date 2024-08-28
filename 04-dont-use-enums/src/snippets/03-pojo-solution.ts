@@ -3,12 +3,11 @@ const LOG_LEVEL = {
   WARNING: 'warning',
   ERROR: 'error'
 } as const;
-
+// Type magic
 type LogLevel = typeof LOG_LEVEL[keyof typeof LOG_LEVEL];
 
 function log(message: string, level: LogLevel) {
   console.log(`[${level}] ${message}`);
 }
 
-log('This works', LOG_LEVEL.DEBUG); // OK
-log('This also works', 'warning'); // OK
+log('This works', LOG_LEVEL.DEBUG);

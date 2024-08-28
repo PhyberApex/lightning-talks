@@ -73,32 +73,24 @@ Let's start by understanding why enums are problematic in TypeScript.
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-<<< ./snippets/02-const-enum-pitfalls.ts {monaco}
+## TypeScript
+<<< ./snippets/02-const-enum-pitfalls.ts {monaco-write}
 
 </div>
 <div>
 
-<v-clicks>
-
-- Still restrict value passing
-- Don't solve structural typing issues
-- Can lead to confusion in larger codebases
-- Inconsistent with TypeScript's design philosophy
-
-</v-clicks>
+## Transpiled JavaScript
+<<< ./snippets/02-const-enum-pitfalls.js {monaco-run}
 
 </div>
 </div>
 
 <!--
-You might think that using 'const enum' solves these problems, but let's see why that's not the case.
-
-[click] Even with 'const enum', we still can't pass string values directly to functions expecting the enum type.
-[click] They don't address the fundamental issue of breaking structural typing.
-[click] In larger codebases, mixing enums and their string values can lead to confusion and inconsistencies.
-[click] This approach is inconsistent with TypeScript's design philosophy of focusing on the shape of data rather than its name.
-
-As we can see, while 'const enum' might seem like a solution, it still carries many of the same problems as regular enums.
+So we can see that the transpiled JavaScript is very convoluted and does also give us one issue. Also we have additional 
+values in our `Object.values` call.
+Change it to string enum.
+Change it to a const enum.
+Add a remark that TypeScript docs don't recommend const enums at all.
 -->
 
 ---
@@ -141,40 +133,6 @@ This solution gives us the best of both worlds: the type safety we want with the
 -->
 
 ---
-
-# Type Magic: Making It Even Better
-
-<div>
-
-<<< ./snippets/04-type-magic.ts {monaco}
-
-</div>
-
-<div class="mt-4">
-
-<v-clicks>
-
-- `ObjectValues<T>` creates a union type of all values
-- Allows us to use the object as both value and type
-- Provides excellent autocompletion and type checking
-
-</v-clicks>
-
-</div>
-
-<!--
-Let's add a bit of type magic to make our solution even more powerful.
-
-Here, we've added a utility type `ObjectValues<T>` that creates a union type of all the values in our object.
-
-[click] This type allows us to extract a union type of all the values in our LOG_LEVEL object.
-[click] We can now use LOG_LEVEL as both a value (for accessing properties) and LogLevel as a type.
-[click] This approach provides excellent autocompletion and type checking, giving us the best of both worlds.
-
-With this setup, we get all the benefits of enums without any of the drawbacks. Our code is now more flexible, more idiomatic, and more in line with TypeScript's design principles.
--->
-
----
 layout: two-cols
 ---
 
@@ -184,7 +142,6 @@ layout: two-cols
 
 - Avoid using enums, including const enums
 - Use POJOs with 'as const' for constant values
-- Leverage utility types for flexible type creation
 - Embrace structural typing principles
 - Write idiomatic JavaScript with TypeScript types
 
@@ -216,12 +173,12 @@ Let's recap some best practices for handling constant values in TypeScript.
 
 [click] First and foremost, avoid using enums, including const enums. They introduce more problems than they solve.
 [click] Instead, use Plain Old JavaScript Objects (POJOs) with 'as const' for your constant values.
-[click] Leverage utility types to create flexible, powerful type definitions from your objects.
 [click] Always strive to embrace TypeScript's structural typing principles in your code.
 [click] Remember, good TypeScript code is just good JavaScript code with added type annotations.
 
 [click] Now, let's summarize what we've learned:
-[click] Enums, while seemingly useful, actually break TypeScript's structural typing principles.
+[click] Enums, while seemingly useful, actually break TypeScript's structural typing principles. 
+(Sidenote about how the devs said they wouldn't add it again)
 [click] POJOs with 'as const' provide a more flexible and idiomatic solution to the same problem.
 [click] TypeScript is fundamentally about the shape of your data, not the names you give it.
 [click] At its core, good TypeScript code is just good JavaScript code with powerful type annotations.

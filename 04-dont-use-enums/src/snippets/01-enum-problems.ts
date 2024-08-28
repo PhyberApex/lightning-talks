@@ -1,12 +1,11 @@
 enum LogLevel {
-  DEBUG = 'debug',
-  WARNING = 'warning',
-  ERROR = 'error'
+  DEBUG,
+  WARNING,
+  ERROR,
 }
 
 function log(message: string, level: LogLevel) {
   console.log(`[${level}] ${message}`);
 }
 
-log('This works', LogLevel.DEBUG); // OK
-log('This fails', 'debug'); // Error: Argument of type 'string' is not assignable to parameter of type 'LogLevel'.
+log('This works', LogLevel.DEBUG);
