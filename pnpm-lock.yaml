@@ -37,7 +37,7 @@ importers:
         version: 3.0.8
       axios:
         specifier: ^1.7.4
-        version: 1.7.4(debug@4.3.6)
+        version: 1.7.7(debug@4.3.6)
       eslint:
         specifier: ^9.6.0
         version: 9.8.0
@@ -101,7 +101,7 @@ importers:
     devDependencies:
       axios:
         specifier: ^1.7.4
-        version: 1.7.4(debug@4.3.6)
+        version: 1.7.7(debug@4.3.6)
 
   04-dont-use-enums/src: {}
 
@@ -1506,8 +1506,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.7.4:
-    resolution: {integrity: sha512-DukmaFRnY6AzAALSH4J2M3k6PkaC+MfaAGdEERRWcC9q3/TWQwLpHR8ZRLKTdQ3aBDL64EdluRDjJqKw+BPZEw==}
+  axios@1.7.7:
+    resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2357,8 +2357,8 @@ packages:
       '@nuxt/kit':
         optional: true
 
-  follow-redirects@1.15.6:
-    resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
+  follow-redirects@1.15.8:
+    resolution: {integrity: sha512-xgrmBhBToVKay1q2Tao5LI26B83UhrB/vM1avwVSDzt8rx3rO6AizBAaF46EgksTVr+rFTQaqZZ9MVBfUe4nig==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -5907,9 +5907,9 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.4(debug@4.3.6):
+  axios@1.7.7(debug@4.3.6):
     dependencies:
-      follow-redirects: 1.15.6(debug@4.3.6)
+      follow-redirects: 1.15.8(debug@4.3.6)
       form-data: 4.0.0
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
@@ -6950,7 +6950,7 @@ snapshots:
     optionalDependencies:
       '@nuxt/kit': 3.12.4(rollup@4.20.0)
 
-  follow-redirects@1.15.6(debug@4.3.6):
+  follow-redirects@1.15.8(debug@4.3.6):
     optionalDependencies:
       debug: 4.3.6
 
@@ -8913,7 +8913,7 @@ snapshots:
   vite-plugin-remote-assets@0.5.0(vite@5.3.5(@types/node@20.16.5)):
     dependencies:
       '@antfu/utils': 0.7.10
-      axios: 1.7.4(debug@4.3.6)
+      axios: 1.7.7(debug@4.3.6)
       blueimp-md5: 2.19.0
       debug: 4.3.6
       fs-extra: 11.2.0
