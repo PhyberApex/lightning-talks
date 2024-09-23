@@ -1,7 +1,9 @@
 name: Build and Deploy Documentation
-
 on:
   push:
+    branches:
+      - '*'
+  pull_request:
     branches:
       - '*'
 
@@ -11,23 +13,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:
           version: 9.6.0
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-
       - name: Build documentation
         run: pnpm run build
-
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -36,7 +33,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifacts
@@ -44,7 +41,6 @@ jobs:
         with:
           name: dist
           path: ./dist
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
