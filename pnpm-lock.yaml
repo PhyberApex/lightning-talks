@@ -88,7 +88,7 @@ importers:
         version: 0.62.3(postcss@8.4.41)(rollup@4.20.0)(vite@5.3.5(@types/node@20.16.5))
       vue-router:
         specifier: ^4.4.0
-        version: 4.4.3(vue@3.4.35(typescript@5.6.2))
+        version: 4.4.5(vue@3.4.35(typescript@5.6.2))
       vue-tsc:
         specifier: ^2.0.26
         version: 2.1.6(typescript@5.6.2)
@@ -1511,8 +1511,8 @@ packages:
   '@vue/compiler-vue2@2.7.16':
     resolution: {integrity: sha512-qYC3Psj9S/mfu9uVi5WvNZIzq+xnXMhOwbTFKKDD7b1lhpnn71jXSFdTQ+WsIEk0ONCd7VV2IMm7ONl6tbQ86A==}
 
-  '@vue/devtools-api@6.6.3':
-    resolution: {integrity: sha512-0MiMsFma/HqA6g3KLKn+AGpL1kgKhFWszC9U29NfpWK5LE7bjeXxySWJrOJ77hBz+TBrBQ7o4QJqbPbqbs8rJw==}
+  '@vue/devtools-api@6.6.4':
+    resolution: {integrity: sha512-sGhTPMuXqZ1rVOk32RylztWkfXTRhuS7vgAKv0zjqk8gbsHkJ7xfFf+jbySxt7tWObEJwyKaHMikV/WGDiQm8g==}
 
   '@vue/language-core@2.1.6':
     resolution: {integrity: sha512-MW569cSky9R/ooKMh6xa2g1D0AtRKbL56k83dzus/bx//RDJk24RHWkMzbAlXjMdDNyxAaagKPRquBIxkxlCkg==}
@@ -4271,8 +4271,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  vue-router@4.4.3:
-    resolution: {integrity: sha512-sv6wmNKx2j3aqJQDMxLFzs/u/mjA9Z5LCgy6BE0f7yFWMjrPLnS/sPNn8ARY/FXw6byV18EFutn5lTO6+UsV5A==}
+  vue-router@4.4.5:
+    resolution: {integrity: sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -5367,7 +5367,7 @@ snapshots:
       typescript: 5.6.2
       unocss: 0.61.9(postcss@8.4.41)(rollup@4.20.0)(vite@5.3.5(@types/node@20.16.5))
       vue: 3.4.35(typescript@5.6.2)
-      vue-router: 4.4.3(vue@3.4.35(typescript@5.6.2))
+      vue-router: 4.4.5(vue@3.4.35(typescript@5.6.2))
       yaml: 2.5.0
     transitivePeerDependencies:
       - '@nuxt/kit'
@@ -5446,7 +5446,7 @@ snapshots:
       vite-plugin-static-copy: 1.0.6(vite@5.3.5(@types/node@20.16.5))
       vite-plugin-vue-server-ref: 0.4.2(vite@5.3.5(@types/node@20.16.5))(vue@3.4.35(typescript@5.6.2))
       vue: 3.4.35(typescript@5.6.2)
-      vue-router: 4.4.3(vue@3.4.35(typescript@5.6.2))
+      vue-router: 4.4.5(vue@3.4.35(typescript@5.6.2))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@svgr/core'
@@ -6104,7 +6104,7 @@ snapshots:
       de-indent: 1.0.2
       he: 1.2.0
 
-  '@vue/devtools-api@6.6.3': {}
+  '@vue/devtools-api@6.6.4': {}
 
   '@vue/language-core@2.1.6(typescript@5.6.2)':
     dependencies:
@@ -9345,9 +9345,9 @@ snapshots:
     dependencies:
       vue: 3.4.35(typescript@5.6.2)
 
-  vue-router@4.4.3(vue@3.4.35(typescript@5.6.2)):
+  vue-router@4.4.5(vue@3.4.35(typescript@5.6.2)):
     dependencies:
-      '@vue/devtools-api': 6.6.3
+      '@vue/devtools-api': 6.6.4
       vue: 3.4.35(typescript@5.6.2)
 
   vue-tsc@2.1.6(typescript@5.6.2):
