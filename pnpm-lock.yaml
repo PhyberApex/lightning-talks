@@ -13,7 +13,7 @@ importers:
         version: 2.24.1(@vue/compiler-sfc@3.4.35)(eslint-plugin-format@0.1.2(eslint@9.8.0))(eslint@9.8.0)(prettier-plugin-slidev@1.0.5(prettier@3.3.3))(typescript@5.5.4)
       '@iconify/json':
         specifier: ^2.2.226
-        version: 2.2.234
+        version: 2.2.252
       '@slidev/cli':
         specifier: ^0.49.16
         version: 0.49.24(@babel/parser@7.25.3)(@nuxt/kit@3.12.4(rollup@4.20.0))(@types/markdown-it@14.1.2)(@types/node@20.14.14)(@vue/compiler-sfc@3.4.35)(playwright-chromium@1.46.0)(postcss@8.4.41)(rollup@4.20.0)
@@ -678,8 +678,8 @@ packages:
   '@iconify-json/svg-spinners@1.1.3':
     resolution: {integrity: sha512-sP7m+/1Z42ROH3MO21ZRoAnYPOtcVVWqTveDyEl8nUCUcGJozYr0awLVqhKT0lUqEg6y2U2UdpHXelyV8beJ1w==}
 
-  '@iconify/json@2.2.234':
-    resolution: {integrity: sha512-2z0+I0YhHelZ+MPX7wHsSGKv81PicsnVlRfCYNmhZ0s1tyPo7Kkvt8QWjytPZV6f/ypb111I5jpTFB+W7bcAgQ==}
+  '@iconify/json@2.2.252':
+    resolution: {integrity: sha512-AtdDjLhN4aBEncnWghiw9JdBRxKAXFcaQmwDFDWPL1UF/cPuuC8BADZzfHIoVcVlEvEbv69tFrzmhj1z/+PGlA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2390,6 +2390,7 @@ packages:
   follow-redirects@1.15.6:
     resolution: {integrity: sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==}
     engines: {node: '>=4.0'}
+    deprecated: Browser detection issues fixed in v1.15.9
     peerDependencies:
       debug: '*'
     peerDependenciesMeta:
@@ -4791,7 +4792,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/json@2.2.234':
+  '@iconify/json@2.2.252':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
