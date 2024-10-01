@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /typescript-lightning-talks/06-conditional-types/ --out ../../dist/06-conditional-types",
+    "export": "slidev export --per-slide --output ../06-conditional-types.pdf"
+  }
+}
