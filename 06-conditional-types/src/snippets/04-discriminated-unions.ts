@@ -1,31 +1,38 @@
-type Shape = 
-  | { kind: "circle"; radius: number }
-  | { kind: "rectangle"; width: number; height: number }
-  | { kind: "square"; sideLength: number };
+type Circle = { kind: "circle"; radius: number };
+type Rectangle = { kind: "rectangle"; width: number; height: number };
+type Square = { kind: "square"; sideLength: number };
 
-type ShapeArea<T extends Shape> = T extends { kind: "circle" }
-  ? number
-  : T extends { kind: "rectangle" }
-  ? number
-  : T extends { kind: "square" }
-  ? number
-  : never;
+type Shape = Circle | Rectangle | Square;
 
-function calculateArea<T extends Shape>(shape: T): ShapeArea<T> {
+type ShapeInfo<T extends Shape> = T extends Circle
+    ? { area: number; circumference: number }
+    : T extends Rectangle
+        ? { area: number; perimeter: number }
+        : T extends Square
+            ? { area: number; diagonal: number }
+            : never;
+
+function getShapeInfo<T extends Shape>(shape: T): ShapeInfo<T> {
   switch (shape.kind) {
     case "circle":
-      return Math.PI * shape.radius ** 2 as ShapeArea<T>;
+      const area = Math.PI * shape.radius ** 2;
+      const circumference = 2 * Math.PI * shape.radius;
+      return { area, circumference } as ShapeInfo<T>;
     case "rectangle":
-      return shape.width * shape.height as ShapeArea<T>;
+      const rectArea = shape.width * shape.height;
+      const perimeter = 2 * (shape.width + shape.height);
+      return { area: rectArea, perimeter } as ShapeInfo<T>;
     case "square":
-      return shape.sideLength ** 2 as ShapeArea<T>;
+      const squareArea = shape.sideLength ** 2;
+      const diagonal = Math.sqrt(2) * shape.sideLength;
+      return { area: squareArea, diagonal } as ShapeInfo<T>;
   }
 }
 
-const circle: Shape = { kind: "circle", radius: 5 };
-const rectangle: Shape = { kind: "rectangle", width: 4, height: 6 };
-const square: Shape = { kind: "square", sideLength: 4 };
+const circle: Circle = { kind: "circle", radius: 5 };
+const rectangle: Rectangle = { kind: "rectangle", width: 4, height: 6 };
+const square: Square = { kind: "square", sideLength: 4 };
 
-console.log(calculateArea(circle)); // Type is number
-console.log(calculateArea(rectangle)); // Type is number
-console.log(calculateArea(square)); // Type is number
+const circleInfo = getShapeInfo(circle);
+const rectangleInfo = getShapeInfo(rectangle);
+const squareInfo = getShapeInfo(square);

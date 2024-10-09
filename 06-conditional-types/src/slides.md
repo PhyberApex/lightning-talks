@@ -163,37 +163,46 @@ Here's an example of using `infer` to create a type that extracts the return typ
 
 ---
 
-# Practical Application: Discriminated Unions
+# Practical Application: Discriminated Unions 1/2
 
 <v-clicks>
 
 - Conditional types work well with discriminated unions
-- Can create type-safe switches based on a discriminant
-- Useful for handling different shapes of data
-- Enhances type safety in complex data structures
-- Enables precise type inference in conditionals
+- Can create type-safe functions that return different types based on input
+- Useful for handling different shapes of data with type-specific operations
+- Enhances type safety and developer experience in complex data structures
+- Enables precise type inference in function returns
 
 </v-clicks>
-
-<v-click>
-
-<<< ./snippets/04-discriminated-unions.ts {monaco}
-
-</v-click>
 
 <!--
 Let's look at a practical application of Conditional Types: working with discriminated unions.
 
-Conditional types are particularly powerful when used with discriminated unions, allowing us to create type-safe switches based on a discriminant property.
+Conditional types are particularly powerful when used with discriminated unions, allowing us to create type-safe functions that return different types based on the input.
 
-This is incredibly useful when dealing with different shapes of data that share some common structure.
+This is incredibly useful when dealing with different shapes of data that require type-specific operations or properties.
 
-By using conditional types with discriminated unions, we can enhance type safety in complex data structures and enable more precise type inference in conditional statements.
+By using conditional types with discriminated unions, we can enhance type safety in complex data structures and enable more precise type inference in function returns.
 
 This pattern is common in state management, API responses, and other scenarios where you might deal with multiple related but distinct types of data.
+-->
 
+---
+
+# Practical Application: Discriminated Unions 2/2
+
+<<< ./snippets/04-discriminated-unions.ts {monaco}
+
+<!--
 [After revealing code]
-Here's an example of using conditional types with a discriminated union. We define a union type for different shapes, and then use a conditional type to extract properties based on the shape type. This allows for type-safe handling of different data shapes.
+Here's an example of using conditional types with a discriminated union. We define union types for different shapes, and then use a conditional type to determine the return type of our function based on the input shape. This allows for type-safe handling of different data shapes, with each shape getting its own specific return type.
+
+Notice how the `getShapeInfo` function returns different properties for each shape:
+- For circles, we get area and circumference.
+- For rectangles, we get area and perimeter.
+- For squares, we get area and diagonal length.
+
+This demonstrates how conditional types can help us create more expressive and type-safe APIs when working with complex data structures.
 -->
 
 ---
@@ -206,8 +215,6 @@ Here's an example of using conditional types with a discriminated union. We defi
 - Ability to create more precise and reusable utility types
 - Improved type inference in complex scenarios
 - Enables type-level programming and metaprogramming
-- Reduces the need for type assertions and `any` types
-- Facilitates creation of self-documenting code
 
 </v-clicks>
 
@@ -222,9 +229,6 @@ They improve type inference in complex scenarios, allowing TypeScript to more ac
 
 Conditional Types enable type-level programming and metaprogramming, opening up new possibilities for creating sophisticated type structures.
 
-By using Conditional Types, we can often reduce the need for type assertions and the use of `any` types, leading to more type-safe code.
-
-Lastly, when used effectively, Conditional Types can make our code more self-documenting, as the types themselves can express complex relationships and constraints.
 -->
 
 ---
@@ -256,37 +260,6 @@ Use meaningful names for your type parameters and conditional types. This can gr
 For complex Conditional Types, consider adding documentation comments. This can help other developers (including your future self) understand the purpose and behavior of the type.
 
 Lastly, be aware that very complex type computations can impact TypeScript's performance. In most cases this isn't an issue, but it's something to keep in mind for large-scale projects.
--->
-
----
-
-# Conclusion
-
-<v-clicks>
-
-- Conditional Types are a powerful feature for creating flexible, expressive types
-- They enable type-level programming and sophisticated type transformations
-- Useful in various scenarios: utility types, discriminated unions, type inference
-- Enhance type safety and reduce the need for type assertions
-- Require judicious use to maintain code readability and maintainability
-- Continuous learning and practice are key to mastering Conditional Types
-
-</v-clicks>
-
-<!--
-To wrap up, we've explored Conditional Types in TypeScript, a powerful feature that allows us to create more flexible and expressive type definitions.
-
-We've seen how Conditional Types enable sophisticated type-level programming and type transformations, opening up new possibilities in our TypeScript projects.
-
-From creating utility types to working with discriminated unions and improving type inference, Conditional Types have a wide range of applications.
-
-By leveraging Conditional Types, we can enhance the type safety of our code and often reduce the need for type assertions or `any` types.
-
-However, it's important to use this feature judiciously. Always consider the readability and maintainability of your code when working with complex type structures.
-
-Mastering Conditional Types takes time and practice. I encourage you to experiment with them in your projects and continue learning about advanced TypeScript features.
-
-Remember, the goal is not just to use advanced features, but to write clear, maintainable, and type-safe code that enhances your development experience and the quality of your software.
 -->
 
 ---
