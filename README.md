@@ -9,4 +9,4 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 | Interface vs Type Alias            | 2024-08-22 | [Live](https://phyberapex.github.io/typescript-lightning-talks/03-interface-vs-type-alias/)  |
 | Don't use enums                    | 2024-08-29 | [Live](https://phyberapex.github.io/typescript-lightning-talks/04-dont-use-enums/)           |
 | Dynamic Return Types in TypeScript | 2024-09-05 | [Live](https://phyberapex.github.io/typescript-lightning-talks/05-return-type-by-parameter/) |
-| Conditional Types                  | 2024-10-24 | [Live](https://phyberapex.github.io/typescript-lightning-talks/06-conditional-types/)        |
+| Conditional Types                  | 2024-10-31 | [Live](https://phyberapex.github.io/typescript-lightning-talks/06-conditional-types/)        |
