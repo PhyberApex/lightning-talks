@@ -64,7 +64,7 @@ importers:
         version: 1.47.2
       pnpm:
         specifier: ^9.5.0
-        version: 9.12.2
+        version: 9.12.3
       prettier-plugin-slidev:
         specifier: ^1.0.5
         version: 1.0.5(prettier@3.3.3)
@@ -3288,8 +3288,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.12.2:
-    resolution: {integrity: sha512-InIbOhH4FmGuHsaM4ae4eUJaHKW5kcl1sHSsIgsYfOVscI/l22n0yWLJiUUu7nbIKHf07oD0dM69Ye4TRhtiKA==}
+  pnpm@9.12.3:
+    resolution: {integrity: sha512-zOD53pxafJW++UQWnMXf6HQav7FFB4wNUIuGgFaEiofIHmJiRstglny9f9KabAYu9z/4QNlrPIbECsks9KgT7g==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -8021,7 +8021,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.12.2: {}
+  pnpm@9.12.3: {}
 
   points-on-curve@0.2.0: {}
 
