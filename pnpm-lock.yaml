@@ -64,7 +64,7 @@ importers:
         version: 1.47.2
       pnpm:
         specifier: ^9.5.0
-        version: 9.13.2
+        version: 9.14.1
       prettier-plugin-slidev:
         specifier: ^1.0.5
         version: 1.0.5(prettier@3.3.3)
@@ -2898,6 +2898,9 @@ packages:
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
+  magic-string@0.30.13:
+    resolution: {integrity: sha512-8rYBO+MsWkgjDSOvLomYnzhdwEG51olQ4zL5KXnNJWV5MNmrb4rTZdrtkhxjnD/QyZUqR/Z/XDsUs/4ej2nx0g==}
+
   markdown-it-footnote@4.0.0:
     resolution: {integrity: sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ==}
 
@@ -3343,8 +3346,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.13.2:
-    resolution: {integrity: sha512-iMnDhkRQNQ5lozWHq4Aaz5RtfIFO0RNNpKkk9t9aISD9NrRqq2j3zR1BMUkRLVPH2zpBNmJM/QD/GEagxs70ig==}
+  pnpm@9.14.1:
+    resolution: {integrity: sha512-fx3pz/6kD/RZTEipR3YRKg2zJegfsYqUADYv97ckf0+9dsMBFhHJ+KxYdDw9xSYBeJTgeUjem3IFL4dO4u39zQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -5853,7 +5856,7 @@ snapshots:
       '@vue/compiler-ssr': 3.5.12
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
-      magic-string: 0.30.12
+      magic-string: 0.30.13
       postcss: 8.4.47
       source-map-js: 1.2.1
 
@@ -7546,6 +7549,10 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  magic-string@0.30.13:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
   markdown-it-footnote@4.0.0: {}
 
   markdown-it-magic-link@0.1.4:
@@ -8159,7 +8166,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.13.2: {}
+  pnpm@9.14.1: {}
 
   points-on-curve@0.2.0: {}
 
