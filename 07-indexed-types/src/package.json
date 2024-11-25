@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /typescript-lightning-talks/07-indexed-types/ --out ../../dist/07-indexed-types",
+    "export": "slidev export --per-slide --output ../07-indexed-types.pdf"
+  }
+}
