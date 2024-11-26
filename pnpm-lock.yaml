@@ -37,7 +37,7 @@ importers:
         version: 3.0.8
       axios:
         specifier: ^1.7.4
-        version: 1.7.7(debug@4.3.7)
+        version: 1.7.8(debug@4.3.7)
       eslint:
         specifier: ^9.6.0
         version: 9.15.0(jiti@2.1.0)
@@ -98,7 +98,7 @@ importers:
     devDependencies:
       axios:
         specifier: ^1.7.4
-        version: 1.7.7(debug@4.3.7)
+        version: 1.7.8(debug@4.3.7)
 
   04-dont-use-enums/src: {}
 
@@ -1497,8 +1497,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.7.7:
-    resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
+  axios@1.7.8:
+    resolution: {integrity: sha512-Uu0wb7KNqK2t5K+YQyVCLM76prD5sRFjKHbJYCP1J7JFGEQ6nN7HWn9+04LAeiJ3ji54lgS/gZCH1oxyrf1SPw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2378,7 +2378,6 @@ packages:
   follow-redirects@1.15.9:
     resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==}
     engines: {node: '>=4.0'}
-    deprecated: Browser detection issues fixed in v1.15.9
     peerDependencies:
       debug: '*'
     peerDependenciesMeta:
@@ -2393,8 +2392,8 @@ packages:
     resolution: {integrity: sha512-yDYSgNMraqvnxiEXO4hi88+YZxaHC6QKzb5N84iRCTDeRO7ZALpir/lVmf/uXUhnwUr2O4HU8s/n6x+yNjQkHw==}
     engines: {node: '>= 14.17'}
 
-  form-data@4.0.0:
-    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+  form-data@4.0.1:
+    resolution: {integrity: sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==}
     engines: {node: '>= 6'}
 
   framesync@6.1.2:
@@ -6028,10 +6027,10 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.7(debug@4.3.7):
+  axios@1.7.8(debug@4.3.7):
     dependencies:
       follow-redirects: 1.15.9(debug@4.3.7)
-      form-data: 4.0.0
+      form-data: 4.0.1
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
@@ -7079,7 +7078,7 @@ snapshots:
 
   form-data-encoder@2.1.4: {}
 
-  form-data@4.0.0:
+  form-data@4.0.1:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
@@ -8929,7 +8928,7 @@ snapshots:
   vite-plugin-remote-assets@0.5.0(vite@5.4.8(@types/node@22.9.3)):
     dependencies:
       '@antfu/utils': 0.7.10
-      axios: 1.7.7(debug@4.3.7)
+      axios: 1.7.8(debug@4.3.7)
       blueimp-md5: 2.19.0
       debug: 4.3.7
       fs-extra: 11.2.0
