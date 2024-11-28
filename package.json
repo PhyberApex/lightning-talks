@@ -6,8 +6,7 @@
     "build": "rimraf dist && pnpm -r run build && markdown-it README.md > dist/index.html",
     "dev": "esno scripts/picker.ts dev",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint . --fix",
-    "prepare": "git submodule update --init --recursive"
+    "lint": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.22.0",

@@ -4,13 +4,14 @@ highlighter: shiki
 css: unocss
 colorSchema: dark
 transition: fade-out
+drawings:
+  enabled: false
 mdc: true
 presenter: dev
+download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/07-indexed-types/07-indexed-types.pdf
 info: |
   ## Indexed Types in TypeScript
   Understanding and leveraging indexed access types for type manipulation
-drawings:
-  persist: false
 title: Indexed Types in TypeScript
 fonts:
   mono: Operator Mono
@@ -38,9 +39,8 @@ By the end of this presentation, what might look like arcane syntax will make pe
 
 <v-clicks>
 
-- Access properties of other types using square brackets
+- Access properties of types using square brackets
 - Similar to accessing object properties in JavaScript
-- Can access both static properties and array types
 - Powerful way to extract and manipulate types
 - Foundation for many advanced TypeScript patterns
 
@@ -64,9 +64,8 @@ We'll see how this simple concept can lead to some surprisingly powerful type ma
 
 - Use square bracket notation to access type properties
 - Can access any property that exists on the type
-- Type-safe: TypeScript ensures property exists
 - Useful for extracting specific property types
-- Can be used with unions and intersections
+- Type-safe: TypeScript ensures property exists
 
 </v-clicks>
 
@@ -79,25 +78,25 @@ We'll see how this simple concept can lead to some surprisingly powerful type ma
 <!--
 Let's start with the basic syntax of indexed types when working with object properties.
 
-Just like in JavaScript where we can access object properties using square brackets, we can do the same with types in TypeScript.
+[click] Just like in JavaScript where we can access object properties using square brackets, we can do the same with types in TypeScript.
 
-This is particularly useful when we want to extract the type of a specific property from a larger type definition.
+[click] Can access all properties
 
-TypeScript ensures type safety by checking that the property we're trying to access actually exists on the type.
+[click] This is particularly useful when we want to extract the type of a specific property from a larger type definition.
 
-[After revealing code]
-In this example, we can see how we can extract the type of specific properties from a larger type definition. This is type-safe - TypeScript will give us an error if we try to access a property that doesn't exist.
+[click] TypeScript ensures type safety by checking that the property we're trying to access actually exists on the type.
+
+[click] In this example, we can see how we can extract the type of specific properties from a larger type definition. This is type-safe - TypeScript will give us an error if we try to access a property that doesn't exist.
 -->
 
 ---
 
-# Array Types with T[number]
+# Array Types with T\[number\]
 
 <v-clicks>
 
 - Special syntax for accessing array element types
 - `T[number]` extracts type of array elements
-- Works with both regular arrays and tuples
 - Commonly used with `typeof` and `as const`
 - Powerful way to derive types from array values
 
@@ -112,13 +111,16 @@ In this example, we can see how we can extract the type of specific properties f
 <!--
 Now, let's look at a particularly interesting use of indexed types: accessing array element types with T[number].
 
+[click]
 This might look like magic at first, but it's actually a logical extension of how indexed types work.
 
+[click]
 When we use [number] as the index, we're essentially asking TypeScript to give us the type of any numeric index in the array.
 
+[click] [click] 
 This is particularly powerful when combined with 'typeof' and 'as const' assertions, allowing us to derive precise types from array values.
 
-[After revealing code]
+[click]
 Here we can see how T[number] can extract the type of array elements. The 'as const' assertion is crucial when we want to preserve literal types rather than widening them to their base types like string or number.
 -->
 
@@ -129,10 +131,8 @@ Here we can see how T[number] can extract the type of array elements. The 'as co
 <v-clicks>
 
 - Access types defined by numeric index signatures
-- Different from string index signatures
 - Useful for array-like structures
 - Can coexist with regular properties
-- Provides type safety for numeric access
 
 </v-clicks>
 
@@ -145,13 +145,17 @@ Here we can see how T[number] can extract the type of array elements. The 'as co
 <!--
 Let's explore a more advanced aspect of indexed types: working with numeric index signatures.
 
-TypeScript allows us to define different types for numeric and string indices, which can be particularly useful for array-like structures.
+[click]
+TypeScript allows us to define different types for numeric and string indices
 
+[click]
+Particularly useful for array-like structures.
+
+[click]
 This feature lets us create types that behave differently when accessed with numbers versus strings.
-
 Understanding this distinction is crucial for working with more complex type structures.
 
-[After revealing code]
+[click]
 Here we can see how numeric index signatures work differently from string-based properties, and how we can use indexed types to access them specifically.
 -->
 
@@ -172,10 +176,16 @@ Here we can see how numeric index signatures work differently from string-based 
 <!--
 Let's discuss some real-world applications where indexed types truly shine.
 
+[click]
 One common use case is creating type-safe enums from arrays of values, which can be more flexible than traditional TypeScript enums.
 
+[click]
+Extracting types from configuration objects like we will see in an example on the next slide
+
+[click]
 They're also excellent for deriving types from test fixtures, ensuring our test data and types stay in sync.
 
+[click]
 Libraries often use indexed types to build flexible, type-safe interfaces that can adapt to different use cases.
 -->
 
@@ -184,7 +194,8 @@ Libraries often use indexed types to build flexible, type-safe interfaces that c
 <<< ./snippets/04-real-world.ts {monaco}
 
 <!--
-In this example, our improved Mutable helper type does two things:
+We have a config object
+Please ignore the details of the mutable helper type it does two things:
 1. Removes readonly modifiers
 2. Widens literal types to their base types (string literals to string, number literals to number, etc.)
 
@@ -202,7 +213,6 @@ This strikes a balance between type safety and flexibility, which is crucial for
 - DRY principle in type definitions
 - Type safety without manual maintenance
 - Improved refactoring capabilities
-- Better type inference in complex scenarios
 - Reduced chance of type mismatches
 
 </v-clicks>
@@ -210,14 +220,16 @@ This strikes a balance between type safety and flexibility, which is crucial for
 <!--
 Let's talk about the benefits of using indexed types and some best practices to follow.
 
+[click]
 Indexed types help us maintain the DRY principle by allowing us to derive types from existing structures rather than duplicating definitions.
 
+[click]
 They provide excellent type safety without requiring manual maintenance of parallel type definitions.
 
+[click]
 When used properly, they can greatly improve our ability to refactor code, as changes to source types automatically propagate to derived types.
 
-They enable better type inference in complex scenarios, reducing the need for explicit type annotations.
-
+[click]
 Most importantly, they help reduce the chance of type mismatches by keeping our types closely tied to our actual data structures.
 -->
 
@@ -231,15 +243,10 @@ class: text-center
 Have you used indexed types in your TypeScript projects?
 
 <!--
-We've covered a lot about indexed types in TypeScript. Now I'd love to hear from you!
+We've covered a lot about indexed types in TypeScript
 
-Have you used indexed types in your projects? Perhaps T[number] to extract array element types?
+Questions?
 
-What challenges have you faced when working with complex type structures?
-
-Do you have any interesting patterns or use cases to share?
-
-Let's discuss your experiences and insights!
 -->
 
 ---

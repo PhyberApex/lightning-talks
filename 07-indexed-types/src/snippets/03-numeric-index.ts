@@ -14,3 +14,5 @@ type ArrayLike<T> = {
 };
 
 type ArrayElement = ArrayLike<string>[number];    // string
+
+export {}
