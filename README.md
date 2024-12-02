@@ -1,4 +1,4 @@
-[![pages-build-deployment](https://github.com/PhyberApex/typescript-lightning-talks/actions/workflows/pages/pages-build-deployment/badge.svg)](https://phyberapex.github.io/typescript-lightning-talks/)
+[![Pages](https://github.com/PhyberApex/typescript-lightning-talks/actions/workflows/deploy-docs.yml/badge.svg)](https://phyberapex.github.io/typescript-lightning-talks/)
 
 # TypeScript Lightning Talks
 
