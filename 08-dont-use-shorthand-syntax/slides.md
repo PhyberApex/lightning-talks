@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://example.com/method-syntax-typescript.pdf
+download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/08-dont-use-shorthand-syntax/08-dont-use-shorthand-syntax.pdf
 info: |
   ## The Pitfall of Method Shorthand Syntax in TypeScript
   Why you should avoid method shorthand and prefer object property syntax
@@ -16,6 +16,10 @@ title: The Pitfall of Method Shorthand Syntax in TypeScript
 fonts:
   mono: Operator Mono
   local: Operator Mono
+  sans: DM Sans
+  strong: Rubik Iso
+  fast: Ubuntu
+  hand: Caveat
 ---
 
 # The Pitfall of Method Shorthand Syntax in TypeScript
