@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@9.14.4",
   "scripts": {
-    "build": "rimraf dist && pnpm -r run build && markdown-it README.md > dist/index.html",
+    "build": "rimraf dist && pnpm -r run build && tsx scripts/createIndex.ts",
     "dev": "esno scripts/picker.ts dev",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --fix"
@@ -24,8 +24,6 @@
     "esno": "^4.7.0",
     "execa": "^9.3.0",
     "fast-glob": "^3.3.2",
-    "markdown-it": "14.1.0",
-    "markdown-it-magic-link": "^0.1.4",
     "playwright-chromium": "^1.45.1",
     "pnpm": "^9.5.0",
     "prettier-plugin-slidev": "^1.0.5",
