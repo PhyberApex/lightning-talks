@@ -18,6 +18,7 @@
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
+            overflow-x: hidden;
         }
 
         .container {
@@ -32,6 +33,7 @@
             padding: 2rem 0;
             margin-bottom: 2rem;
             text-align: center;
+            opacity: 0;
         }
 
         h1 {
@@ -42,6 +44,11 @@
         .subtitle {
             color: rgba(255, 255, 255, 0.9);
             margin-top: 0.5rem;
+        }
+
+        .subtitle a {
+            color: white;
+            text-decoration: none;
         }
 
         .talks-grid {
@@ -56,12 +63,8 @@
             border-radius: 8px;
             padding: 1.5rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-
-        .talk-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            opacity: 0;
+            transform: translateY(30px);
         }
 
         .talk-title {
@@ -100,6 +103,8 @@
             }
         }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 <header>
@@ -114,5 +119,50 @@
         {{TALKS}}
     </div>
 </main>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate header
+    gsap.to("header", {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out"
+    });
+
+    // Animate cards
+    gsap.utils.toArray(".talk-card").forEach((card, index) => {
+        gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            delay: 0.2 * index,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: card,
+                start: "top bottom-=100",
+                toggleActions: "play none none reverse"
+            }
+        });
+    });
+
+    // Add hover animation for cards
+    gsap.utils.toArray(".talk-card").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            gsap.to(card, {
+                scale: 1.03,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+        card.addEventListener("mouseleave", () => {
+            gsap.to(card, {
+                scale: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+    });
+</script>
 </body>
 </html>
