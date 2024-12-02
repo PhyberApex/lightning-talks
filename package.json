@@ -4,6 +4,7 @@
   "packageManager": "pnpm@9.14.4",
   "scripts": {
     "build": "rimraf dist && pnpm -r run build && tsx scripts/createIndex.ts",
+    "build2": "tsx scripts/createIndex.ts",
     "dev": "esno scripts/picker.ts dev",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --fix"
