@@ -108,7 +108,7 @@ const htmlTemplate = `<!DOCTYPE html>
     <header>
         <div class="container">
             <h1>TypeScript Lightning Talks</h1>
-            <p class="subtitle">A series of lightning talks by @PhyberApex exploring TypeScript concepts</p>
+            <p class="subtitle">A series of lightning talks by <a href="https://phyberapex.de">@PhyberApex</a> exploring TypeScript concepts</p>
         </div>
     </header>
 
