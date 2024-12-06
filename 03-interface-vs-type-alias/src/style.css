@@ -9,7 +9,7 @@
 
 a:has(> code) {
   underline: none;
-  border: 0px !important;
+  border: 0 !important;
 }
 
 .monaco-editor {

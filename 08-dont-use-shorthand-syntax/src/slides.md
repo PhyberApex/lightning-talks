@@ -71,7 +71,7 @@ Let's start by looking at the two ways you can define methods on an object in Ty
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-<<< ./snippets/02-method-shorthand-problem.ts {monaco}
+<<< ./snippets/02-method-shorthand-problem.ts {monaco-run}
 
 </div>
 <div>
@@ -162,8 +162,6 @@ Before we wrap up, let's clear up some common misconceptions about this issue.
 -->
 
 ---
-layout: two-cols
----
 
 # Best Practices
 
@@ -172,30 +170,8 @@ layout: two-cols
 - Use object property syntax for method signatures
 - Avoid method shorthand syntax
 - Use ESLint rule: @typescript-eslint/method-signature-style
-- Be consistent across your codebase
 
 </v-clicks>
-
-::right::
-
-<div class="ml-4">
-
-<v-click>
-
-# Remember
-
-</v-click>
-
-<v-clicks>
-
-- Method shorthand is bivariant
-- Object property syntax is safer
-- Catches errors at compile-time
-- Leads to more robust code
-
-</v-clicks>
-
-</div>
 
 <!--
 Let's recap some best practices for dealing with method signatures in TypeScript.
@@ -203,13 +179,6 @@ Let's recap some best practices for dealing with method signatures in TypeScript
 [click] Always use object property syntax for your method signatures. It's safer and catches more errors.
 [click] Avoid method shorthand syntax, even though it might look more concise.
 [click] You can enforce this using the ESLint rule @typescript-eslint/method-signature-style.
-[click] Whatever approach you choose, be consistent across your entire codebase.
-
-[click] Now, let's summarize what we've learned:
-[click] Remember, method shorthand syntax is bivariant, which can lead to unexpected behavior.
-[click] Object property syntax is safer and more predictable.
-[click] It helps catch errors at compile-time rather than runtime.
-[click] By using object property syntax, you'll write more robust and reliable TypeScript code.
 -->
 
 ---

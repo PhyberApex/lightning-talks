@@ -7,5 +7,5 @@ interface SmallDog extends Dog {
 }
 
 const brian: Dog = {
-  barkAt(dog: SmallDog) {}, // Error: Type '(dog: SmallDog) => void' is not assignable to type '(dog: Dog) => void'.
+  barkAt(dog: SmallDog) {},
 };

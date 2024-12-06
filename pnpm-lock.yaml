@@ -102,6 +102,8 @@ importers:
 
   07-indexed-types/src: {}
 
+  08-dont-use-shorthand-syntax/src: {}
+
 packages:
 
   '@ampproject/remapping@2.3.0':
