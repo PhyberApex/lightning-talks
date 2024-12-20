@@ -58,7 +58,7 @@ importers:
         version: 1.49.1
       pnpm:
         specifier: ^9.5.0
-        version: 9.15.0
+        version: 9.15.1
       prettier-plugin-slidev:
         specifier: ^1.0.5
         version: 1.0.5(prettier@3.4.1)
@@ -2739,6 +2739,10 @@ packages:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
     hasBin: true
 
+  jiti@1.21.7:
+    resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
+    hasBin: true
+
   jiti@2.0.0-beta.3:
     resolution: {integrity: sha512-pmfRbVRs/7khFrSAYnSiJ8C0D5GvzkE4Ey2pAvUcJsw1ly/p+7ut27jbJrjY79BpAJQJ4gXYFtK6d1Aub+9baQ==}
     hasBin: true
@@ -3355,8 +3359,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.15.0:
-    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
+  pnpm@9.15.1:
+    resolution: {integrity: sha512-GstWXmGT7769p3JwKVBGkVDPErzHZCYudYfnHRncmKQj3/lTblfqRMSb33kP9pToPCe+X6oj1n4MAztYO+S/zw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -7319,7 +7323,7 @@ snapshots:
       debug: 4.4.0
       esbuild: 0.23.1
       jiti: 2.0.0-beta.3
-      jiti-v1: jiti@1.21.6
+      jiti-v1: jiti@1.21.7
       pathe: 1.1.2
       tsx: 4.19.2
     transitivePeerDependencies:
@@ -7420,6 +7424,8 @@ snapshots:
       '@pkgjs/parseargs': 0.11.0
 
   jiti@1.21.6: {}
+
+  jiti@1.21.7: {}
 
   jiti@2.0.0-beta.3: {}
 
@@ -8183,7 +8189,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.15.0: {}
+  pnpm@9.15.1: {}
 
   points-on-curve@0.2.0: {}
 
