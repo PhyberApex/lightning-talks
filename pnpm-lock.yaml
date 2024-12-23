@@ -13,7 +13,7 @@ importers:
         version: 2.27.3(@typescript-eslint/utils@8.8.0(eslint@9.17.0(jiti@2.4.2))(typescript@5.7.2))(@vue/compiler-sfc@3.5.12)(eslint-plugin-format@0.1.3(eslint@9.17.0(jiti@2.4.2)))(eslint@9.17.0(jiti@2.4.2))(prettier-plugin-slidev@1.0.5(prettier@3.4.1))(typescript@5.7.2)
       '@iconify/json':
         specifier: ^2.2.226
-        version: 2.2.284
+        version: 2.2.287
       '@slidev/cli':
         specifier: ^0.49.16
         version: 0.49.29(@babel/parser@7.26.3)(@nuxt/kit@3.13.2(rollup@4.23.0)(webpack-sources@3.2.3))(@types/markdown-it@14.1.2)(@types/node@22.10.2)(@vue/compiler-sfc@3.5.12)(playwright-chromium@1.49.1)(postcss@8.4.47)(rollup@4.23.0)(webpack-sources@3.2.3)
@@ -863,8 +863,8 @@ packages:
   '@iconify-json/svg-spinners@1.2.0':
     resolution: {integrity: sha512-0ov9JMKnqD4p/8aEzSTk+VKdmKZkRWHTqbzCEgKhL+yvpR8B1k3Ak8CO0bt6o+SBV/l8MOqUgFFgdt0xx8tLEw==}
 
-  '@iconify/json@2.2.284':
-    resolution: {integrity: sha512-s+DpI5CWkLwnRIwF5wg32OJBitqwD0PvVxVRj5WvBO6v8wLJvkxjOG0G/UmS8sWhwyMjfLsAK6NL71LPBNjsvw==}
+  '@iconify/json@2.2.287':
+    resolution: {integrity: sha512-JMph4En1aR9acnmlIl0c8ZAQy47G7pmHw/AWpTWAKAzqlOVubCxjWI9b1KzDr/BxF/f3BjXtnFBDz5eKWg9FSA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2896,10 +2896,6 @@ packages:
 
   jiti@1.21.6:
     resolution: {integrity: sha512-2yTgeWTWzMWkHu6Jp9NKgePDaYHbntiwvYuuJLbbN9vl7DC9DvXKOB2BC3ZZ92D3cvV/aflH0osDfwpHepQ53w==}
-    hasBin: true
-
-  jiti@1.21.7:
-    resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
 
   jiti@2.0.0-beta.3:
@@ -5006,7 +5002,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/json@2.2.284':
+  '@iconify/json@2.2.287':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
@@ -7609,7 +7605,7 @@ snapshots:
       debug: 4.3.7
       esbuild: 0.23.1
       jiti: 2.0.0-beta.3
-      jiti-v1: jiti@1.21.7
+      jiti-v1: jiti@1.21.6
       pathe: 1.1.2
       tsx: 4.19.2
     transitivePeerDependencies:
@@ -7721,8 +7717,6 @@ snapshots:
       '@pkgjs/parseargs': 0.11.0
 
   jiti@1.21.6: {}
-
-  jiti@1.21.7: {}
 
   jiti@2.0.0-beta.3: {}
 
