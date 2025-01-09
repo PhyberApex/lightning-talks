@@ -21,7 +21,7 @@
     "@types/seedrandom": "^3.0.8",
     "axios": "^1.7.4",
     "eslint": "^9.6.0",
-    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-format": "^1.0.0",
     "esno": "^4.7.0",
     "execa": "^9.3.0",
     "fast-glob": "^3.3.2",
