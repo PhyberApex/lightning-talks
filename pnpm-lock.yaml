@@ -13,7 +13,7 @@ importers:
         version: 4.1.0(@typescript-eslint/utils@8.21.0(eslint@9.18.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.18.0(jiti@2.4.2)))(eslint@9.18.0(jiti@2.4.2))(prettier-plugin-slidev@1.0.5(prettier@3.4.2))(typescript@5.7.3)
       '@iconify/json':
         specifier: ^2.2.226
-        version: 2.2.298
+        version: 2.2.300
       '@slidev/cli':
         specifier: ^0.50.0
         version: 0.50.0(@babel/parser@7.26.5)(@nuxt/kit@3.15.2(rollup@4.23.0))(@types/markdown-it@14.1.2)(@types/node@22.10.7)(@vue/compiler-sfc@3.5.13)(playwright-chromium@1.50.0)(postcss@8.5.1)(rollup@4.23.0)(tsx@4.19.2)
@@ -876,8 +876,8 @@ packages:
   '@iconify-json/svg-spinners@1.2.2':
     resolution: {integrity: sha512-DIErwfBWWzLfmAG2oQnbUOSqZhDxlXvr8941itMCrxQoMB0Hiv8Ww6Bln/zIgxwjDvSem2dKJtap+yKKwsB/2A==}
 
-  '@iconify/json@2.2.298':
-    resolution: {integrity: sha512-+/bcltP0KzlzWuKqtvUeTL2Gvf7SkW56Ghxw0PJOG+BSh6vF7ZQBe/1GMWH4MeIR+FUFSLAbGnLcyIdYRZqrLw==}
+  '@iconify/json@2.2.300':
+    resolution: {integrity: sha512-hbVkF+/xyElyV2nSB2SPcTU/kdbYqzT5IriiC/4o4Z46gFTIdXRoRMxIoESHOoWVNvOvZvEPmK1govycSZUmHQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -5242,7 +5242,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/json@2.2.298':
+  '@iconify/json@2.2.300':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
