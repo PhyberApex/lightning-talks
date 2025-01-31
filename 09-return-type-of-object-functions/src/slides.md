@@ -22,109 +22,63 @@ fonts:
   hand: Caveat
 ---
 
-# Return Types of Object Functions
-Understanding TypeScript's Object.keys and Object.entries
+# Return type of object functions
+Understanding TypeScript's Design Decisions
 
 <!--
-Welcome everyone! Today we'll dive into an interesting aspect of TypeScript's type system: why Object.keys and Object.entries have seemingly less specific return types than we might expect. This topic reveals important insights about TypeScript's structural typing system.
--->
-
----
-
-# The Challenge
-
-<v-clicks>
-
-- Developers expect more specific return types
-- `Object.keys` returns `string[]` instead of `Array<keyof T>`
-- `Object.entries` returns `[string, any][]` instead of typed tuples
-- TypeScript has good reasons for these choices
-
-</v-clicks>
-
-<!--
-Let's start by understanding what developers typically expect versus what TypeScript actually provides. Many developers are surprised by the behavior of these methods, but as we'll see, TypeScript's choices are well-reasoned and necessary for type safety.
+Welcome everyone! Today we're going to explore a common source of confusion in TypeScript: why Object.keys returns string[] instead of a more specific type. This design decision reveals some fascinating aspects of TypeScript's type system and JavaScript's runtime behavior.
 -->
 
 ---
 layout: two-cols
 ---
 
-# Structural Typing in Action
+# The Expectation vs Reality
 
 <v-clicks>
 
-- TypeScript uses structural typing
-- Extra properties are allowed
-- Return types can have unexpected properties
-- Type system must account for this behavior
+- We expect keys to match object properties
+- TypeScript returns `string[]` instead
+- Not a limitation, but a necessity
+- Reflects JavaScript's dynamic nature
 
 </v-clicks>
 
 ::right::
 
-<<< ./snippets/01-excess-properties.ts {monaco}
+<<< ./snippets/01-naive-expectation.ts {monaco}
 
 <!--
-Here's a fundamental example that demonstrates why TypeScript makes these choices. Let's look at how structural typing affects object types.
+Let's start with what most developers expect when using Object.keys. The natural assumption is that TypeScript would know exactly which keys exist on an object.
 
-The code on the right shows how TypeScript's structural typing system allows objects to have extra properties beyond their defined type. This behavior has important implications for how we handle object properties at the type level.
-
-Pay attention to how we can add an extra property 'name' even though it's not in the return type. This is perfectly valid in TypeScript's structural typing system.
+Looking at our example, you might think TypeScript could easily determine that Object.keys should return an array of "name" | "age". However, there are several reasons why this isn't possible, which we'll explore throughout this talk.
 -->
 
 ---
 layout: two-cols
 ---
 
-# Object.keys Behavior
+# Type Widening and Runtime Behavior
 
 <v-clicks>
 
-- Returns `string[]` by design
-- Cannot guarantee all properties are known
-- Must account for potential extra properties
-- Type safety requires broader return type
+- Objects can be modified at runtime
+- TypeScript types are compile-time only
+- JavaScript allows dynamic property addition
+- TypeScript must account for runtime changes
 
 </v-clicks>
 
 ::right::
 
-<<< ./snippets/02-object-keys-example.ts {monaco}
+<<< ./snippets/02-type-widening.ts {monaco}
 
 <!--
-Let's examine why Object.keys returns string[]. The example on the right demonstrates a common scenario where an object might have additional properties at runtime.
+One of the fundamental reasons for Object.keys returning string[] is JavaScript's dynamic nature.
 
-TypeScript must return string[] because it cannot guarantee that it knows all possible properties that might exist on the object at runtime. This is a direct consequence of the structural typing system we just discussed.
+In this example, we see how objects can be modified at runtime in JavaScript. Even though TypeScript gives us compile-time safety, it can't prevent runtime modifications in JavaScript.
 
-Notice how the object could have extra properties that aren't part of its static type definition. This is why a more specific return type would be unsafe.
--->
-
----
-layout: two-cols
----
-
-# Object.entries Behavior
-
-<v-clicks>
-
-- Returns `[string, any][]`
-- Similar reasoning to Object.keys
-- Values could be of any type
-- Type safety demands flexibility
-
-</v-clicks>
-
-::right::
-
-<<< ./snippets/03-object-entries-example.ts {monaco}
-
-<!--
-The same principles apply to Object.entries. Let's look at why it returns [string, any][] instead of a more specific tuple type.
-
-Just like with Object.keys, we can't guarantee what properties might exist at runtime. Additionally, we can't be certain about the types of values for any extra properties.
-
-This example shows why a more specific return type would be unsafe, as extra properties could have values of any type.
+This means that by the time Object.keys runs, the object might have completely different properties than what TypeScript knows about at compile time.
 -->
 
 ---
@@ -135,49 +89,46 @@ layout: two-cols
 
 <v-clicks>
 
-- Create wrapper functions
-- Use type assertions carefully
-- Document assumptions
-- Understand the trade-offs
+- Create wrapper functions for known objects
+- Use type assertions with caution
+- Consider Object.entries for value types
+- Document assumptions explicitly
 
 </v-clicks>
 
 ::right::
 
-<<< ./snippets/04-type-safe-alternative.ts {monaco-run}
+<<< ./snippets/03-safe-alternative.ts {monaco}
 
 <!--
-If you need more specific typing, you can create wrapper functions that make explicit guarantees about their input and output types.
+While Object.keys must return string[] for safety, we can create type-safe alternatives for specific use cases.
 
-However, be careful with this approach. You're essentially telling TypeScript "trust me, I know what I'm doing" with the type assertion.
+This example shows how to create a wrapper function that asserts the keys are of the expected type. However, use this pattern with caution - you're telling TypeScript to trust your runtime assumptions.
 
-This pattern should be used sparingly and only when you can guarantee that the runtime behavior matches your type assertions.
+This approach is useful when you have complete control over the object and can guarantee its shape won't change at runtime.
 -->
 
 ---
 
-# Best Practices
+# Why This Matters
 
 <v-clicks>
 
-- Accept TypeScript's design decisions
-- Understand structural typing implications
-- Use type assertions carefully
-- Create typed wrappers when necessary
-- Document assumptions and limitations
+- Type safety vs runtime flexibility
+- JavaScript's dynamic nature
+- TypeScript's design philosophy
+- Practical implications for developers
 
 </v-clicks>
 
 <!--
-Let's recap some best practices when working with Object.keys and Object.entries in TypeScript:
+Understanding why Object.keys returns string[] helps us appreciate TypeScript's design decisions.
 
-First, accept and understand why TypeScript made these design decisions. They're based on sound principles of type safety.
+This behavior reflects the balance TypeScript strikes between type safety and JavaScript's dynamic nature.
 
-Remember the implications of structural typing - it's a fundamental part of TypeScript's design.
+It reminds us that TypeScript's type system is about compile-time checks, not runtime guarantees.
 
-If you need more specific types, create wrapper functions, but use them carefully and document your assumptions.
-
-Most importantly, understand that TypeScript's current behavior is not a limitation - it's a feature that ensures type safety.
+Most importantly, it helps us write better, more type-safe code by understanding the limitations and working within them.
 -->
 
 ---
@@ -187,14 +138,14 @@ class: text-center
 
 # Questions?
 
-Have you encountered surprises with Object.keys or Object.entries in your TypeScript projects?
+How do you handle type-safe key enumeration in your TypeScript projects?
 
 <!--
-We've covered a lot about TypeScript's handling of object properties and its type system. I'm curious about your experiences!
+We've covered the technical reasons behind TypeScript's Object.keys behavior. I'm curious about your experiences!
 
-Have you encountered situations where Object.keys or Object.entries didn't behave as you initially expected? How did you handle those cases?
+How do you handle scenarios where you need type-safe key enumeration? Have you developed any patterns or utilities to make this easier?
 
-Maybe you've found creative solutions for working with object properties in TypeScript? I'd love to hear about them!
+Let's discuss your approaches and challenges when working with object keys in TypeScript.
 -->
 
 ---
@@ -204,14 +155,14 @@ class: text-center
 
 # Thank You!
 
-Remember: TypeScript's type system choices are designed to ensure type safety!
+Remember: TypeScript's type system is about compile-time safety in a dynamic world!
 
 <!--
-Thank you all for your attention today!
+Thank you for joining me in this exploration of TypeScript's type system!
 
-We've explored some fundamental aspects of TypeScript's type system and why certain design decisions were made. Understanding these principles helps us write better, more type-safe code.
+We've seen how TypeScript's design decisions around Object.keys reflect the reality of JavaScript's dynamic nature.
 
-Remember that TypeScript's choices around Object.keys and Object.entries are deliberate and important for maintaining type safety. While they might sometimes seem inconvenient, they protect us from subtle runtime errors.
+Understanding these fundamentals helps us write better TypeScript code and make more informed decisions about type safety.
 
-Keep exploring TypeScript's type system - there's always more to learn!
+Keep exploring TypeScript's type system - there's always more to discover!
 -->
