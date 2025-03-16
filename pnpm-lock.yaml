@@ -16,7 +16,7 @@ importers:
         version: 2.2.317
       '@slidev/cli':
         specifier: ^51.0.0
-        version: 51.3.0(@babel/parser@7.26.9)(@nuxt/kit@3.16.0)(@types/markdown-it@14.1.2)(@types/node@22.13.9)(@vue/compiler-sfc@3.5.13)(playwright-chromium@1.50.1)(postcss@8.5.3)(tsx@4.19.2)
+        version: 51.3.0(@babel/parser@7.26.9)(@nuxt/kit@3.16.0)(@types/markdown-it@14.1.2)(@types/node@22.13.9)(@vue/compiler-sfc@3.5.13)(playwright-chromium@1.51.0)(postcss@8.5.3)(tsx@4.19.2)
       '@slidev/client':
         specifier: ^51.0.0
         version: 51.4.0(@nuxt/kit@3.16.0)(@vue/compiler-sfc@3.5.13)(postcss@8.5.3)(vite@6.1.1(@types/node@22.13.9)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))
@@ -55,7 +55,7 @@ importers:
         version: 3.3.3
       playwright-chromium:
         specifier: ^1.45.1
-        version: 1.50.1
+        version: 1.51.0
       pnpm:
         specifier: ^10.0.0
         version: 10.6.3
@@ -3450,13 +3450,13 @@ packages:
   plantuml-encoder@1.4.0:
     resolution: {integrity: sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==}
 
-  playwright-chromium@1.50.1:
-    resolution: {integrity: sha512-0IKyCdwS5dDoGE3EqqfYtX24qF6+ef1UI6OLn2VUi2aHOgsI/KnESRm6/Ws0W78SrwhLi6lLlAL6fQISoO1cfw==}
+  playwright-chromium@1.51.0:
+    resolution: {integrity: sha512-vvTfgpnpy/OHzszS6jtRxvltC0J3x2Eko925FciIC0IN3KC1fg76veqV9AVWIasR+JTq9ZQh9V5Yqz8DPl38Lg==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright-core@1.50.1:
-    resolution: {integrity: sha512-ra9fsNWayuYumt+NiM069M6OkcRb1FZSK8bgi66AtpFoWkg2+y0bJSNmkFrWhMbEBbVKC/EruAHH3g0zmtwGmQ==}
+  playwright-core@1.51.0:
+    resolution: {integrity: sha512-x47yPE3Zwhlil7wlNU/iktF7t2r/URR3VLbH6EknJd/04Qc/PSJ0EY3CMXipmglLG+zyRxW6HNo2EGbKLHPWMg==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -5259,7 +5259,7 @@ snapshots:
 
   '@sindresorhus/merge-streams@4.0.0': {}
 
-  '@slidev/cli@51.3.0(@babel/parser@7.26.9)(@nuxt/kit@3.16.0)(@types/markdown-it@14.1.2)(@types/node@22.13.9)(@vue/compiler-sfc@3.5.13)(playwright-chromium@1.50.1)(postcss@8.5.3)(tsx@4.19.2)':
+  '@slidev/cli@51.3.0(@babel/parser@7.26.9)(@nuxt/kit@3.16.0)(@types/markdown-it@14.1.2)(@types/node@22.13.9)(@vue/compiler-sfc@3.5.13)(playwright-chromium@1.51.0)(postcss@8.5.3)(tsx@4.19.2)':
     dependencies:
       '@antfu/ni': 23.3.1
       '@antfu/utils': 9.1.0
@@ -5331,7 +5331,7 @@ snapshots:
       yaml: 2.7.0
       yargs: 17.7.2
     optionalDependencies:
-      playwright-chromium: 1.50.1
+      playwright-chromium: 1.51.0
     transitivePeerDependencies:
       - '@babel/parser'
       - '@nuxt/kit'
@@ -5428,11 +5428,11 @@ snapshots:
       '@slidev/rough-notation': 0.1.0
       '@slidev/types': 51.4.0(@nuxt/kit@3.16.0)(@vue/compiler-sfc@3.5.13)(postcss@8.5.3)(typescript@5.8.2)(vite@6.1.1(@types/node@22.13.9)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))
       '@typescript/ata': 0.9.7(typescript@5.8.2)
-      '@unhead/vue': 1.11.20(vue@3.5.13(typescript@5.8.2))
+      '@unhead/vue': 1.11.20(vue@3.5.13(typescript@5.7.3))
       '@unocss/reset': 66.0.0
-      '@vueuse/core': 13.0.0(vue@3.5.13(typescript@5.8.2))
-      '@vueuse/math': 13.0.0(vue@3.5.13(typescript@5.8.2))
-      '@vueuse/motion': 3.0.3(vue@3.5.13(typescript@5.8.2))
+      '@vueuse/core': 13.0.0(vue@3.5.13(typescript@5.7.3))
+      '@vueuse/math': 13.0.0(vue@3.5.13(typescript@5.7.3))
+      '@vueuse/motion': 3.0.3(vue@3.5.13(typescript@5.7.3))
       drauu: 0.4.3
       file-saver: 2.0.5
       floating-vue: 5.2.2(@nuxt/kit@3.16.0)(vue@3.5.13(typescript@5.8.2))
@@ -5446,7 +5446,7 @@ snapshots:
       prettier: 3.5.3
       recordrtc: 5.6.2
       shiki: 3.2.1
-      shiki-magic-move: 1.0.1(shiki@3.2.1)(vue@3.5.13(typescript@5.8.2))
+      shiki-magic-move: 1.0.1(shiki@3.2.1)(vue@3.5.13(typescript@5.7.3))
       typescript: 5.8.2
       unocss: 66.0.0(postcss@8.5.3)(vite@6.1.1(@types/node@22.13.9)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.8.2))
       vue: 3.5.13(typescript@5.8.2)
@@ -5925,7 +5925,7 @@ snapshots:
       unhead: 1.11.19
       vue: 3.5.13(typescript@5.8.2)
 
-  '@unhead/vue@1.11.20(vue@3.5.13(typescript@5.8.2))':
+  '@unhead/vue@1.11.20(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@unhead/schema': 1.11.20
       '@unhead/shared': 1.11.20
@@ -6269,11 +6269,11 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2))':
+  '@vueuse/core@13.0.0(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       '@types/web-bluetooth': 0.0.21
       '@vueuse/metadata': 13.0.0
-      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.8.2))
+      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.7.3))
       vue: 3.5.13(typescript@5.8.2)
 
   '@vueuse/math@12.7.0(typescript@5.8.2)':
@@ -6283,9 +6283,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vueuse/math@13.0.0(vue@3.5.13(typescript@5.8.2))':
+  '@vueuse/math@13.0.0(vue@3.5.13(typescript@5.7.3))':
     dependencies:
-      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.8.2))
+      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.7.3))
       vue: 3.5.13(typescript@5.8.2)
 
   '@vueuse/metadata@10.11.1': {}
@@ -6310,10 +6310,10 @@ snapshots:
       - magicast
       - supports-color
 
-  '@vueuse/motion@3.0.3(vue@3.5.13(typescript@5.8.2))':
+  '@vueuse/motion@3.0.3(vue@3.5.13(typescript@5.7.3))':
     dependencies:
-      '@vueuse/core': 13.0.0(vue@3.5.13(typescript@5.8.2))
-      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.8.2))
+      '@vueuse/core': 13.0.0(vue@3.5.13(typescript@5.7.3))
+      '@vueuse/shared': 13.0.0(vue@3.5.13(typescript@5.7.3))
       defu: 6.1.4
       framesync: 6.1.2
       popmotion: 11.0.5
@@ -6337,7 +6337,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vueuse/shared@13.0.0(vue@3.5.13(typescript@5.8.2))':
+  '@vueuse/shared@13.0.0(vue@3.5.13(typescript@5.7.3))':
     dependencies:
       vue: 3.5.13(typescript@5.8.2)
 
@@ -8587,11 +8587,11 @@ snapshots:
 
   plantuml-encoder@1.4.0: {}
 
-  playwright-chromium@1.50.1:
+  playwright-chromium@1.51.0:
     dependencies:
-      playwright-core: 1.50.1
+      playwright-core: 1.51.0
 
-  playwright-core@1.50.1: {}
+  playwright-core@1.51.0: {}
 
   pluralize@8.0.0: {}
 
@@ -8869,7 +8869,7 @@ snapshots:
       shiki: 3.0.0
       vue: 3.5.13(typescript@5.8.2)
 
-  shiki-magic-move@1.0.1(shiki@3.2.1)(vue@3.5.13(typescript@5.8.2)):
+  shiki-magic-move@1.0.1(shiki@3.2.1)(vue@3.5.13(typescript@5.7.3)):
     dependencies:
       diff-match-patch-es: 1.0.1
       ohash: 1.1.6
