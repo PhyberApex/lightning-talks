@@ -79,7 +79,7 @@ importers:
         version: 66.0.0(postcss@8.5.3)(vite@6.2.5(@types/node@22.14.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       vue-router:
         specifier: ^4.4.0
-        version: 4.5.0(vue@3.5.13(typescript@5.8.3))
+        version: 4.5.1(vue@3.5.13(typescript@5.8.3))
       vue-tsc:
         specifier: ^2.0.26
         version: 2.2.8(typescript@5.8.3)
@@ -4146,8 +4146,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  vue-router@4.5.0:
-    resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
+  vue-router@4.5.1:
+    resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -5189,7 +5189,7 @@ snapshots:
       typescript: 5.8.3
       unocss: 66.0.0(postcss@8.5.3)(vite@6.2.5(@types/node@22.14.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       vue: 3.5.13(typescript@5.8.3)
-      vue-router: 4.5.0(vue@3.5.13(typescript@5.8.3))
+      vue-router: 4.5.1(vue@3.5.13(typescript@5.8.3))
       yaml: 2.7.1
     transitivePeerDependencies:
       - '@nuxt/kit'
@@ -5269,7 +5269,7 @@ snapshots:
       vite-plugin-static-copy: 2.3.0(vite@6.2.5(@types/node@22.14.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.1))
       vite-plugin-vue-server-ref: 1.0.0(vite@6.2.5(@types/node@22.14.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       vue: 3.5.13(typescript@5.8.3)
-      vue-router: 4.5.0(vue@3.5.13(typescript@5.8.3))
+      vue-router: 4.5.1(vue@3.5.13(typescript@5.8.3))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@svgr/core'
@@ -8898,7 +8898,7 @@ snapshots:
     dependencies:
       vue: 3.5.13(typescript@5.8.3)
 
-  vue-router@4.5.0(vue@3.5.13(typescript@5.8.3)):
+  vue-router@4.5.1(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.8.3)
