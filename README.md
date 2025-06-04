@@ -15,5 +15,6 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 | Indexed Types                      | 2024-11-28 | [Live](https://phyberapex.github.io/typescript-lightning-talks/07-indexed-types/)                   |
 | Don't use shorthand syntax         | 2024-12-06 | [Live](https://phyberapex.github.io/typescript-lightning-talks/08-dont-use-shorthand-syntax/)       |
 | Return type of object functions    | 2025-01-31 | [Live](https://phyberapex.github.io/typescript-lightning-talks/09-return-type-of-object-functions/) |
+| Discriminated Unions & Exhaustiveness Checking | 2025-06-05 | [Live](https://phyberapex.github.io/typescript-lightning-talks/10-discriminated-unions/) |
 
 Overview of [all talks](https://phyberapex.github.io/typescript-lightning-talks/)
