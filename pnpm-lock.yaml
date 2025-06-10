@@ -108,8 +108,6 @@ importers:
 
   10-discriminated-unions/src: {}
 
-  10-the-hidden-this/src: {}
-
 packages:
 
   '@ampproject/remapping@2.3.0':
