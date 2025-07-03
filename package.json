@@ -13,7 +13,7 @@
     "@antfu/eslint-config": "^4.0.0",
     "@iconify/json": "^2.2.226",
     "@slidev/cli": "^51.0.0",
-    "@slidev/client": "^51.0.0",
+    "@slidev/client": "^52.0.0",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/theme-seriph": "0.25.0",
     "@types/node": "^22.0.0",
