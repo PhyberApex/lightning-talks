@@ -34,6 +34,6 @@
     "typescript": "^5.5.3",
     "unocss": "^66.0.0",
     "vue-router": "^4.4.0",
-    "vue-tsc": "^2.0.26"
+    "vue-tsc": "^3.0.0"
   }
 }
