@@ -16,7 +16,7 @@
     "@slidev/client": "^52.0.0",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/theme-seriph": "0.25.0",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.0.0",
     "@types/prompts": "^2.4.9",
     "@types/seedrandom": "^3.0.8",
     "axios": "^1.7.4",
