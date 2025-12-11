@@ -4,6 +4,7 @@ type Talk = {
     title: string,
     date: string,
     link: string,
+    tags: string[],
 }
 
 // Function to parse the markdown content
@@ -25,8 +26,9 @@ function parseMarkdown(markdownContent: string) {
             const title = row[0].trim();
             const date = row[1].trim();
             const link = row[2].trim().match(/\((.*?)\)/)?.[1] || '';
+            const tags = row[3].split(',').map(tag => tag.trim());
 
-            talks.push({ title, date, link });
+            talks.push({ title, date, link, tags });
         }
         currentIndex++;
     }
@@ -44,12 +46,21 @@ function formatDate(dateStr: string) {
     });
 }
 
+// Function to generate tags HTML
+function generateTagsHTML(tags: string[]) {
+    return tags
+        .filter(tag => tag.length > 0)
+        .map(tag => `<span class="talk-tag">${tag}</span>`)
+        .join('');
+}
+
 // Function to generate talk cards HTML
 function generateTalkCards(talks: Array<Talk>) {
     return talks.map(talk => `
             <div class="talk-card">
                 <h2 class="talk-title">${talk.title}</h2>
                 <div class="talk-date">${formatDate(talk.date)}</div>
+                <div class="talk-tags">${generateTagsHTML(talk.tags)}</div>
                 <a href="${talk.link}" class="view-talk">View Talk</a>
             </div>`
     ).join('\n');

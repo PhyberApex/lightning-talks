@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /typescript-lightning-talks/10-discriminated-unions/ --out ../../dist/10-discriminated-unions",
+    "export": "slidev export --per-slide --output ../10-discriminated-unions.pdf"
+  }
+}
