@@ -1,6 +1,6 @@
 [![Pages](https://github.com/PhyberApex/typescript-lightning-talks/actions/workflows/deploy-docs.yml/badge.svg)](https://phyberapex.github.io/typescript-lightning-talks/)
 
-# TypeScript Lightning Talks
+# Lightning Talks
 
 These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 
