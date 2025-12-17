@@ -110,6 +110,26 @@ importers:
 
   11-what-is-vue/src: {}
 
+  12-computed-getter-setter/src: {}
+
+  13-provide-inject/src: {}
+
+  14-slots-named-slots/src: {}
+
+  15-scoped-slots/src: {}
+
+  16-ref-vs-reactive/src: {}
+
+  17-composition-api-deep-dive/src: {}
+
+  18-template-refs/src: {}
+
+  19-vue-router/src: {}
+
+  20-pinia-vs-composable-state/src: {}
+
+  21-use-model-macro/src: {}
+
 packages:
 
   '@antfu/eslint-config@6.7.1':

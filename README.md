@@ -16,6 +16,6 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 | Don't use shorthand syntax                     | 2024-12-06 | [Live](https://phyberapex.github.io/typescript-lightning-talks/08-dont-use-shorthand-syntax/)       | TypeScript |
 | Return type of object functions                | 2025-01-31 | [Live](https://phyberapex.github.io/typescript-lightning-talks/09-return-type-of-object-functions/) | TypeScript |
 | Discriminated Unions & Exhaustiveness Checking | 2025-06-05 | [Live](https://phyberapex.github.io/typescript-lightning-talks/10-discriminated-unions/)            | TypeScript |
- | What is Vue                                    | 2025-12-24 | [Live](https://phyberapex.github.io/typescript-lightning-talks/10-discriminated-unions/)            | Vue        |
+ | What is Vue                                    | 2025-12-18 | [Live](https://phyberapex.github.io/typescript-lightning-talks/10-discriminated-unions/)            | Vue        |
 
 Overview of [all talks](https://phyberapex.github.io/typescript-lightning-talks/)
