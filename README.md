@@ -4,8 +4,8 @@
 
 These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 
-| Topic                                          | Date       | Live                                                                                                | Tags       |
-|------------------------------------------------|------------|-----------------------------------------------------------------------------------------------------|------------|
+| Topic                                          | Date       | Live                                                                                     | Tags       |
+|------------------------------------------------|------------|------------------------------------------------------------------------------------------|------------|
 | Branded Types                                  | 2024-08-01 | [Live](https://phyberapex.github.io/lightning-talks/01-branded-types/)                   | TypeScript |
 | The never Type                                 | 2024-08-08 | [Live](https://phyberapex.github.io/lightning-talks/02-the-never-type/)                  | TypeScript |
 | Interface vs Type Alias                        | 2024-08-22 | [Live](https://phyberapex.github.io/lightning-talks/03-interface-vs-type-alias/)         | TypeScript |
@@ -16,6 +16,6 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 | Don't use shorthand syntax                     | 2024-12-06 | [Live](https://phyberapex.github.io/lightning-talks/08-dont-use-shorthand-syntax/)       | TypeScript |
 | Return type of object functions                | 2025-01-31 | [Live](https://phyberapex.github.io/lightning-talks/09-return-type-of-object-functions/) | TypeScript |
 | Discriminated Unions & Exhaustiveness Checking | 2025-06-05 | [Live](https://phyberapex.github.io/lightning-talks/10-discriminated-unions/)            | TypeScript |
- | What is Vue                                    | 2025-12-18 | [Live](https://phyberapex.github.io/lightning-talks/10-discriminated-unions/)            | Vue        |
+ | What is Vue                                    | 2025-12-18 | [Live](https://phyberapex.github.io/lightning-talks/11-what-is-vue/)                     | Vue        |
 
 Overview of [all talks](https://phyberapex.github.io/lightning-talks/)
