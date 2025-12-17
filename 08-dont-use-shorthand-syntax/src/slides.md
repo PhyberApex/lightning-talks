@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/08-dont-use-shorthand-syntax/08-dont-use-shorthand-syntax.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/08-dont-use-shorthand-syntax/08-dont-use-shorthand-syntax.pdf
 info: |
   ## The Pitfall of Method Shorthand Syntax in TypeScript
   Why you should avoid method shorthand and prefer object property syntax

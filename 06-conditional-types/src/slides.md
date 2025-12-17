@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/06-conditional-types/06-conditional-types.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/06-conditional-types/06-conditional-types.pdf
 info: |
   ## Conditional Types in TypeScript
   Understanding and leveraging conditional types for more flexible type definitions

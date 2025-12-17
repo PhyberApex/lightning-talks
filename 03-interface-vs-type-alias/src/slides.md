@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/03-interface-vs-type-alias/03-interface-vs-type-alias.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/03-interface-vs-type-alias/03-interface-vs-type-alias.pdf
 info: |
   ## Type Aliases vs. Interfaces in TypeScript
   Why type aliases should be your go-to choice

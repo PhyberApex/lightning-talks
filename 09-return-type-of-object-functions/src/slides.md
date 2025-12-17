@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/09-return-type-of-object-functions/09-return-type-of-object-functions.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/09-return-type-of-object-functions/09-return-type-of-object-functions.pdf
 info: |
   ## Return Types of Object Functions in TypeScript
   Understanding why Object.keys and Object.entries return string[] and [string, any][]

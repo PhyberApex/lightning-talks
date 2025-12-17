@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/11-what-is-vue/11-what-is-vue.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/11-what-is-vue/11-what-is-vue.pdf
 info: |
   ## What is Vue?
   A quick introduction to Vue.js - The Progressive JavaScript Framework
