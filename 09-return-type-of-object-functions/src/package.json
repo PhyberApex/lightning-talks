@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /typescript-lightning-talks/09-return-type-of-object-functions/ --out ../../dist/09-return-type-of-object-functions",
+    "build": "slidev build --base /lightning-talks/09-return-type-of-object-functions/ --out ../../dist/09-return-type-of-object-functions",
     "export": "slidev export --per-slide --output ../09-return-type-of-object-functions.pdf"
   }
 }

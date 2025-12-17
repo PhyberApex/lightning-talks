@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build --base /typescript-lightning-talks/08-dont-use-shorthand-syntax/ --out ../../dist/08-dont-use-shorthand-syntax",
+    "build": "slidev build --base /lightning-talks/08-dont-use-shorthand-syntax/ --out ../../dist/08-dont-use-shorthand-syntax",
     "export": "slidev export --per-slide --output ../08-dont-use-shorthand-syntax.pdf"
   }
 }

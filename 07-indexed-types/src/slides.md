@@ -8,7 +8,7 @@ drawings:
   enabled: false
 mdc: true
 presenter: dev
-download: https://raw.githubusercontent.com/PhyberApex/typescript-lightning-talks/main/07-indexed-types/07-indexed-types.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/07-indexed-types/07-indexed-types.pdf
 info: |
   ## Indexed Types in TypeScript
   Understanding and leveraging indexed access types for type manipulation
