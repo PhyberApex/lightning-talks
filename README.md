@@ -17,5 +17,6 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 | Return type of object functions                | 2025-01-31 | [Live](https://phyberapex.github.io/lightning-talks/09-return-type-of-object-functions/) | TypeScript |
 | Discriminated Unions & Exhaustiveness Checking | 2025-06-05 | [Live](https://phyberapex.github.io/lightning-talks/10-discriminated-unions/)            | TypeScript |
  | What is Vue                                    | 2025-12-18 | [Live](https://phyberapex.github.io/lightning-talks/11-what-is-vue/)                     | Vue        |
+ | Computed with getter and setter                | 2026-01-15 | [Live](https://phyberapex.github.io/lightning-talks/12-computed-getter-setter/)          | Vue        |
 
 Overview of [all talks](https://phyberapex.github.io/lightning-talks/)

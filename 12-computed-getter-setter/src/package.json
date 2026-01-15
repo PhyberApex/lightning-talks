@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /lightning-talks/12-computed-getter-setter/ --out ../../dist/12-computed-getter-setter",
+    "export": "slidev export --per-slide --output ../12-computed-getter-setter.pdf"
+  }
+}
+
+
