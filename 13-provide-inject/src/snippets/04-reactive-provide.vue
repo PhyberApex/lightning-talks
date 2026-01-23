@@ -1,21 +1,19 @@
+<!-- App.vue -->
 <script setup lang="ts">
-import { provide, ref, type InjectionKey, type Ref } from 'vue'
+import { provide, ref } from 'vue'
+import { ThemeKey } from './injection-keys'
 
-export const CountKey: InjectionKey<Ref<number>> = Symbol('count')
+const theme = ref('dark')
+provide(ThemeKey, theme)
 
-const count = ref<number>(0)
-
-// Provide a reactive ref - changes propagate!
-provide(CountKey, count)
-
-function increment(): void {
-  count.value++
+function toggleTheme(): void {
+  theme.value = theme.value === 'dark' ? 'light' : 'dark'
 }
 </script>
 
 <template>
-  <button @click="increment">Count: {{ count }}</button>
-  <ChildComponent /> <!-- Will see count updates! -->
+  <button @click="toggleTheme">Theme: {{ theme }}</button>
+  <Layout /> <!-- Navigation will see updates! -->
 </template>
 
 
