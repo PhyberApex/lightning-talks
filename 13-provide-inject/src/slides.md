@@ -41,7 +41,6 @@ Vue's provide/inject system offers an elegant solution. Let's dive in!
 - Intermediate components don't use the data
 - Tedious and error-prone
 - Makes refactoring difficult
-- provide/inject to the rescue!
 
 </v-clicks>
 
@@ -54,6 +53,32 @@ Those intermediate components don't even use the data!
 
 It's tedious, clutters your code, and makes refactoring a nightmare.
 
+Let me show you what this looks like in code...
+-->
+
+---
+layout: two-cols
+---
+
+# Prop Drilling in Action
+
+::left::
+
+<<< ./snippets/00a-prop-drilling-top.vue vue
+
+::right::
+
+<<< ./snippets/00b-prop-drilling-bottom.vue vue
+
+<!--
+Look at this example - we have a theme that needs to go from App to Navigation.
+
+App defines the theme, but Navigation is the only one that actually uses it.
+
+Layout and Sidebar are just passing it through - they don't care about the theme at all!
+
+Imagine adding a new prop - you'd have to update every component in the chain.
+
 Vue's provide/inject solves this elegantly.
 -->
 
@@ -61,7 +86,7 @@ Vue's provide/inject solves this elegantly.
 layout: two-cols
 ---
 
-# Basic provide/inject
+# provide/inject to the Rescue!
 
 <v-clicks>
 
@@ -81,13 +106,15 @@ layout: two-cols
 </v-click>
 
 <!--
-The concept is simple: a parent component provides a value.
+Now let's see how provide/inject solves this!
 
-Any descendant - no matter how deep - can inject it.
+The parent component simply provides a value.
 
-No need to pass props through intermediate components.
+Any descendant - no matter how deep - can inject it directly.
 
-Here's a parent providing a theme value...
+Layout and Sidebar don't need to know about the theme at all!
+
+Here's the parent providing that same theme value...
 -->
 
 ---
@@ -97,13 +124,13 @@ Here's a parent providing a theme value...
 <<< ./snippets/02-child-inject.vue vue {monaco}
 
 <!--
-And here's how a child component injects it.
+And here's Navigation.vue - our deeply nested child that actually needs the theme.
 
 We call inject with the same key used in provide.
 
 The second argument is a default value in case nothing is provided.
 
-Simple and clean - no prop drilling!
+Layout and Sidebar don't exist in this code at all - no prop drilling!
 -->
 
 ---
@@ -131,11 +158,11 @@ This is the recommended approach for any serious Vue TypeScript project.
 <!--
 Important: provided values can be reactive!
 
-If you provide a ref, changes will propagate to all injecting components.
+Here App.vue provides a reactive theme ref with a toggle button.
+
+When the theme changes, Navigation.vue will automatically update - no props needed!
 
 This is incredibly powerful for sharing state without a full state management solution.
-
-Just remember: the injecting component receives the ref, not just its value.
 -->
 
 ---

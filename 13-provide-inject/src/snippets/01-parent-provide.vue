@@ -1,14 +1,13 @@
+<!-- App.vue -->
 <script setup lang="ts">
-import { provide } from 'vue'
+import { provide, ref } from 'vue'
 
-// Provide a value to all descendants
-provide('theme', 'dark')
+const theme = ref('dark')
+provide('theme', theme)
 </script>
 
 <template>
-  <div class="app">
-    <DeepNestedChild />
-  </div>
+  <Layout /> <!-- No :theme prop needed! -->
 </template>
 
 

@@ -1,14 +1,12 @@
+<!-- Navigation.vue - finally uses it! -->
 <script setup lang="ts">
-import { inject } from 'vue'
+import { inject, type Ref } from 'vue'
 
-// Inject the value (with optional default)
-const theme = inject<string>('theme', 'light')
+const theme = inject<Ref<string>>('theme')
 </script>
 
 <template>
-  <div :class="theme">
-    Current theme: {{ theme }}
-  </div>
+  <nav :class="theme">{{ theme }}</nav>
 </template>
 
 
