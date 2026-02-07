@@ -58,7 +58,7 @@ importers:
         version: 1.58.2
       pnpm:
         specifier: ^10.0.0
-        version: 10.28.2
+        version: 10.29.1
       prettier-plugin-slidev:
         specifier: ^1.0.5
         version: 1.0.5(prettier@3.8.1)
@@ -3323,8 +3323,8 @@ packages:
   pnpm-workspace-yaml@1.5.0:
     resolution: {integrity: sha512-PxdyJuFvq5B0qm3s9PaH/xOtSxrcvpBRr+BblhucpWjs8c79d4b7/cXhyY4AyHOHCnqklCYZTjfl0bT/mFVTRw==}
 
-  pnpm@10.28.2:
-    resolution: {integrity: sha512-QYcvA3rSL3NI47Heu69+hnz9RI8nJtnPdMCPGVB8MdLI56EVJbmD/rwt9kC1Q43uYCPrsfhO1DzC1lTSvDJiZA==}
+  pnpm@10.29.1:
+    resolution: {integrity: sha512-SNriM2NaZFdoowKNGVRcrMFohjnusfNzTkLW1rlxr78iqhrJr1Khc9nDogwVhXz6QA8ZmU15ovYm/Mc/zNqbvA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -7851,7 +7851,7 @@ snapshots:
     dependencies:
       yaml: 2.8.2
 
-  pnpm@10.28.2: {}
+  pnpm@10.29.1: {}
 
   points-on-curve@0.2.0: {}
 
