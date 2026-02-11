@@ -19,5 +19,6 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
  | What is Vue                                    | 2025-12-18 | [Live](https://phyberapex.github.io/lightning-talks/11-what-is-vue/)                     | Vue        |
  | Computed with getter and setter                | 2026-01-15 | [Live](https://phyberapex.github.io/lightning-talks/12-computed-getter-setter/)          | Vue        |
  | Provide Inject                                 | 2026-01-23 | [Live](https://phyberapex.github.io/lightning-talks/13-provide-inject/)                  | Vue        |
+ | Building an OpenClaw Co-Pilot                  | 2026-02-11 | [Live](https://phyberapex.github.io/lightning-talks/14-openclaw-copilot/)              | Automation, AI |
 
 Overview of [all talks](https://phyberapex.github.io/lightning-talks/)
