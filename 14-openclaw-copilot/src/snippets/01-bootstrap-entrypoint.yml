@@ -1,0 +1,9 @@
+# Override entrypoint so bootstrap runs before the gateway
+# (e.g. in docker-compose or Kubernetes)
+services:
+  gateway:
+    image: ghcr.io/openclaw/openclaw
+    entrypoint: ["/bin/bash", "/bootstrap/openclaw-bootstrap.sh"]
+    command: ["node", "dist/index.js", "gateway"]
+    volumes:
+      - ./bootstrap:/bootstrap:ro
