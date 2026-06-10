@@ -58,7 +58,7 @@ importers:
         version: 1.60.0
       pnpm:
         specifier: ^10.0.0
-        version: 10.34.1
+        version: 10.34.2
       prettier-plugin-slidev:
         specifier: ^1.0.5
         version: 1.0.5(prettier@3.8.1)
@@ -4028,8 +4028,8 @@ packages:
   pnpm-workspace-yaml@1.6.0:
     resolution: {integrity: sha512-uUy4dK3E11sp7nK+hnT7uAWfkBMe00KaUw8OG3NuNlYQoTk4sc9pcdIy1+XIP85v9Tvr02mK3JPaNNrP0QyRaw==}
 
-  pnpm@10.34.1:
-    resolution: {integrity: sha512-tY+95tymapKVOAIVgfZItFcLbKGbGOfL1/LAenskRUFVOI2s3wjyrzZ46IptH+BPnWCd8kv1FzWgYOoEGzdKtw==}
+  pnpm@10.34.2:
+    resolution: {integrity: sha512-mufj/kd8UrvOHdyKoZb/JD7UtI8c6qdFWCCt+npItfV+gX7S0g5fPCw2Rt/tujYFZ2k+U0Vy3M0lL7Lri3wETA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -4249,8 +4249,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  semver@7.8.2:
-    resolution: {integrity: sha512-c8jsqUZm3omBOI66G90z1Dyw5z622G8oLG+omfsHBJf3CWQTlOcwOjvOG6wtiNfW6anKm/eA39LMwMtMez2TiQ==}
+  semver@7.8.4:
+    resolution: {integrity: sha512-rUCObTnP32Q08R2uuIrt7r9PlEonuTmtuXYcW6s5kjdlj3xbnwe+21yXptAUYcMAABLkYYTtnmzb3w3EDZfueA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -6412,7 +6412,7 @@ snapshots:
       eslint: 9.39.4(jiti@2.7.0)
       json-stable-stringify-without-jsonify: 1.0.1
       lodash.merge: 4.6.2
-      semver: 7.8.2
+      semver: 7.8.4
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6459,7 +6459,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.56.1
       debug: 4.4.3
       minimatch: 10.2.5
-      semver: 7.8.2
+      semver: 7.8.4
       tinyglobby: 0.2.17
       ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -9208,7 +9208,7 @@ snapshots:
     dependencies:
       yaml: 2.9.0
 
-  pnpm@10.34.1: {}
+  pnpm@10.34.2: {}
 
   points-on-curve@0.2.0: {}
 
@@ -9429,7 +9429,7 @@ snapshots:
 
   semver@7.8.1: {}
 
-  semver@7.8.2: {}
+  semver@7.8.4: {}
 
   setimmediate@1.0.5: {}
 
