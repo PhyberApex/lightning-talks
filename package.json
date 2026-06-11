@@ -33,7 +33,7 @@
     "seedrandom": "^3.0.5",
     "typescript": "^5.5.3",
     "unocss": "^66.0.0",
-    "vue-router": "^4.4.0",
+    "vue-router": "^5.0.0",
     "vue-tsc": "^3.0.0"
   }
 }
