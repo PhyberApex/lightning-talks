@@ -20,7 +20,7 @@
     "@types/prompts": "^2.4.9",
     "@types/seedrandom": "^3.0.8",
     "axios": "^1.7.4",
-    "eslint": "^9.6.0",
+    "eslint": "^10.0.0",
     "eslint-plugin-format": "^1.0.0",
     "esno": "^4.7.0",
     "execa": "^9.3.0",
