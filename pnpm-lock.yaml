@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^9.0.0
-        version: 9.1.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.62.1(typescript@5.9.3))(@typescript-eslint/utils@8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@vue/compiler-sfc@3.5.35)(eslint-plugin-format@1.5.0(eslint@10.6.0(jiti@2.7.0)))(eslint@10.6.0(jiti@2.7.0))(prettier-plugin-slidev@1.0.5(prettier@3.8.1))(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
+        version: 9.1.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.62.1(typescript@5.9.3))(@typescript-eslint/utils@8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@vue/compiler-sfc@3.5.35)(eslint-plugin-format@2.0.1(eslint@10.6.0(jiti@2.7.0)))(eslint@10.6.0(jiti@2.7.0))(prettier-plugin-slidev@1.0.5(prettier@3.8.1))(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)
       '@iconify/json':
         specifier: ^2.2.226
         version: 2.2.493
@@ -42,8 +42,8 @@ importers:
         specifier: ^10.0.0
         version: 10.6.0(jiti@2.7.0)
       eslint-plugin-format:
-        specifier: ^1.0.0
-        version: 1.5.0(eslint@10.6.0(jiti@2.7.0))
+        specifier: ^2.0.0
+        version: 2.0.1(eslint@10.6.0(jiti@2.7.0))
       esno:
         specifier: ^4.7.0
         version: 4.8.0
@@ -1723,12 +1723,6 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4 <6.0.0'
 
-  '@typescript-eslint/tsconfig-utils@8.57.1':
-    resolution: {integrity: sha512-0lgOZB8cl19fHO4eI46YUx2EceQqhgkPSuCGLlGi79L2jwYY1cxeYc1Nae8Aw1xjgW3PKVDLlr3YJ6Bxx8HkWg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-    peerDependencies:
-      typescript: '>=4.8.4 <6.0.0'
-
   '@typescript-eslint/tsconfig-utils@8.62.1':
     resolution: {integrity: sha512-xadytJqX9vJVQ2fdQjkcIVigwaOJNWkpjdLt6cEQ+xPnrI1fkp+/jZE/I97k9KUjqtpd25i0HeyZf3T6dutv2g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2754,8 +2748,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-format@1.5.0:
-    resolution: {integrity: sha512-jaeOKrxs79Nn6rMkLycPkLHvBVKcgsFG+RqNXb6W9iS9y2Q0NYGhFTLcDUdp5mf01X99wEkjtX2O8cumM7lNMQ==}
+  eslint-plugin-format@2.0.1:
+    resolution: {integrity: sha512-0BA65p5DAiuKtx5MmMJfPk9WaTjoHHbyVW7ZXRhaZoA1fdiMHhay9QRiDL2wr0hJWZxdF7CRThOK/70VUKVg2g==}
     peerDependencies:
       eslint: ^8.40.0 || ^9.0.0 || ^10.0.0
 
@@ -4771,7 +4765,7 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@9.1.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.62.1(typescript@5.9.3))(@typescript-eslint/utils@8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@vue/compiler-sfc@3.5.35)(eslint-plugin-format@1.5.0(eslint@10.6.0(jiti@2.7.0)))(eslint@10.6.0(jiti@2.7.0))(prettier-plugin-slidev@1.0.5(prettier@3.8.1))(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)':
+  '@antfu/eslint-config@9.1.0(@typescript-eslint/rule-tester@8.56.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@typescript-eslint/typescript-estree@8.62.1(typescript@5.9.3))(@typescript-eslint/utils@8.62.1(eslint@10.6.0(jiti@2.7.0))(typescript@5.9.3))(@vue/compiler-sfc@3.5.35)(eslint-plugin-format@2.0.1(eslint@10.6.0(jiti@2.7.0)))(eslint@10.6.0(jiti@2.7.0))(prettier-plugin-slidev@1.0.5(prettier@3.8.1))(ts-declaration-location@1.0.7(typescript@5.9.3))(typescript@5.9.3)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.6.0
@@ -4811,7 +4805,7 @@ snapshots:
       vue-eslint-parser: 10.4.1(eslint@10.6.0(jiti@2.7.0))
       yaml-eslint-parser: 2.0.0
     optionalDependencies:
-      eslint-plugin-format: 1.5.0(eslint@10.6.0(jiti@2.7.0))
+      eslint-plugin-format: 2.0.1(eslint@10.6.0(jiti@2.7.0))
       prettier-plugin-slidev: 1.0.5(prettier@3.8.1)
     transitivePeerDependencies:
       - '@eslint/json'
@@ -6323,8 +6317,8 @@ snapshots:
 
   '@typescript-eslint/project-service@8.56.1(typescript@5.9.3)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.57.1(typescript@5.9.3)
-      '@typescript-eslint/types': 8.57.1
+      '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@5.9.3)
+      '@typescript-eslint/types': 8.62.1
       debug: 4.4.3
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -6364,10 +6358,6 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.62.1
 
   '@typescript-eslint/tsconfig-utils@8.56.1(typescript@5.9.3)':
-    dependencies:
-      typescript: 5.9.3
-
-  '@typescript-eslint/tsconfig-utils@8.57.1(typescript@5.9.3)':
     dependencies:
       typescript: 5.9.3
 
@@ -7600,7 +7590,7 @@ snapshots:
       eslint: 10.6.0(jiti@2.7.0)
       eslint-compat-utils: 0.5.1(eslint@10.6.0(jiti@2.7.0))
 
-  eslint-plugin-format@1.5.0(eslint@10.6.0(jiti@2.7.0)):
+  eslint-plugin-format@2.0.1(eslint@10.6.0(jiti@2.7.0)):
     dependencies:
       '@dprint/formatter': 0.5.1
       '@dprint/markdown': 0.21.1
