@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.34.5",
+  "packageManager": "pnpm@11.17.0",
   "scripts": {
     "build": "rimraf dist && pnpm -r run build && pnpm run build:index",
     "build:index": "tsx scripts/createIndex.ts",
@@ -26,7 +26,7 @@
     "execa": "^10.0.0",
     "fast-glob": "^3.3.2",
     "playwright-chromium": "^1.45.1",
-    "pnpm": "^10.0.0",
+    "pnpm": "^11.0.0",
     "prettier-plugin-slidev": "^1.0.5",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
