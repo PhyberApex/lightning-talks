@@ -1,2 +1,5 @@
 packages:
   - '*/src'
+allowBuilds:
+  esbuild: true
+  playwright-chromium: true
