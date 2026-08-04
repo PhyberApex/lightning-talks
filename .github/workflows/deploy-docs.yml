@@ -38,6 +38,10 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
+    # force_orphan rewrites gh-pages, so concurrent deploys race on the push.
+    concurrency:
+      group: gh-pages
+      cancel-in-progress: false
     steps:
       - name: Download build artifacts
         uses: actions/download-artifact@v8
