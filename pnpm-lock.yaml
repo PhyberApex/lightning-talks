@@ -31,7 +31,7 @@ importers:
         version: 10.0.0
       pnpm:
         specifier: ^11.0.0
-        version: 11.17.0
+        version: 11.19.0
       prettier-plugin-slidev:
         specifier: ^1.0.5
         version: 1.0.5(prettier@3.8.1)
@@ -5480,8 +5480,8 @@ packages:
   pnpm-workspace-yaml@1.6.1:
     resolution: {integrity: sha512-yTeZntGWi8m9WNuhoVsP0DpFc4sC1U0+rr/qR6Zi9n2g3sxXY+JfccjXjjruNz96tM8I09yaJUA86doRnNLkbg==}
 
-  pnpm@11.17.0:
-    resolution: {integrity: sha512-zKPOozKtJUu4QUX5ZtGfSHlhUhA0b8kseaBH8joNezzKPDeS8AdrofGDHSd++88KkRmzGppg7Kf7PWIx8zHvcg==}
+  pnpm@11.19.0:
+    resolution: {integrity: sha512-eIHz7VkNRyxKlV4riLISF5ERYGbcyIy8o4SeybYPG7qm0syyIfqR2k4cZb7yvL43k2Wup6xTnHv4be3DobItzg==}
     engines: {node: '>=22.13'}
     hasBin: true
 
@@ -9765,7 +9765,7 @@ snapshots:
       '@vue/shared': 3.5.40
       estree-walker: 2.0.2
       magic-string: 0.30.21
-      postcss: 8.5.19
+      postcss: 8.5.25
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.39':
@@ -12884,7 +12884,7 @@ snapshots:
     dependencies:
       yaml: 2.9.0
 
-  pnpm@11.17.0: {}
+  pnpm@11.19.0: {}
 
   points-on-curve@0.2.0: {}
 
