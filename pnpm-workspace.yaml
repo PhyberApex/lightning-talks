@@ -1,5 +1,8 @@
 packages:
   - '*/src'
+shamefullyHoist: true
+ignoreWorkspaceRootCheck: true
+strictPeerDependencies: false
 allowBuilds:
   esbuild: true
   playwright-chromium: true
