@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const count = ref<number>(0)
 
@@ -11,6 +11,7 @@ function increment(): void {
 </script>
 
 <template>
-  <button @click="increment">{{ count }} ({{ doubled }})</button>
+  <button @click="increment">
+    {{ count }} ({{ doubled }})
+  </button>
 </template>
-

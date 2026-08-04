@@ -9,5 +9,3 @@ provide('theme', theme)
 <template>
   <Layout /> <!-- No :theme prop needed! -->
 </template>
-
-

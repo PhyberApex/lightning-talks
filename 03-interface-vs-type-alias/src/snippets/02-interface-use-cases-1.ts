@@ -1,11 +1,11 @@
 // Declaration merging
 interface Window {
-  customProperty: string;
+  customProperty: string
 }
 
 // Class implementation
 interface Printable {
-  print(): void;
+  print: () => void
 }
 
 class Document implements Printable {

@@ -1,6 +1,16 @@
+ignoreWorkspaceRootCheck: true
+shellEmulator: true
+
+trustPolicy: no-downgrade
+
+# Legacy transitives whose line predates npm provenance, so the trust policy
+# reads them as a downgrade from their provenance-signed newer releases.
+trustPolicyExclude:
+  - semver@6.3.1
+  - undici-types@6.21.0
+  - '@trickfilm400/rollup-plugin-off-main-thread@3.0.0-pre1'
 packages:
   - '*/src'
-ignoreWorkspaceRootCheck: true
 strictPeerDependencies: false
 allowBuilds:
   esbuild: true

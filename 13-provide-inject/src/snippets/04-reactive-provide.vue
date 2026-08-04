@@ -12,8 +12,8 @@ function toggleTheme(): void {
 </script>
 
 <template>
-  <button @click="toggleTheme">Theme: {{ theme }}</button>
+  <button @click="toggleTheme">
+    Theme: {{ theme }}
+  </button>
   <Layout /> <!-- Navigation will see updates! -->
 </template>
-
-

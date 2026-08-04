@@ -9,7 +9,7 @@
   "devDependencies": {
     "@slidev/cli": "^52.19.0",
     "@slidev/theme-seriph": "0.25.0",
-    "@slidev/types": "^52.0.0",
+    "@slidev/types": "^52.19.0",
     "playwright-chromium": "^1.45.1"
   }
 }

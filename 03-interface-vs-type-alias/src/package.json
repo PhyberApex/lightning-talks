@@ -10,7 +10,7 @@
     "@slidev/cli": "^52.19.0",
     "@slidev/client": "^52.19.0",
     "@slidev/theme-default": "^0.25.0",
-    "@slidev/types": "^52.0.0",
+    "@slidev/types": "^52.19.0",
     "@types/seedrandom": "^3.0.8",
     "axios": "^1.7.4",
     "playwright-chromium": "^1.45.1",

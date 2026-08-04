@@ -4,8 +4,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": false,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "./snippets"
+    "outDir": "./snippets",
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "**/*.md"

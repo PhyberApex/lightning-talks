@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useNav } from '@slidev/client'
+import seedrandom from 'seedrandom'
 /**
  * A new glow effect system powered by blured polygons
  *
@@ -11,24 +13,22 @@
  * - glowSeed: string | false - Seed for the stable random distribution (default: 'default')
  */
 import { computed, ref, watch } from 'vue'
-import { useNav } from '@slidev/client'
-import seedrandom from 'seedrandom'
 
 const { currentSlideRoute } = useNav()
 
 export type Range = [number, number]
 
-export type Distribution =
-  | 'full'
-  | 'top'
-  | 'bottom'
-  | 'left'
-  | 'right'
-  | 'top-left'
-  | 'top-right'
-  | 'bottom-left'
-  | 'bottom-right'
-  | 'center'
+export type Distribution
+  = | 'full'
+    | 'top'
+    | 'bottom'
+    | 'left'
+    | 'right'
+    | 'top-left'
+    | 'top-right'
+    | 'bottom-left'
+    | 'bottom-right'
+    | 'center'
 
 const frontmatter = computed(() => (currentSlideRoute.value.meta?.slide as any)?.frontmatter || {})
 const distribution = computed(() => (frontmatter.value.glow || 'full') as Distribution)

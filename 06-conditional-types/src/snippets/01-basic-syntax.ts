@@ -1,6 +1,6 @@
-type NumberOrString<T> = T extends number ? number : string;
+type NumberOrString<T> = T extends number ? number : string
 
-let num: NumberOrString<number> = 42;
-let str: NumberOrString<boolean> = "Hello";
+const num: NumberOrString<number> = 42
+const str: NumberOrString<boolean> = 'Hello'
 
-let error: NumberOrString<number> = "This will fail";
+const error: NumberOrString<number> = 'This will fail'

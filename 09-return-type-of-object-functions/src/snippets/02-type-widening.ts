@@ -1,6 +1,6 @@
 const obj = {
   x: 1,
-  y: 2
+  y: 2,
 }
 
 type T1 = typeof obj

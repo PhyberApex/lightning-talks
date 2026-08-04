@@ -1,10 +1,10 @@
-type User = {
-  id: number;
-  name: string;
-  password: string;
+interface User {
+  id: number
+  name: string
+  password: string
 }
 
-type Task = {
-  id: number;
-  name: string;
+interface Task {
+  id: number
+  name: string
 }

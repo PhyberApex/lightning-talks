@@ -3,7 +3,7 @@
 services:
   gateway:
     image: ghcr.io/openclaw/openclaw
-    entrypoint: ["/bin/bash", "/bootstrap/openclaw-bootstrap.sh"]
-    command: ["node", "dist/index.js", "gateway"]
+    entrypoint: [/bin/bash, /bootstrap/openclaw-bootstrap.sh]
+    command: [node, dist/index.js, gateway]
     volumes:
       - ./bootstrap:/bootstrap:ro

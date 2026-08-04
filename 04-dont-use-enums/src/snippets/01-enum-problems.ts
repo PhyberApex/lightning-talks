@@ -5,7 +5,7 @@ enum LogLevel {
 }
 
 function log(message: string, level: LogLevel) {
-  console.log(`[${level}] ${message}`);
+  console.log(`[${level}] ${message}`)
 }
 
-log('This works', LogLevel.DEBUG);
+log('This works', LogLevel.DEBUG)

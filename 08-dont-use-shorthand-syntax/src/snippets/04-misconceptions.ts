@@ -1,10 +1,10 @@
 interface Obj {
-  methodShorthand(param: string): void;
-  objectProperty: (param: string) => void;
+  methodShorthand: (param: string) => void
+  objectProperty: (param: string) => void
 }
 
 function functionDeclaration(param: string) {}
-const arrowFunction = (param: string) => {};
+function arrowFunction(param: string) {}
 
 const examples: Obj[] = [
   {
@@ -15,4 +15,4 @@ const examples: Obj[] = [
     methodShorthand: functionDeclaration,
     objectProperty: arrowFunction,
   },
-];
+]

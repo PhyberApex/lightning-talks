@@ -1,11 +1,11 @@
-type PizzaDiscriminated = {
+interface PizzaDiscriminated {
   result: 'success'
   id: number
   name: string
   toppings: string[]
 }
 
-type ErrorResponseDiscriminated = {
+interface ErrorResponseDiscriminated {
   result: 'error'
   error: string
   code: number
@@ -23,4 +23,4 @@ switch (response.result) {
   case 'error':
     console.log('API error:', response.error)
     break
-} 
+}

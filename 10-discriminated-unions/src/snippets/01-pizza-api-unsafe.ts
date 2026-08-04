@@ -1,10 +1,10 @@
-type Pizza = {
+interface Pizza {
   id: number
   name: string
   toppings: string[]
 }
 
-type ErrorResponse = {
+interface ErrorResponse {
   error: string
   code: number
 }

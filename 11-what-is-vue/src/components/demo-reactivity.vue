@@ -13,7 +13,11 @@ function decrement(): void {
 </script>
 
 <template>
-  <button @click="increment">Increase</button> <br />
-  <button @click="decrement">Decrease</button> <br />
+  <button @click="increment">
+    Increase
+  </button> <br>
+  <button @click="decrement">
+    Decrease
+  </button> <br>
   Count: {{ count }}
 </template>

@@ -1,9 +1,9 @@
 interface Dog {
-  barkAt(dog: Dog): void;
+  barkAt: (dog: Dog) => void
 }
 
 interface SmallDog extends Dog {
-  whimper: () => void;
+  whimper: () => void
 }
 
 const smallDog: SmallDog = {
@@ -12,10 +12,10 @@ const smallDog: SmallDog = {
 }
 
 const brian: Dog = {
-  barkAt(smallDog: SmallDog) { smallDog.whimper();  },
-};
+  barkAt(smallDog: SmallDog) { smallDog.whimper() },
+}
 
 const normalDog: Dog = {
   barkAt() {},
-};
-brian.barkAt(smallDog);
+}
+brian.barkAt(smallDog)

@@ -1,11 +1,11 @@
 interface User {
-  name: string;
-  age: number;
+  name: string
+  age: number
 }
 
 const user = {
-  name: "Alice",
-  age: 30
+  name: 'Alice',
+  age: 30,
 }
 
 // What we might expect:

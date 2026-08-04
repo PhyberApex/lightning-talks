@@ -7,7 +7,8 @@
     "build:index": "tsx scripts/createIndex.ts",
     "dev": "esno scripts/picker.ts dev",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint . --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^9.0.0",
@@ -17,12 +18,12 @@
     "eslint-plugin-format": "^2.0.0",
     "esno": "^4.7.0",
     "execa": "^10.0.0",
-    "pnpm": "^11.0.0",
+    "pnpm": "^11.19.0",
     "prettier-plugin-slidev": "^1.0.5",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
     "tsx": "^4.19.0",
-    "typescript": "^7.0.0",
+    "typescript": "^6.0.0",
     "vue-tsc": "^3.0.0"
   }
 }
