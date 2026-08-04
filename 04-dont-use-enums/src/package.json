@@ -5,5 +5,15 @@
     "dev": "tsc ./snippets/02-const-enum-pitfalls.ts -w & slidev",
     "build": "slidev build --base /lightning-talks/04-dont-use-enums/ --out ../../dist/04-dont-use-enums",
     "export": "slidev export --per-slide --output ../04-dont-use-enums.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.0",
+    "@slidev/client": "^52.19.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/types": "^52.0.0",
+    "@types/seedrandom": "^3.0.8",
+    "playwright-chromium": "^1.45.1",
+    "seedrandom": "^3.0.5",
+    "vue": "^3.5.0"
   }
 }

@@ -5,5 +5,15 @@
     "dev": "slidev",
     "build": "slidev build --base /lightning-talks/10-discriminated-unions/ --out ../../dist/10-discriminated-unions",
     "export": "slidev export --per-slide --output ../10-discriminated-unions.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.0",
+    "@slidev/client": "^52.19.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/types": "^52.0.0",
+    "@types/seedrandom": "^3.0.8",
+    "playwright-chromium": "^1.45.1",
+    "seedrandom": "^3.0.5",
+    "vue": "^3.5.0"
   }
 }

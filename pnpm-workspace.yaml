@@ -1,6 +1,5 @@
 packages:
   - '*/src'
-shamefullyHoist: true
 ignoreWorkspaceRootCheck: true
 strictPeerDependencies: false
 allowBuilds:

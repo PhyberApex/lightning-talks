@@ -5,7 +5,15 @@
     "dev": "slidev",
     "build": "slidev build --base /lightning-talks/12-computed-getter-setter/ --out ../../dist/12-computed-getter-setter",
     "export": "slidev export --per-slide --output ../12-computed-getter-setter.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.0",
+    "@slidev/client": "^52.19.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/types": "^52.0.0",
+    "@types/seedrandom": "^3.0.8",
+    "playwright-chromium": "^1.45.1",
+    "seedrandom": "^3.0.5",
+    "vue": "^3.5.0"
   }
 }
-
-

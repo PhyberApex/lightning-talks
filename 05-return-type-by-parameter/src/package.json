@@ -5,5 +5,15 @@
     "dev": "slidev",
     "build": "slidev build --base /lightning-talks/05-return-type-by-parameter/ --out ../../dist/05-return-type-by-parameter",
     "export": "slidev export --per-slide --output ../05-return-type-by-parameter.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.0",
+    "@slidev/client": "^52.19.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/types": "^52.0.0",
+    "@types/seedrandom": "^3.0.8",
+    "playwright-chromium": "^1.45.1",
+    "seedrandom": "^3.0.5",
+    "vue": "^3.5.0"
   }
 }

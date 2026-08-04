@@ -5,5 +5,11 @@
     "dev": "slidev",
     "build": "slidev build --base /lightning-talks/01-branded-types/ --out ../../dist/01-branded-types",
     "export": "slidev export --per-slide --output ../01-branded-types.pdf"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.19.0",
+    "@slidev/theme-seriph": "0.25.0",
+    "@slidev/types": "^52.0.0",
+    "playwright-chromium": "^1.45.1"
   }
 }
