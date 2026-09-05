@@ -1,0 +1,1 @@
+import{lt as e,ot as t}from"../monaco/bundled-types-Dyz1sQDP.js";function n(n,r){if(!r||r===`all`||r===`*`)return t(1,n+1);if(r===`none`)return[];let i=[];for(let e of r.split(/[,;]/g))if(!e.includes(`-`))i.push(+e);else{let[r,a]=e.split(`-`,2);i.push(...t(+r,a?+a+1:n+1))}return e(i).filter(e=>e<=n).sort((e,t)=>e-t)}export{n as t};
