@@ -1,0 +1,1 @@
+import{D as e,K as t,Y as n,w as r}from"../modules/shiki-BwSt-xNI.js";import{t as i}from"../_plugin-vue_export-helper-BDNMzG2s.js";var a={},o={class:`slidev-layout center h-full grid place-content-center`},s={class:`my-auto`};function c(i,a){return t(),e(`div`,o,[r(`div`,s,[n(i.$slots,`default`)])])}var l=i(a,[[`render`,c]]);export{l as t};
