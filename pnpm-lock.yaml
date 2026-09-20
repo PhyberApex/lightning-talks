@@ -60,8 +60,8 @@ importers:
         specifier: 0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       playwright-chromium:
         specifier: ^1.45.1
         version: 1.63.0
@@ -81,8 +81,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -108,8 +108,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -138,8 +138,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -165,8 +165,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -192,8 +192,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -219,8 +219,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -246,8 +246,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -273,8 +273,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -300,8 +300,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -327,8 +327,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -354,8 +354,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -381,8 +381,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -408,8 +408,8 @@ importers:
         specifier: ^0.25.0
         version: 0.25.0
       '@slidev/types':
-        specifier: ^52.19.0
-        version: 52.20.1(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+        specifier: ^53.0.0
+        version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
       '@types/seedrandom':
         specifier: ^3.0.8
         version: 3.0.8
@@ -1037,8 +1037,20 @@ packages:
   '@cacheable/utils@2.5.0':
     resolution: {integrity: sha512-buipgOVDkkPXNR5+xBpDw7Zk2n1EvU7qBJCNUcL7rhQ//kfpOXPAvQ511Os0vpLYJ1pZnvudNytkQt2hst3wqA==}
 
+  '@chevrotain/cst-dts-gen@11.1.2':
+    resolution: {integrity: sha512-XTsjvDVB5nDZBQB8o0o/0ozNelQtn2KrUVteIHSlPd2VAV2utEb6JzyCJaJ8tGxACR4RiBNWy5uYUHX2eji88Q==}
+
+  '@chevrotain/gast@11.1.2':
+    resolution: {integrity: sha512-Z9zfXR5jNZb1Hlsd/p+4XWeUFugrHirq36bKzPWDSIacV+GPSVXdk+ahVWZTwjhNwofAWg/sZg58fyucKSQx5g==}
+
+  '@chevrotain/regexp-to-ast@11.1.2':
+    resolution: {integrity: sha512-nMU3Uj8naWer7xpZTYJdxbAs6RIv/dxYzkYU8GSwgUtcAAlzjcPfX1w+RKRcYG8POlzMeayOQ/znfwxEGo5ulw==}
+
   '@chevrotain/types@11.1.2':
     resolution: {integrity: sha512-U+HFai5+zmJCkK86QsaJtoITlboZHBqrVketcO2ROv865xfCMSFpELQoz1GkX5GzME8pTa+3kbKrZHQtI0gdbw==}
+
+  '@chevrotain/utils@11.1.2':
+    resolution: {integrity: sha512-4mudFAQ6H+MqBTfqLmU7G1ZwRzCLfJEooL/fsF6rCX5eePMbGhoy5n4g+G4vlh2muDcsCTJtL+uKbOzWxs5LHA==}
 
   '@clack/core@1.4.3':
     resolution: {integrity: sha512-/kr3UWNtdJfxZtPgDqUOmG2pvwlmcLGheex5yiZKdwbzZJxhV+HMNR9QNmyY5cGwTNV6LrR7Jtp+KjhUAP1qBQ==}
@@ -1445,6 +1457,10 @@ packages:
 
   '@mermaid-js/parser@1.2.1':
     resolution: {integrity: sha512-n12NohV3mrUyUL2o93IgG/ifeW9FTyeJn3zDxkhwa8MJ9Fxg3HQMlA3RiGmD/3UnJvheztkjjQAjA2T4LmUcpw==}
+
+  '@mermaid-js/parser@2.0.0':
+    resolution: {integrity: sha512-K8BeapFUfrfxbRAUQAG5oBOCwo1+bNWzaVnPxTCutkfrTBn6T/j91FIhqxWJ32SUeQ9T3iy1zcmPZ5ROZEvDrg==}
+    engines: {node: '>=22.12.0'}
 
   '@modelcontextprotocol/core@2.0.0':
     resolution: {integrity: sha512-pJCEwGG7Lfr/+PQp9ZTwKXNeO5wzbfKL7H3MYpCorM4oFBoQrdjnBgEoqG+RjhsvS1FKrDbKux+M1HhlnGWqcA==}
@@ -2166,6 +2182,10 @@ packages:
   '@slidev/types@52.20.1':
     resolution: {integrity: sha512-1ErNS0PDqszzdPAXGHgcgWgL7hbhfJkCULdMmWRWbkhXGZvyo0hZXtPRV9B/qGpfw6GwbqxnuZ6UGfQ6bJ/leA==}
     engines: {node: '>=20.12.0'}
+
+  '@slidev/types@53.0.0':
+    resolution: {integrity: sha512-Iyr37tIJAC65lTLgFim+5c5iqNAaj7NfkcFUzu8yqxY9SAeuFyk7rB8MBc/VC4JVpPVaahVO+35EX+wPY6BAeg==}
+    engines: {node: '>=22.12.0'}
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
@@ -2912,6 +2932,9 @@ packages:
   character-entities@2.0.2:
     resolution: {integrity: sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==}
 
+  chevrotain@11.1.2:
+    resolution: {integrity: sha512-opLQzEVriiH1uUQ4Kctsd49bRoFDXGGSC4GUqj7pGyxM3RehRhvTlZJc1FL/Flew2p5uwxa1tUDWKzI4wNM8pg==}
+
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
@@ -3375,6 +3398,9 @@ packages:
 
   electron-to-chromium@1.5.402:
     resolution: {integrity: sha512-/oOpMaPT6Yg+6/1XQhyIPlzgj7Ye9zf+nNM2Uh6OcE2G2oNptWazFa+qB2Pdqqbsc9KnIDzgAntoYN0dbwOXwA==}
+
+  elkjs@0.9.3:
+    resolution: {integrity: sha512-f/ZeWvW/BCXbhGEf1Ujp29EASo/lk1FDnETgNKwJrsVvGZhUWCZyg3xLJjAsxfOmt8KjswHmI5EwCQcPMpOYhQ==}
 
   emoji-regex@10.6.0:
     resolution: {integrity: sha512-toUI84YS5YmxW219erniWD0CIVOo46xGKColeNQRgOzDorgBi1v4D71/OFzgD9GO2UGKIv1C3Sp8DAn0+j5w7A==}
@@ -4519,6 +4545,9 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
+  lodash-es@4.17.23:
+    resolution: {integrity: sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==}
+
   lodash-es@4.18.1:
     resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
@@ -4658,6 +4687,10 @@ packages:
 
   mermaid@11.17.2:
     resolution: {integrity: sha512-V6K3C8EBdEsPFZXSKMJe6ppQOENxuHARr9GvHX4hh47lAbhMRD9qf4oEK7LoaRQxULMa80/qt5gHO73aCleBBg==}
+
+  mermaid@12.0.0:
+    resolution: {integrity: sha512-/wQXC9iBxoGV8p3erbvaXs9h77VyLDBH6GdayVjj3hEcSQhFU4N1WUhUppotCEqlIxI2pRMwjwBSwTB1MfZBgQ==}
+    engines: {node: '>=22.12.0'}
 
   micromark-core-commonmark@2.0.3:
     resolution: {integrity: sha512-RDBrHEMSxVFLg6xvnXmb1Ayr2WzLAWjeSATAoxwKYJV94TeNavgoIdA0a9ytzDSVzBy2YKFK+emCPOEibLeCrg==}
@@ -7024,7 +7057,22 @@ snapshots:
       hashery: 1.5.1
       keyv: 5.6.0
 
+  '@chevrotain/cst-dts-gen@11.1.2':
+    dependencies:
+      '@chevrotain/gast': 11.1.2
+      '@chevrotain/types': 11.1.2
+      lodash-es: 4.17.23
+
+  '@chevrotain/gast@11.1.2':
+    dependencies:
+      '@chevrotain/types': 11.1.2
+      lodash-es: 4.17.23
+
+  '@chevrotain/regexp-to-ast@11.1.2': {}
+
   '@chevrotain/types@11.1.2': {}
+
+  '@chevrotain/utils@11.1.2': {}
 
   '@clack/core@1.4.3':
     dependencies:
@@ -7383,6 +7431,10 @@ snapshots:
   '@mdit-vue/types@3.0.2': {}
 
   '@mermaid-js/parser@1.2.1':
+    dependencies:
+      '@chevrotain/types': 11.1.2
+
+  '@mermaid-js/parser@2.0.0':
     dependencies:
       '@chevrotain/types': 11.1.2
 
@@ -8163,6 +8215,56 @@ snapshots:
       - vite
       - webpack
 
+  '@slidev/types@53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.43)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))':
+    dependencies:
+      '@antfu/utils': 9.3.0
+      '@shikijs/markdown-it': 4.4.3(markdown-it-async@2.2.0)
+      '@vitejs/plugin-vue': 6.0.9(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.43(typescript@6.0.3))
+      '@vitejs/plugin-vue-jsx': 5.1.6(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.43(typescript@6.0.3))
+      katex: 0.18.7
+      mermaid: 12.0.0
+      monaco-editor: 0.56.0
+      shiki: 4.4.3
+      unocss: 66.10.5(cac@7.0.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+      unplugin-icons: 24.0.0(@vue/compiler-sfc@3.5.43)(esbuild@0.28.2)(rolldown@1.2.9)(rollup@4.62.2)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+      unplugin-vue-markdown: 32.1.1(esbuild@0.28.2)(rolldown@1.2.9)(rollup@4.62.2)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+      vite-plugin-inspect: 12.0.2(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+      vite-plugin-remote-assets: 2.1.0(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+      vite-plugin-static-copy: 4.1.1(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))
+      vite-plugin-vue-server-ref: 1.0.0(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.43(typescript@6.0.3))
+      vue: 3.5.43(typescript@6.0.3)
+      vue-router: 5.3.1(@vue/compiler-sfc@3.5.43)(esbuild@0.28.2)(rolldown@1.2.9)(rollup@4.62.2)(vite@8.3.0(@types/node@24.13.5)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.43(typescript@6.0.3))
+    transitivePeerDependencies:
+      - '@devframes/agentic'
+      - '@farmfe/core'
+      - '@modelcontextprotocol/client'
+      - '@modelcontextprotocol/server'
+      - '@nuxt/kit'
+      - '@pinia/colada'
+      - '@rspack/core'
+      - '@svgr/core'
+      - '@svgx/core'
+      - '@unocss/astro'
+      - '@unocss/postcss'
+      - '@unocss/webpack'
+      - '@vue/compiler-sfc'
+      - '@vue/compiler-vapor'
+      - bun-types-no-globals
+      - cac
+      - esbuild
+      - markdown-it-async
+      - ocache
+      - pinia
+      - rolldown
+      - rollup
+      - srvx
+      - supports-color
+      - svelte
+      - typescript
+      - unloader
+      - vite
+      - webpack
+
   '@standard-schema/spec@1.1.0': {}
 
   '@stylistic/eslint-plugin@5.10.0(eslint@10.10.0(jiti@2.7.0))':
@@ -8731,7 +8833,7 @@ snapshots:
 
   '@vue-macros/common@3.1.4(vue@3.5.43(typescript@6.0.3))':
     dependencies:
-      '@vue/compiler-sfc': 3.5.42
+      '@vue/compiler-sfc': 3.5.43
       ast-kit: 2.2.0
       local-pkg: 1.2.1
       magic-string-ast: 1.0.3
@@ -9171,6 +9273,15 @@ snapshots:
   character-entities-legacy@3.0.0: {}
 
   character-entities@2.0.2: {}
+
+  chevrotain@11.1.2:
+    dependencies:
+      '@chevrotain/cst-dts-gen': 11.1.2
+      '@chevrotain/gast': 11.1.2
+      '@chevrotain/regexp-to-ast': 11.1.2
+      '@chevrotain/types': 11.1.2
+      '@chevrotain/utils': 11.1.2
+      lodash-es: 4.17.23
 
   chokidar@3.6.0:
     dependencies:
@@ -9648,6 +9759,8 @@ snapshots:
     optional: true
 
   electron-to-chromium@1.5.402: {}
+
+  elkjs@0.9.3: {}
 
   emoji-regex@10.6.0: {}
 
@@ -10926,6 +11039,8 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
+  lodash-es@4.17.23: {}
+
   lodash-es@4.18.1: {}
 
   lodash.debounce@4.0.8:
@@ -11182,6 +11297,32 @@ snapshots:
       dompurify: 3.4.14
       es-toolkit: 1.51.0
       fastdom: 1.0.12
+      katex: 0.16.47
+      khroma: 2.1.0
+      marked: 16.4.2
+      roughjs: 4.6.6
+      stylis: 4.4.0
+      ts-dedent: 2.3.0
+      uuid: 14.0.2
+
+  mermaid@12.0.0:
+    dependencies:
+      '@braintree/sanitize-url': 7.1.2
+      '@iconify/utils': 3.1.7
+      '@mermaid-js/parser': 2.0.0
+      '@types/d3': 7.4.3
+      '@upsetjs/venn.js': 2.0.0
+      chevrotain: 11.1.2
+      cytoscape: 3.34.2
+      cytoscape-cose-bilkent: 4.1.0(cytoscape@3.34.2)
+      cytoscape-fcose: 2.2.0(cytoscape@3.34.2)
+      d3: 7.9.0
+      d3-sankey: 0.12.3
+      dagre-d3-es: 7.0.14
+      dayjs: 1.11.23
+      dompurify: 3.4.14
+      elkjs: 0.9.3
+      es-toolkit: 1.51.0
       katex: 0.16.47
       khroma: 2.1.0
       marked: 16.4.2
