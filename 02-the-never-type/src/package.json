@@ -9,7 +9,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.509",
     "@slidev/cli": "^52.19.0",
-    "@slidev/client": "^52.19.0",
+    "@slidev/client": "^53.0.0",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/types": "^53.0.0",
     "@types/seedrandom": "^3.0.8",
