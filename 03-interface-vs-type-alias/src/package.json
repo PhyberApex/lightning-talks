@@ -7,7 +7,7 @@
     "export": "slidev export --per-slide --output ../03-interface-vs-type-alias.pdf"
   },
   "devDependencies": {
-    "@slidev/cli": "^52.19.0",
+    "@slidev/cli": "^53.0.0",
     "@slidev/client": "^53.0.0",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/types": "^53.0.0",
