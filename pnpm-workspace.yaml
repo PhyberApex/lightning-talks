@@ -17,6 +17,13 @@ packages:
   - '*/src'
   - 'packages/*'
 
+# @shikijs/vitepress-twoslash (pulled in by @slidev/cli for `twoslash` code
+# blocks) patches floating-vue's VMenu through `components.Popper`, which
+# floating-vue 5.4 no longer exposes, so every page load logs
+# "Failed to patch FloatingVue". See https://github.com/shikijs/shiki/issues/1329
+overrides:
+  floating-vue: 5.3.0
+
 allowBuilds:
   esbuild: true
   playwright-chromium: true
