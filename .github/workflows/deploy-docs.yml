@@ -26,6 +26,10 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Lint
         run: pnpm run lint
+      - name: Test
+        run: pnpm run test
+      - name: Check README talks table
+        run: pnpm run readme:check
       - name: Build documentation
         run: pnpm run build
       - name: Upload build artifacts

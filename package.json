@@ -5,7 +5,10 @@
   "scripts": {
     "build": "rimraf dist && pnpm -r run build && pnpm run build:index",
     "build:index": "tsx scripts/createIndex.ts",
+    "readme": "tsx scripts/updateReadme.ts",
+    "readme:check": "tsx scripts/updateReadme.ts --check",
     "dev": "esno scripts/picker.ts dev",
+    "test": "vitest run",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -25,6 +28,7 @@
     "rimraf": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:",
+    "vitest": "catalog:",
     "vue-tsc": "catalog:"
   }
 }
