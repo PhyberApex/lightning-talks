@@ -27,6 +27,7 @@ jobs:
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: playwright-${{ runner.os }}-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Lint
@@ -37,6 +38,9 @@ jobs:
         run: pnpm run readme:check
       - name: Build documentation
         run: pnpm run build
+      - name: Install Chromium system dependencies
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: pnpm --filter ./01-branded-types/src exec playwright install-deps chromium
       - name: Export PDFs
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         run: pnpm run export --all
