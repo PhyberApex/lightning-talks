@@ -1,5 +1,5 @@
 ignoreWorkspaceRootCheck: true
-shellEmulator: true
+minimumReleaseAgeExcludePrune: true
 
 trustPolicy: no-downgrade
 
@@ -9,9 +9,13 @@ trustPolicyExclude:
   - semver@6.3.1
   - undici-types@6.21.0
   - '@trickfilm400/rollup-plugin-off-main-thread@3.0.0-pre1'
+
+strictPeerDependencies: false
+shellEmulator: true
+
 packages:
   - '*/src'
-strictPeerDependencies: false
+
 allowBuilds:
   esbuild: true
   playwright-chromium: true
