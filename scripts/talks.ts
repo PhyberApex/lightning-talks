@@ -1,7 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-export const SITE_URL = 'https://phyberapex.github.io/lightning-talks/'
+const SITE_URL = 'https://phyberapex.github.io/lightning-talks/'
+
+export const repoRoot = fileURLToPath(new URL('..', import.meta.url))
 
 export interface Talk {
   slug: string
@@ -47,7 +50,7 @@ function escapeTableCell(text: string) {
   return text.replace(/\|/g, '\\|')
 }
 
-export function renderTalksTable(talks: Talk[]) {
+function renderTalksTable(talks: Talk[]) {
   const header = ['Topic', 'Date', 'Live', 'Tags']
   const rows = talks.map(talk => [
     escapeTableCell(talk.title),
@@ -57,10 +60,10 @@ export function renderTalksTable(talks: Talk[]) {
   ])
   const widths = header.map((cell, column) =>
     Math.max(cell.length, ...rows.map(row => row[column].length)))
-  const line = (cells: string[]) =>
+  const renderRow = (cells: string[]) =>
     `| ${cells.map((cell, column) => cell.padEnd(widths[column])).join(' | ')} |`
   const separator = `|${widths.map(width => '-'.repeat(width + 2)).join('|')}|`
-  return [line(header), separator, ...rows.map(line)].join('\n')
+  return [renderRow(header), separator, ...rows.map(renderRow)].join('\n')
 }
 
 export function renderReadme(readme: string, talks: Talk[]) {

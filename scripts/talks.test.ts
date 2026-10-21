@@ -11,7 +11,6 @@ function tempRepo(decks: Record<string, unknown>) {
     if (meta !== undefined)
       fs.writeFileSync(path.join(root, folder, 'talk.json'), JSON.stringify(meta))
   }
-  fs.mkdirSync(path.join(root, 'scripts'))
   return root
 }
 

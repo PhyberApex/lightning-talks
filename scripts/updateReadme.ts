@@ -1,13 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import { fileURLToPath } from 'node:url'
-import { readTalks, renderReadme } from './talks.ts'
+import { readTalks, renderReadme, repoRoot } from './talks.ts'
 
-const rootDir = fileURLToPath(new URL('..', import.meta.url))
-const readmePath = path.join(rootDir, 'README.md')
+const readmePath = path.join(repoRoot, 'README.md')
 const current = fs.readFileSync(readmePath, 'utf8')
-const next = renderReadme(current, readTalks(rootDir))
+const next = renderReadme(current, readTalks(repoRoot))
 
 if (process.argv.includes('--check')) {
   if (current !== next) {
