@@ -4,5 +4,6 @@
   "tags": [
     "Automation",
     "AI"
-  ]
+  ],
+  "abstract": "An introduction to OpenClaw, the self-hosted personal AI agent: what it is, why people are excited about it, how it is put together, and how I use it with my calendar, GitHub and Home Assistant. Includes the lessons learned from running it, from giving it a personality to treating it like production."
 }

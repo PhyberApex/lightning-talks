@@ -11,25 +11,33 @@ export interface Talk {
   title: string
   date: string
   tags: string[]
+  abstract: string
   link: string
+  pdf: string
+}
+
+export function downloadUrl(slug: string) {
+  return `${SITE_URL}${slug}/${slug}.pdf`
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/
 
-function parseTalkMeta(slug: string, raw: unknown): Omit<Talk, 'slug' | 'link'> {
+function parseTalkMeta(slug: string, raw: unknown): Omit<Talk, 'slug' | 'link' | 'pdf'> {
   const fail = (reason: string): never => {
     throw new Error(`${slug}/talk.json: ${reason}`)
   }
   if (typeof raw !== 'object' || raw === null)
     return fail('expected an object')
-  const { title, date, tags } = raw as Record<string, unknown>
+  const { title, date, tags, abstract } = raw as Record<string, unknown>
   if (typeof title !== 'string' || title.trim() === '')
     return fail('"title" must be a non-empty string')
   if (typeof date !== 'string' || !ISO_DATE.test(date))
     return fail('"date" must be formatted as YYYY-MM-DD')
   if (!Array.isArray(tags) || !tags.every(tag => typeof tag === 'string'))
     return fail('"tags" must be an array of strings')
-  return { title, date, tags }
+  if (typeof abstract !== 'string' || abstract.trim() === '')
+    return fail('"abstract" must be a non-empty string')
+  return { title, date, tags, abstract }
 }
 
 export function listDeckSlugs(rootDir: string): string[] {
@@ -43,7 +51,7 @@ export function readTalks(rootDir: string): Talk[] {
   return listDeckSlugs(rootDir)
     .map((slug) => {
       const raw = JSON.parse(fs.readFileSync(path.join(rootDir, slug, 'talk.json'), 'utf8'))
-      return { slug, ...parseTalkMeta(slug, raw), link: `${SITE_URL}${slug}/` }
+      return { slug, ...parseTalkMeta(slug, raw), link: `${SITE_URL}${slug}/`, pdf: downloadUrl(slug) }
     })
 }
 
@@ -78,6 +86,24 @@ export function renderReadme(readme: string, talks: Talk[]) {
   const before = readme.slice(0, start + TALKS_START.length)
   const after = readme.slice(end)
   return `${before}\n${renderTalksTable(talks)}\n${after}`
+}
+
+export function renderTalkReadme(talk: Talk) {
+  const facts = [
+    `- **Date:** ${talk.date}`,
+    ...talk.tags.length > 0 ? [`- **Tags:** ${talk.tags.join(', ')}`] : [],
+    `- **Live:** ${talk.link}`,
+    `- **PDF:** ${talk.pdf}`,
+  ]
+  return [
+    '<!-- Generated from talk.json by `pnpm run readme`. Edit talk.json instead of this file. -->',
+    `# ${talk.title}`,
+    '',
+    talk.abstract,
+    '',
+    ...facts,
+    '',
+  ].join('\n')
 }
 
 function escapeHtml(text: string) {

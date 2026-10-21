@@ -3,5 +3,6 @@
   "date": "2025-01-31",
   "tags": [
     "TypeScript"
-  ]
+  ],
+  "abstract": "Object.keys returns string[] and Object.entries returns [string, any][], even for objects whose keys TypeScript knows exactly. This talk explains why the types are widened on purpose, what can go wrong at runtime, and which type-safe alternatives to reach for."
 }

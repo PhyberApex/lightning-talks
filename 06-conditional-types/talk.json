@@ -3,5 +3,6 @@
   "date": "2024-10-31",
   "tags": [
     "TypeScript"
-  ]
+  ],
+  "abstract": "Conditional types let a type depend on another type with `T extends U ? X : Y`. This talk walks through the syntax, rebuilds built-in helpers such as NonNullable, uses `infer` to pull types apart, and applies conditional types to discriminated unions."
 }

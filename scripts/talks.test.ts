@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { expect, it } from 'vitest'
-import { listDeckSlugs, readTalks, renderIndexHtml, renderReadme } from './talks.ts'
+import { listDeckSlugs, readTalks, renderIndexHtml, renderReadme, renderTalkReadme } from './talks.ts'
 
 function tempRepo(decks: Record<string, unknown>) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'talks-'))
@@ -16,26 +16,47 @@ function tempRepo(decks: Record<string, unknown>) {
 
 it('readTalks collects talk.json from NN-* folders in order', () => {
   const root = tempRepo({
-    '02-second': { title: 'Second', date: '2024-08-08', tags: ['TypeScript'] },
-    '01-first': { title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'] },
+    '02-second': { title: 'Second', date: '2024-08-08', tags: ['TypeScript'], abstract: 'About the second.' },
+    '01-first': { title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'], abstract: 'About the first.' },
   })
 
   expect(readTalks(root)).toEqual([
-    { slug: '01-first', title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'], link: 'https://phyberapex.github.io/lightning-talks/01-first/' },
-    { slug: '02-second', title: 'Second', date: '2024-08-08', tags: ['TypeScript'], link: 'https://phyberapex.github.io/lightning-talks/02-second/' },
+    {
+      slug: '01-first',
+      title: 'First',
+      date: '2024-08-01',
+      tags: ['TypeScript', 'Basics'],
+      abstract: 'About the first.',
+      link: 'https://phyberapex.github.io/lightning-talks/01-first/',
+      pdf: 'https://phyberapex.github.io/lightning-talks/01-first/01-first.pdf',
+    },
+    {
+      slug: '02-second',
+      title: 'Second',
+      date: '2024-08-08',
+      tags: ['TypeScript'],
+      abstract: 'About the second.',
+      link: 'https://phyberapex.github.io/lightning-talks/02-second/',
+      pdf: 'https://phyberapex.github.io/lightning-talks/02-second/02-second.pdf',
+    },
   ])
 })
 
 it('readTalks rejects a talk.json with missing or malformed fields, naming the folder', () => {
   const root = tempRepo({
-    '01-no-tags': { title: 'No tags', date: '2024-08-01' },
+    '01-no-tags': { title: 'No tags', date: '2024-08-01', abstract: 'x' },
   })
   expect(() => readTalks(root)).toThrow(/01-no-tags[\s\S]*tags/)
 
   const badDate = tempRepo({
-    '01-bad-date': { title: 'Bad date', date: 'August 1st', tags: [] },
+    '01-bad-date': { title: 'Bad date', date: 'August 1st', tags: [], abstract: 'x' },
   })
   expect(() => readTalks(badDate)).toThrow(/01-bad-date[\s\S]*date/)
+
+  const blankAbstract = tempRepo({
+    '01-blank-abstract': { title: 'Blank', date: '2024-08-01', tags: [], abstract: '  ' },
+  })
+  expect(() => readTalks(blankAbstract)).toThrow(/01-blank-abstract[\s\S]*abstract/)
 })
 
 it('readTalks fails when a deck folder has no talk.json', () => {
@@ -44,8 +65,8 @@ it('readTalks fails when a deck folder has no talk.json', () => {
 })
 
 const talks = [
-  { slug: '01-first', title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'], link: 'https://example.test/01-first/' },
-  { slug: '02-second', title: 'Second | Part 2', date: '2024-08-08', tags: [], link: 'https://example.test/02-second/' },
+  { slug: '01-first', title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'], abstract: 'About the first.', link: 'https://example.test/01-first/', pdf: 'https://example.test/01-first/01-first.pdf' },
+  { slug: '02-second', title: 'Second | Part 2', date: '2024-08-08', tags: [], abstract: 'About the second.', link: 'https://example.test/02-second/', pdf: 'https://example.test/02-second/02-second.pdf' },
 ]
 
 it('renderReadme replaces everything between the talks markers with the table', () => {
@@ -73,6 +94,25 @@ it('renderReadme replaces everything between the talks markers with the table', 
   ].join('\n'))
 })
 
+it('renderTalkReadme writes title, abstract, date, tags and links for one talk', () => {
+  expect(renderTalkReadme(talks[0])).toBe([
+    '<!-- Generated from talk.json by `pnpm run readme`. Edit talk.json instead of this file. -->',
+    '# First',
+    '',
+    'About the first.',
+    '',
+    '- **Date:** 2024-08-01',
+    '- **Tags:** TypeScript, Basics',
+    '- **Live:** https://example.test/01-first/',
+    '- **PDF:** https://example.test/01-first/01-first.pdf',
+    '',
+  ].join('\n'))
+})
+
+it('renderTalkReadme omits the tags line for a talk without tags', () => {
+  expect(renderTalkReadme(talks[1])).not.toContain('Tags')
+})
+
 it('renderReadme refuses a README without markers', () => {
   expect(() => renderReadme('# No markers', talks)).toThrow(/talks:start/)
 })
@@ -80,7 +120,7 @@ it('renderReadme refuses a README without markers', () => {
 it('renderIndexHtml fills the template with one escaped card per talk', () => {
   const template = '<main>\n{{TALKS}}\n</main>'
   const html = renderIndexHtml(template, [
-    { slug: '14-claw', title: 'Claw & Order <3', date: '2026-02-13', tags: ['Automation', 'AI'], link: 'https://example.test/14-claw/' },
+    { slug: '14-claw', title: 'Claw & Order <3', date: '2026-02-13', tags: ['Automation', 'AI'], abstract: 'Lobsters.', link: 'https://example.test/14-claw/', pdf: 'https://example.test/14-claw/14-claw.pdf' },
   ])
 
   expect(html).toBe(`<main>
@@ -96,8 +136,8 @@ it('renderIndexHtml fills the template with one escaped card per talk', () => {
 
 it('listDeckSlugs returns NN-* folders sorted ascending and ignores everything else', () => {
   const root = tempRepo({
-    '02-second': { title: 'Second', date: '2024-08-08', tags: [] },
-    '01-first': { title: 'First', date: '2024-08-01', tags: [] },
+    '02-second': { title: 'Second', date: '2024-08-08', tags: [], abstract: 'x' },
+    '01-first': { title: 'First', date: '2024-08-01', tags: [], abstract: 'x' },
     'scripts': undefined,
   })
   expect(listDeckSlugs(root)).toEqual(['01-first', '02-second'])

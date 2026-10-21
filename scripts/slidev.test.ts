@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { expect, it } from 'vitest'
-import { downloadUrl, slidevArgs } from './slidev.ts'
-import { listDeckSlugs, repoRoot } from './talks.ts'
+import { slidevArgs } from './slidev.ts'
+import { downloadUrl, listDeckSlugs, repoRoot } from './talks.ts'
 
 it('slidevArgs derives base, output dir and PDF path from the folder name', () => {
   expect(slidevArgs('dev', '01-first')).toEqual([])

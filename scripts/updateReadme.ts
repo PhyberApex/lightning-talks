@@ -1,20 +1,27 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import { readTalks, renderReadme, repoRoot } from './talks.ts'
+import { readTalks, renderReadme, renderTalkReadme, repoRoot } from './talks.ts'
 
-const readmePath = path.join(repoRoot, 'README.md')
-const current = fs.readFileSync(readmePath, 'utf8')
-const next = renderReadme(current, readTalks(repoRoot))
+const talks = readTalks(repoRoot)
+const rootReadme = path.join(repoRoot, 'README.md')
+const files = [
+  { file: rootReadme, next: renderReadme(fs.readFileSync(rootReadme, 'utf8'), talks) },
+  ...talks.map(talk => ({ file: path.join(repoRoot, talk.slug, 'README.md'), next: renderTalkReadme(talk) })),
+]
+const stale = files.filter(({ file, next }) => !fs.existsSync(file) || fs.readFileSync(file, 'utf8') !== next)
 
 if (process.argv.includes('--check')) {
-  if (current !== next) {
-    console.error('README.md talks table is out of date. Run `pnpm run readme` and commit the result.')
+  if (stale.length > 0) {
+    for (const { file } of stale)
+      console.error(`${path.relative(repoRoot, file)} is out of date`)
+    console.error('Run `pnpm run readme` and commit the result.')
     process.exit(1)
   }
-  console.log('README.md talks table is up to date')
+  console.log('README.md and all talk READMEs are up to date')
 }
 else {
-  fs.writeFileSync(readmePath, next)
-  console.log('Updated README.md talks table')
+  for (const { file, next } of stale)
+    fs.writeFileSync(file, next)
+  console.log(`Updated ${stale.length} README file(s)`)
 }

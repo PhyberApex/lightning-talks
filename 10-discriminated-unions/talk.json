@@ -3,5 +3,6 @@
   "date": "2025-06-05",
   "tags": [
     "TypeScript"
-  ]
+  ],
+  "abstract": "Type guards and user-defined type predicates let TypeScript narrow unknown data, such as API responses, into safe types. This talk builds up from unsafe property access to custom type guards, discriminated unions and exhaustive checks with never."
 }

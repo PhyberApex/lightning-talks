@@ -7,14 +7,9 @@ export const TALK_COMMANDS = ['dev', 'build', 'export'] as const
 export type TalkCommand = typeof TALK_COMMANDS[number]
 
 const SITE_BASE = '/lightning-talks/'
-const SITE_URL = `https://phyberapex.github.io${SITE_BASE}`
 
 export function isTalkCommand(value: string | undefined): value is TalkCommand {
   return (TALK_COMMANDS as readonly string[]).includes(value ?? '')
-}
-
-export function downloadUrl(slug: string) {
-  return `${SITE_URL}${slug}/${slug}.pdf`
 }
 
 export function slidevArgs(command: TalkCommand, slug: string): string[] {

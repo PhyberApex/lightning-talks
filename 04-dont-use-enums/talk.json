@@ -3,5 +3,6 @@
   "date": "2024-08-29",
   "tags": [
     "TypeScript"
-  ]
+  ],
+  "abstract": "TypeScript enums are not native JavaScript, break structural typing, restrict how values can be passed and complicate inference, and const enums bring problems of their own. This talk walks through those pitfalls and replaces enums with plain objects declared `as const` plus a derived union type."
 }
