@@ -7,9 +7,9 @@
     "export": "slidev export --per-slide --output ../01-branded-types.pdf"
   },
   "devDependencies": {
-    "@slidev/cli": "^53.0.0",
-    "@slidev/theme-seriph": "0.25.0",
-    "@slidev/types": "^53.0.0",
-    "playwright-chromium": "^1.45.1"
+    "@slidev/cli": "catalog:",
+    "@slidev/theme-seriph": "catalog:",
+    "@slidev/types": "catalog:",
+    "playwright-chromium": "catalog:"
   }
 }
