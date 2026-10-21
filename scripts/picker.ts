@@ -1,37 +1,31 @@
-import fs from 'node:fs/promises'
 import process from 'node:process'
-import { execa } from 'execa'
 import prompts from 'prompts'
+import { isTalkCommand, runSlidev, TALK_COMMANDS } from './slidev.ts'
+import { listDeckSlugs, repoRoot } from './talks.ts'
+
+async function pickFolder(folders: string[], skipPrompt: boolean): Promise<string | undefined> {
+  if (skipPrompt)
+    return folders[0]
+  const { folder } = await prompts({
+    type: 'select',
+    name: 'folder',
+    message: 'Pick a folder',
+    choices: folders.map(folder => ({ title: folder, value: folder })),
+  })
+  return folder
+}
 
 async function startPicker(args: string[]) {
-  const folders = (await fs.readdir(new URL('..', import.meta.url), { withFileTypes: true }))
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name)
-    .filter(folder => folder.match(/^\d{2}-/))
-    .sort((a, b) => -a.localeCompare(b))
-
-  const result = args.includes('-y')
-    ? { folder: folders[0] }
-    : await prompts([
-        {
-          type: 'select',
-          name: 'folder',
-          message: 'Pick a folder',
-          choices: folders.map(folder => ({ title: folder, value: folder })),
-        },
-      ])
-
-  args = args.filter(arg => arg !== '-y')
-
-  if (result.folder) {
-    if (args[0] === 'dev') {
-      // execa('code', [fileURLToPath(new URL(`../${result.folder}/slides.md`, import.meta.url))])
-      await execa('pnpm', ['run', ...args], {
-        cwd: new URL(`../${result.folder}/src`, import.meta.url),
-        stdio: 'inherit',
-      })
-    }
+  const command = args.find(arg => arg !== '-y')
+  if (!isTalkCommand(command)) {
+    console.error(`Usage: tsx scripts/picker.ts <${TALK_COMMANDS.join('|')}> [-y]`)
+    process.exit(1)
   }
+
+  const newestFirst = listDeckSlugs(repoRoot).reverse()
+  const folder = await pickFolder(newestFirst, args.includes('-y'))
+  if (folder)
+    await runSlidev(command, folder)
 }
 
 await startPicker(process.argv.slice(2))

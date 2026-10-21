@@ -32,11 +32,15 @@ function parseTalkMeta(slug: string, raw: unknown): Omit<Talk, 'slug' | 'link'> 
   return { title, date, tags }
 }
 
-export function readTalks(rootDir: string): Talk[] {
+export function listDeckSlugs(rootDir: string): string[] {
   return fs.readdirSync(rootDir, { withFileTypes: true })
     .filter(dirent => dirent.isDirectory() && /^\d{2}-/.test(dirent.name))
     .map(dirent => dirent.name)
     .sort()
+}
+
+export function readTalks(rootDir: string): Talk[] {
+  return listDeckSlugs(rootDir)
     .map((slug) => {
       const raw = JSON.parse(fs.readFileSync(path.join(rootDir, slug, 'talk.json'), 'utf8'))
       return { slug, ...parseTalkMeta(slug, raw), link: `${SITE_URL}${slug}/` }

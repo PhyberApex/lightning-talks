@@ -3,7 +3,7 @@ theme: lightning-talks
 background: /cover.jpg
 drawings:
   enabled: false
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/10-the-hidden-this/10-the-hidden-this.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/10-discriminated-unions/10-discriminated-unions.pdf
 info: |
   ## Type Guards & User-Defined Type Predicates in TypeScript
   How to safely handle API responses and unlock the full power of TypeScript's type narrowing.
