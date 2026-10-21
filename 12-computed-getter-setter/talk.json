@@ -3,5 +3,6 @@
   "date": "2026-01-15",
   "tags": [
     "Vue"
-  ]
+  ],
+  "abstract": "Computed properties in Vue are usually read-only, but they can also define a setter. This talk shows how writable computed properties keep derived state in sync in both directions, for example when binding a transformed value to a form input."
 }

@@ -3,5 +3,6 @@
   "date": "2025-12-18",
   "tags": [
     "Vue"
-  ]
+  ],
+  "abstract": "A quick introduction to Vue.js, the progressive JavaScript framework: single file components, reactivity with ref(), template directives, and how the Options API compares to the Composition API."
 }

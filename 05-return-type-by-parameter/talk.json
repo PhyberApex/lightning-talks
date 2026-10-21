@@ -3,5 +3,6 @@
   "date": "2024-09-05",
   "tags": [
     "TypeScript"
-  ]
+  ],
+  "abstract": "How to make a function's return type depend on the argument it is called with. Using a typed map of API endpoints, generics and indexed access types, a single fetch helper returns the right response type for every endpoint without casts or overloads."
 }

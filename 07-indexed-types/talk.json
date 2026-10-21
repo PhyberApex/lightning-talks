@@ -3,5 +3,6 @@
   "date": "2024-11-28",
   "tags": [
     "TypeScript"
-  ]
+  ],
+  "abstract": "Indexed access types read the type of a property, an array element or an index signature with `T[K]`. This talk covers the syntax for objects and arrays, numeric index signatures, and how to derive types from existing ones instead of duplicating them."
 }
