@@ -4,7 +4,9 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
-      "@slidev/client": ["./packages/theme/slidev-client.d.ts"]
+      "@slidev/client": [
+        "./packages/theme/slidev-client.d.ts"
+      ]
     },
     "allowImportingTsExtensions": true,
     "noEmit": true,
@@ -14,10 +16,11 @@
   "include": [
     "scripts/**/*",
     "packages/theme/**/*",
-    "*/src/components/**/*"
+    "*/src/**/*"
   ],
   "exclude": [
     "**/node_modules",
-    "dist"
+    "dist",
+    "*/src/snippets"
   ]
 }

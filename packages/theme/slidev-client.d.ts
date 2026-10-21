@@ -1,6 +1,5 @@
-// Slidev ships `@slidev/client` as raw `.ts` sources that only typecheck inside
-// its own Vite build (vite/client types, `__SLIDEV_*` globals, vue-router
-// augmentations). Mapping the import here keeps typecheck on our code only.
+// `@slidev/client` ships raw `.ts` sources that only typecheck inside Slidev's
+// own Vite build, so tsconfig `paths` resolves the import to this declaration.
 import type { SlideRoute } from '@slidev/types'
 import type { ComputedRef } from 'vue'
 
