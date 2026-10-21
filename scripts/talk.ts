@@ -4,7 +4,10 @@ import prompts from 'prompts'
 import { isTalkCommand, runSlidev, TALK_COMMANDS } from './slidev.ts'
 import { listDeckSlugs, repoRoot } from './talks.ts'
 
-const CONCURRENCY: Record<TalkCommand, number> = { dev: 1, build: 4, export: 2 }
+// Under pnpm, Slidev treats itself as globally installed and points every
+// deck's Vite dependency cache at the same directory inside @slidev/cli, so
+// concurrent exports overwrite each other's pre-bundled deps mid-render.
+const CONCURRENCY: Record<TalkCommand, number> = { dev: 1, build: 4, export: 1 }
 
 async function runPool<T>(items: T[], limit: number, worker: (item: T) => Promise<void>) {
   const queue = [...items]
