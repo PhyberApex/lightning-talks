@@ -2,6 +2,9 @@
   "type": "module",
   "private": true,
   "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "build": "rimraf dist && tsx scripts/talk.ts build --all && pnpm run build:index",
     "build:index": "tsx scripts/createIndex.ts",
