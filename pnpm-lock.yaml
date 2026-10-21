@@ -162,423 +162,501 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@antfu/eslint-config':
+      specifier: ^9.0.0
+      version: 9.5.1
+    '@iconify/json':
+      specifier: ^2.2.509
+      version: 2.2.544
+    '@slidev/cli':
+      specifier: ^53.0.0
+      version: 53.0.0
+    '@slidev/client':
+      specifier: ^53.0.0
+      version: 53.0.0
+    '@slidev/theme-default':
+      specifier: ^0.25.0
+      version: 0.25.0
+    '@slidev/theme-seriph':
+      specifier: 0.25.0
+      version: 0.25.0
+    '@slidev/types':
+      specifier: ^53.0.0
+      version: 53.0.0
+    '@types/node':
+      specifier: ^24.0.0
+      version: 24.19.2
+    '@types/prompts':
+      specifier: ^2.4.9
+      version: 2.4.9
+    '@types/seedrandom':
+      specifier: ^3.0.8
+      version: 3.0.8
+    axios:
+      specifier: ^1.7.4
+      version: 1.20.0
+    eslint:
+      specifier: ^10.0.0
+      version: 10.13.0
+    eslint-plugin-format:
+      specifier: ^2.0.0
+      version: 2.0.1
+    esno:
+      specifier: ^4.7.0
+      version: 4.8.0
+    execa:
+      specifier: ^10.2.0
+      version: 10.2.0
+    playwright-chromium:
+      specifier: ^1.45.1
+      version: 1.64.1
+    pnpm:
+      specifier: ^12.0.0
+      version: 12.14.0
+    prettier-plugin-slidev:
+      specifier: ^1.0.5
+      version: 1.0.5
+    prompts:
+      specifier: ^2.4.2
+      version: 2.4.2
+    rimraf:
+      specifier: ^6.0.1
+      version: 6.1.3
+    seedrandom:
+      specifier: ^3.0.5
+      version: 3.0.5
+    tsx:
+      specifier: ^4.19.0
+      version: 4.23.15
+    typescript:
+      specifier: ^6.0.0
+      version: 6.0.3
+    vue:
+      specifier: ^3.5.0
+      version: 3.5.44
+    vue-tsc:
+      specifier: ^3.0.0
+      version: 3.3.13
+
 importers:
 
   .:
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^9.0.0
+        specifier: 'catalog:'
         version: 9.5.1(@typescript-eslint/typescript-estree@8.72.0(typescript@6.0.3))(@typescript-eslint/utils@8.72.0(eslint@10.13.0(jiti@2.7.0))(typescript@6.0.3))(@vue/compiler-sfc@3.5.44)(eslint-plugin-format@2.0.1(eslint@10.13.0(jiti@2.7.0)))(eslint@10.13.0(jiti@2.7.0))(prettier-plugin-slidev@1.0.5(prettier@3.8.1))(ts-declaration-location@1.0.7(typescript@6.0.3))(typescript@6.0.3)
       '@types/node':
-        specifier: ^24.0.0
+        specifier: 'catalog:'
         version: 24.19.2
       '@types/prompts':
-        specifier: ^2.4.9
+        specifier: 'catalog:'
         version: 2.4.9
       eslint:
-        specifier: ^10.0.0
+        specifier: 'catalog:'
         version: 10.13.0(jiti@2.7.0)
       eslint-plugin-format:
-        specifier: ^2.0.0
+        specifier: 'catalog:'
         version: 2.0.1(eslint@10.13.0(jiti@2.7.0))
       esno:
-        specifier: ^4.7.0
+        specifier: 'catalog:'
         version: 4.8.0
       execa:
-        specifier: ^10.0.0
+        specifier: 'catalog:'
         version: 10.2.0
       pnpm:
-        specifier: ^12.0.0
+        specifier: 'catalog:'
         version: 12.14.0
       prettier-plugin-slidev:
-        specifier: ^1.0.5
+        specifier: 'catalog:'
         version: 1.0.5(prettier@3.8.1)
       prompts:
-        specifier: ^2.4.2
+        specifier: 'catalog:'
         version: 2.4.2
       rimraf:
-        specifier: ^6.0.1
+        specifier: 'catalog:'
         version: 6.1.3
       tsx:
-        specifier: ^4.19.0
+        specifier: 'catalog:'
         version: 4.23.15
       typescript:
-        specifier: ^6.0.0
+        specifier: 'catalog:'
         version: 6.0.3
       vue-tsc:
-        specifier: ^3.0.0
+        specifier: 'catalog:'
         version: 3.3.13(typescript@6.0.3)
 
   01-branded-types/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/theme-seriph':
-        specifier: 0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
 
   02-the-never-type/src:
     devDependencies:
       '@iconify/json':
-        specifier: ^2.2.509
+        specifier: 'catalog:'
         version: 2.2.544
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   03-interface-vs-type-alias/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       axios:
-        specifier: ^1.7.4
+        specifier: 'catalog:'
         version: 1.20.0(debug@4.4.3)
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   04-dont-use-enums/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   05-return-type-by-parameter/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   06-conditional-types/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   07-indexed-types/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   08-dont-use-shorthand-syntax/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   09-return-type-of-object-functions/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   10-discriminated-unions/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   11-what-is-vue/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   12-computed-getter-setter/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   13-provide-inject/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
   14-openclaw-copilot/src:
     devDependencies:
       '@slidev/cli':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@types/markdown-it@14.2.0)(@types/node@24.19.2)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(hono@4.12.30)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(playwright-chromium@1.64.1)(postcss@8.5.30)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(terser@5.49.0)(tsx@4.23.15)(vite-plugin-pwa@1.3.0(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))(workbox-build@7.4.1)(workbox-window@7.4.1))
       '@slidev/client':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@oxc-project/types@0.150.0)(@vitejs/devtools-kit@0.4.12(@modelcontextprotocol/server@2.0.0)(cac@7.0.0)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1)))(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(lightningcss@1.33.0)(markdown-it-async@2.2.0)(markdown-it@14.3.0)(oxc-parser@0.150.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@slidev/theme-default':
-        specifier: ^0.25.0
+        specifier: 'catalog:'
         version: 0.25.0
       '@slidev/types':
-        specifier: ^53.0.0
+        specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
       '@types/seedrandom':
-        specifier: ^3.0.8
+        specifier: 'catalog:'
         version: 3.0.8
       playwright-chromium:
-        specifier: ^1.45.1
+        specifier: 'catalog:'
         version: 1.64.1
       seedrandom:
-        specifier: ^3.0.5
+        specifier: 'catalog:'
         version: 3.0.5
       vue:
-        specifier: ^3.5.0
+        specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
 
 packages:
