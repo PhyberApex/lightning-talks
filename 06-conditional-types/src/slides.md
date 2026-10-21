@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/06-conditional-types/06-conditional-types.pdf
 info: |
   ## Conditional Types in TypeScript
   Understanding and leveraging conditional types for more flexible type definitions
 title: Conditional Types in TypeScript
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 ---
 
 # Conditional Types in TypeScript

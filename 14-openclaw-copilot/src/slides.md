@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/14-openclaw-copilot/14-openclaw-copilot.pdf
 info: |
   ## Claw & Order — Lobsters never sleep
   OpenClaw 101
 title: Claw & Order — Lobsters never sleep — OpenClaw 101
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 ---
 
 # Claw & Order

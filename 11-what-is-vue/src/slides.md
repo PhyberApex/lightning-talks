@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/11-what-is-vue/11-what-is-vue.pdf
 info: |
   ## What is Vue?
   A quick introduction to Vue.js - The Progressive JavaScript Framework
 title: What is Vue?
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 ---
 
 # What is Vue?

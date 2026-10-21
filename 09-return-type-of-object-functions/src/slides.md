@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/09-return-type-of-object-functions/09-return-type-of-object-functions.pdf
 info: |
   ## Return Types of Object Functions in TypeScript
   Understanding why Object.keys and Object.entries return string[] and [string, any][]
 title: Return Types of Object Functions in TypeScript
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 ---
 
 # Return type of object functions

@@ -2,21 +2,24 @@
 import { useNav } from '@slidev/client'
 import seedrandom from 'seedrandom'
 /**
- * A new glow effect system powered by blured polygons
+ * Glow effect powered by blurred polygons, credits to @pi0 @Atinux.
  *
- * Credits to @pi0 @Atinux
- *
- * Properties:
- * - glow: 'left' | 'right' | 'top' | 'bottom' | 'full' -  Distribution of the polygons points
- * - glowOpacity: number - Opacity of the polygons (4)
- * - glowHue: number - Hue shift for the polygons (default: 0)
- * - glowSeed: string | false - Seed for the stable random distribution (default: 'default')
+ * Read from the slide frontmatter (put them under `defaults:` in the headmatter to apply deck-wide):
+ * - glow: Distribution - where the polygon points cluster (default: 'full')
+ * - glowOpacity: number (default: 0.4)
+ * - glowHue: number - hue rotation in degrees (default: 0)
+ * - glowSeed: string | false - seed for the stable random layout, false re-rolls every load (default: 'default')
+ * - glowColors: [string, string, string] - base colors of the right / left / top gradients
  */
 import { computed, ref, watch } from 'vue'
 
 const { currentSlideRoute } = useNav()
 
 export type Range = [number, number]
+
+export type GlowColors = [string, string, string]
+
+const defaultGlowColors: GlowColors = ['#2f96ad', '#4B32C3', '#8080f2']
 
 export type Distribution
   = | 'full'
@@ -30,14 +33,18 @@ export type Distribution
     | 'bottom-right'
     | 'center'
 
-const formatter = computed(() => (currentSlideRoute.value.meta?.slide as any)?.frontmatter || {})
-const distribution = computed(() => (formatter.value.glow || 'full') as Distribution)
-const opacity = computed<number>(() => +(formatter.value.glowOpacity || 0.4))
-const hue = computed<number>(() => +(formatter.value.glowHue || 0))
-const seed = computed<string>(() => (formatter.value.glowSeed === 'false' || formatter.value.glowSeed === false)
+const frontmatter = computed(() => (currentSlideRoute.value.meta?.slide as any)?.frontmatter || {})
+const distribution = computed(() => (frontmatter.value.glow || 'full') as Distribution)
+const opacity = computed<number>(() => +(frontmatter.value.glowOpacity || 0.4))
+const hue = computed<number>(() => +(frontmatter.value.glowHue || 0))
+const seed = computed<string>(() => (frontmatter.value.glowSeed === 'false' || frontmatter.value.glowSeed === false)
   ? Date.now().toString()
-  : formatter.value.glowSeed || 'default',
+  : frontmatter.value.glowSeed || 'default',
 )
+const glowColors = computed<GlowColors>(() => {
+  const colors = frontmatter.value.glowColors
+  return Array.isArray(colors) && colors.length === 3 ? colors as GlowColors : defaultGlowColors
+})
 const overflow = 0.3
 const disturb = 0.3
 const disturbChance = 0.3
@@ -94,7 +101,7 @@ function distance2([x1, y1]: Range, [x2, y2]: Range) {
   return (x2 - x1) ** 2 + (y2 - y1) ** 2
 }
 
-function usePloy(number = 16) {
+function usePoly(number = 16) {
   function getPoints(): Range[] {
     const limits = distributionToLimits(distribution.value)
     const rng = seedrandom(`${seed.value}-${currentSlideRoute.value.no}`)
@@ -120,7 +127,7 @@ function usePloy(number = 16) {
     const newPoints = new Set(getPoints())
     points.value = points.value.map((o) => {
       let minDistance = Number.POSITIVE_INFINITY
-      let closest: Range | undefined
+      let closest: Range = o
       for (const n of newPoints) {
         const d = distance2(o, n)
         if (d < minDistance) {
@@ -140,9 +147,13 @@ function usePloy(number = 16) {
   return poly
 }
 
-const poly1 = usePloy(10)
-const poly2 = usePloy(6)
-const poly3 = usePloy(3)
+function gradient(direction: string, color: string) {
+  return `linear-gradient(to ${direction} in oklch, ${color} 0%, #ffffff1a 100%)`
+}
+
+const poly1 = usePoly(10)
+const poly2 = usePoly(6)
+const poly3 = usePoly(3)
 </script>
 
 <template>
@@ -152,16 +163,16 @@ const poly3 = usePloy(3)
     aria-hidden="true"
   >
     <div
-      class="clip bg-gradient-to-r from-[#2f96ad] to-white/10"
-      :style="{ 'clip-path': `polygon(${poly1})`, 'opacity': opacity }"
+      class="clip"
+      :style="{ 'clip-path': `polygon(${poly1})`, 'opacity': opacity, 'background-image': gradient('right', glowColors[0]) }"
     />
     <div
-      class="clip bg-gradient-to-l from-[#4B32C3] to-white/10"
-      :style="{ 'clip-path': `polygon(${poly2})`, 'opacity': opacity }"
+      class="clip"
+      :style="{ 'clip-path': `polygon(${poly2})`, 'opacity': opacity, 'background-image': gradient('left', glowColors[1]) }"
     />
     <div
-      class="clip bg-gradient-to-t from-[#8080f2] to-white/10"
-      :style="{ 'clip-path': `polygon(${poly3})`, 'opacity': 0.2 }"
+      class="clip"
+      :style="{ 'clip-path': `polygon(${poly3})`, 'opacity': 0.2, 'background-image': gradient('top', glowColors[2]) }"
     />
   </div>
 </template>

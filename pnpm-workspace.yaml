@@ -15,6 +15,7 @@ shellEmulator: true
 
 packages:
   - '*/src'
+  - 'packages/*'
 
 allowBuilds:
   esbuild: true

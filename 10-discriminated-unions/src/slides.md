@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/10-the-hidden-this/10-the-hidden-this.pdf
 info: |
   ## Type Guards & User-Defined Type Predicates in TypeScript
   How to safely handle API responses and unlock the full power of TypeScript's type narrowing.
 title: Type Guards & User-Defined Type Predicates
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 ---
 
 # Type Guards & User-Defined Type Predicates

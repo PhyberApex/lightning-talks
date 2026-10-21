@@ -8,13 +8,8 @@
   },
   "devDependencies": {
     "@slidev/cli": "catalog:",
-    "@slidev/client": "catalog:",
-    "@slidev/theme-default": "catalog:",
-    "@slidev/types": "catalog:",
-    "@types/seedrandom": "catalog:",
     "axios": "catalog:",
     "playwright-chromium": "catalog:",
-    "seedrandom": "catalog:",
-    "vue": "catalog:"
+    "slidev-theme-lightning-talks": "workspace:*"
   }
 }

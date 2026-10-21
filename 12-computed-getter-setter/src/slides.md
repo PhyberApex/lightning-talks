@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/12-computed-getter-setter/12-computed-getter-setter.pdf
 info: |
   ## Computed Properties: Beyond Read-Only
   Understanding writable computed properties with getters and setters in Vue
 title: Computed Properties - Beyond Read-Only
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 ---
 
 # Computed Properties
