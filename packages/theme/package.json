@@ -35,8 +35,10 @@
     "@slidev/client": "catalog:",
     "@slidev/theme-default": "catalog:",
     "@slidev/types": "catalog:",
-    "@types/seedrandom": "catalog:",
     "seedrandom": "catalog:",
     "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/seedrandom": "catalog:"
   }
 }

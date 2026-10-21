@@ -487,15 +487,16 @@ importers:
       '@slidev/types':
         specifier: 'catalog:'
         version: 53.0.0(@modelcontextprotocol/server@2.0.0)(@nuxt/kit@3.21.11)(@vue/compiler-sfc@3.5.44)(cac@7.0.0)(esbuild@0.28.2)(markdown-it-async@2.2.0)(rolldown@1.2.9)(rollup@4.62.2)(srvx@1.0.5)(typescript@6.0.3)(vite@8.3.0(@types/node@24.19.2)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.15)(yaml@2.9.1))
-      '@types/seedrandom':
-        specifier: 'catalog:'
-        version: 3.0.8
       seedrandom:
         specifier: 'catalog:'
         version: 3.0.5
       vue:
         specifier: 'catalog:'
         version: 3.5.44(typescript@6.0.3)
+    devDependencies:
+      '@types/seedrandom':
+        specifier: 'catalog:'
+        version: 3.0.8
 
 packages:
 

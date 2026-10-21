@@ -2,16 +2,14 @@
 import { useNav } from '@slidev/client'
 import seedrandom from 'seedrandom'
 /**
- * A new glow effect system powered by blured polygons
+ * Glow effect powered by blurred polygons, credits to @pi0 @Atinux.
  *
- * Credits to @pi0 @Atinux
- *
- * Properties:
- * - glow: 'left' | 'right' | 'top' | 'bottom' | 'full' -  Distribution of the polygons points
- * - glowOpacity: number - Opacity of the polygons (4)
- * - glowHue: number - Hue shift for the polygons (default: 0)
- * - glowSeed: string | false - Seed for the stable random distribution (default: 'default')
- * - glowColors: [string, string, string] - Base colors of the three gradients (default: teal, indigo, periwinkle)
+ * Read from the slide frontmatter (put them under `defaults:` in the headmatter to apply deck-wide):
+ * - glow: Distribution - where the polygon points cluster (default: 'full')
+ * - glowOpacity: number (default: 0.4)
+ * - glowHue: number - hue rotation in degrees (default: 0)
+ * - glowSeed: string | false - seed for the stable random layout, false re-rolls every load (default: 'default')
+ * - glowColors: [string, string, string] - base colors of the right / left / top gradients
  */
 import { computed, ref, watch } from 'vue'
 
@@ -103,7 +101,7 @@ function distance2([x1, y1]: Range, [x2, y2]: Range) {
   return (x2 - x1) ** 2 + (y2 - y1) ** 2
 }
 
-function usePloy(number = 16) {
+function usePoly(number = 16) {
   function getPoints(): Range[] {
     const limits = distributionToLimits(distribution.value)
     const rng = seedrandom(`${seed.value}-${currentSlideRoute.value.no}`)
@@ -153,9 +151,9 @@ function gradient(direction: string, color: string) {
   return `linear-gradient(to ${direction} in oklch, ${color} 0%, #ffffff1a 100%)`
 }
 
-const poly1 = usePloy(10)
-const poly2 = usePloy(6)
-const poly3 = usePloy(3)
+const poly1 = usePoly(10)
+const poly2 = usePoly(6)
+const poly3 = usePoly(3)
 </script>
 
 <template>

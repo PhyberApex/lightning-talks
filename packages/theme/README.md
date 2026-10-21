@@ -11,6 +11,8 @@ title: My talk
 ---
 ```
 
+Deck `01-branded-types` is the one exception: it stays on `theme: seriph` with its own `setup/shiki.ts`, because pulling this theme in would change how it looks.
+
 The theme builds on `@slidev/theme-default`, which it pulls in as an addon so the stock layouts and components stay available. Slidev resolves that addon from the deck folder, so `@slidev/theme-default` is a root `devDependency` of the workspace rather than a per-deck one.
 
 ## Glow colours
