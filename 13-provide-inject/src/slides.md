@@ -3,7 +3,7 @@ theme: lightning-talks
 background: /cover.jpg
 drawings:
   enabled: false
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/13-provide-inject/13-provide-inject.pdf
+download: https://phyberapex.github.io/lightning-talks/13-provide-inject/13-provide-inject.pdf
 info: |
   ## Provide & Inject
   Dependency Injection in Vue - avoiding prop drilling

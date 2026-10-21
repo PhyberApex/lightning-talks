@@ -3,7 +3,7 @@ theme: lightning-talks
 background: /cover.jpg
 drawings:
   enabled: false
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/11-what-is-vue/11-what-is-vue.pdf
+download: https://phyberapex.github.io/lightning-talks/11-what-is-vue/11-what-is-vue.pdf
 info: |
   ## What is Vue?
   A quick introduction to Vue.js - The Progressive JavaScript Framework

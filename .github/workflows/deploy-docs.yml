@@ -22,6 +22,11 @@ jobs:
         with:
           node-version: '24'
           cache: pnpm
+      - name: Cache Playwright browsers
+        uses: actions/cache@v5
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Lint
@@ -32,6 +37,9 @@ jobs:
         run: pnpm run readme:check
       - name: Build documentation
         run: pnpm run build
+      - name: Export PDFs
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: pnpm run export --all
       - name: Upload build artifacts
         uses: actions/upload-artifact@v7
         with:

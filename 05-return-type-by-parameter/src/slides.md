@@ -1,7 +1,7 @@
 ---
 theme: lightning-talks
 background: /cover.jpg
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/05-return-type-by-parameter/05-return-type-by-parameter.pdf
+download: https://phyberapex.github.io/lightning-talks/05-return-type-by-parameter/05-return-type-by-parameter.pdf
 info: |
   ## Dynamic Return Types in TypeScript
   How to use TypeScript to return a type based on a parameter

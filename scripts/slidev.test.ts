@@ -17,20 +17,23 @@ it('slidevArgs derives base, output dir and PDF path from the folder name', () =
     'export',
     '--per-slide',
     '--output',
-    '../01-first.pdf',
+    '../../dist/01-first/01-first.pdf',
   ])
 })
 
-it('downloadUrl points at the exported PDF next to the deck on main', () => {
+it('downloadUrl points at the PDF published next to the deck on Pages', () => {
   expect(downloadUrl('01-first'))
-    .toBe('https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/01-first/01-first.pdf')
+    .toBe('https://phyberapex.github.io/lightning-talks/01-first/01-first.pdf')
 })
 
 it.each(listDeckSlugs(repoRoot))('%s declares the download URL derived from its folder name', (slug) => {
   const slides = fs.readFileSync(path.join(repoRoot, slug, 'src/slides.md'), 'utf8')
   const frontmatter = slides.split('\n---')[0]
   expect(frontmatter.match(/^download: (.*)$/m)?.[1]).toBe(downloadUrl(slug))
-  expect(fs.existsSync(path.join(repoRoot, slug, `${slug}.pdf`))).toBe(true)
+})
+
+it.each(listDeckSlugs(repoRoot))('%s does not commit its PDF', (slug) => {
+  expect(fs.existsSync(path.join(repoRoot, slug, `${slug}.pdf`))).toBe(false)
 })
 
 it.each(listDeckSlugs(repoRoot))('%s/src/package.json does not repeat its folder name', (slug) => {
