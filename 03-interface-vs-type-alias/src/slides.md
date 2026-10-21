@@ -1,25 +1,13 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
 drawings:
   enabled: false
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/03-interface-vs-type-alias/03-interface-vs-type-alias.pdf
 info: |
   ## Type Aliases vs. Interfaces in TypeScript
   Why type aliases should be your go-to choice
 title: Type Aliases vs. Interfaces in TypeScript
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
 monacoTypesAdditionalPackages:
   - "axios"
 ---

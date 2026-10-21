@@ -1,0 +1,42 @@
+{
+  "name": "slidev-theme-lightning-talks",
+  "type": "module",
+  "private": true,
+  "description": "Shared look and feel for every deck in the lightning-talks series",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "slidev": ">=53.0.0"
+  },
+  "slidev": {
+    "defaults": {
+      "addons": [
+        "@slidev/theme-default"
+      ],
+      "highlighter": "shiki",
+      "css": "unocss",
+      "colorSchema": "dark",
+      "transition": "fade-out",
+      "mdc": true,
+      "presenter": "dev",
+      "fonts": {
+        "mono": "Operator Mono",
+        "local": "Operator Mono",
+        "sans": "DM Sans",
+        "strong": "Rubik Iso",
+        "fast": "Ubuntu",
+        "hand": "Caveat"
+      }
+    }
+  },
+  "dependencies": {
+    "@slidev/client": "catalog:",
+    "@slidev/theme-default": "catalog:",
+    "@slidev/types": "catalog:",
+    "@types/seedrandom": "catalog:",
+    "seedrandom": "catalog:",
+    "vue": "catalog:"
+  }
+}

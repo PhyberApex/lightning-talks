@@ -1,11 +1,6 @@
 ---
+theme: lightning-talks
 background: /cover.jpg
-highlighter: shiki
-css: unocss
-colorSchema: dark
-transition: fade-out
-mdc: true
-presenter: dev
 download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/05-return-type-by-parameter/05-return-type-by-parameter.pdf
 info: |
   ## Dynamic Return Types in TypeScript
@@ -13,13 +8,11 @@ info: |
 drawings:
   persist: false
 title: Dynamic Return Types in TypeScript
-fonts:
-  mono: Operator Mono
-  local: Operator Mono
-  sans: DM Sans
-  strong: Rubik Iso
-  fast: Ubuntu
-  hand: Caveat
+defaults:
+  glowColors:
+    - '#00dcc2'
+    - '#2366a6'
+    - '#5523a6'
 ---
 
 # Dynamic Return Types in TypeScript

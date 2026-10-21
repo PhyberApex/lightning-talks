@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:",
+    "@slidev/theme-default": "catalog:",
     "@types/node": "catalog:",
     "@types/prompts": "catalog:",
     "eslint": "catalog:",
