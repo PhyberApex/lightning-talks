@@ -2,7 +2,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const SITE_URL = 'https://phyberapex.github.io/lightning-talks/'
+export const SITE_BASE = '/lightning-talks/'
+const SITE_URL = `https://phyberapex.github.io${SITE_BASE}`
 
 export const repoRoot = fileURLToPath(new URL('..', import.meta.url))
 

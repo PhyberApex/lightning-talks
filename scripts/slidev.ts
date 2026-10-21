@@ -1,12 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { execa } from 'execa'
-import { repoRoot } from './talks.ts'
+import { repoRoot, SITE_BASE } from './talks.ts'
 
 export const TALK_COMMANDS = ['dev', 'build', 'export'] as const
 export type TalkCommand = typeof TALK_COMMANDS[number]
-
-const SITE_BASE = '/lightning-talks/'
 
 export function isTalkCommand(value: string | undefined): value is TalkCommand {
   return (TALK_COMMANDS as readonly string[]).includes(value ?? '')
