@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 import { expect, it } from 'vitest'
-import { readTalks, renderIndexHtml, renderReadme } from './talks.ts'
+import { listDeckSlugs, readTalks, renderIndexHtml, renderReadme } from './talks.ts'
 
 function tempRepo(decks: Record<string, unknown>) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'talks-'))
@@ -92,4 +92,13 @@ it('renderIndexHtml fills the template with one escaped card per talk', () => {
                 <a href="https://example.test/14-claw/" class="view-talk">View Talk</a>
             </div>
 </main>`)
+})
+
+it('listDeckSlugs returns NN-* folders sorted ascending and ignores everything else', () => {
+  const root = tempRepo({
+    '02-second': { title: 'Second', date: '2024-08-08', tags: [] },
+    '01-first': { title: 'First', date: '2024-08-01', tags: [] },
+    'scripts': undefined,
+  })
+  expect(listDeckSlugs(root)).toEqual(['01-first', '02-second'])
 })

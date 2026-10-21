@@ -3,7 +3,7 @@ theme: lightning-talks
 background: /cover.jpg
 drawings:
   enabled: false
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/03-interface-vs-type-alias/04-dont-use-enums.pdf
+download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/04-dont-use-enums/04-dont-use-enums.pdf
 info: |
   ## Don't Use Enums in TypeScript
   Why enums break TypeScript's structural typing and how to avoid them

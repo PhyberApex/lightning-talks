@@ -2,9 +2,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "tsc ./snippets/02-const-enum-pitfalls.ts -w & slidev",
-    "build": "slidev build --base /lightning-talks/04-dont-use-enums/ --out ../../dist/04-dont-use-enums",
-    "export": "slidev export --per-slide --output ../04-dont-use-enums.pdf"
+    "snippets": "tsc --ignoreConfig ./snippets/02-const-enum-pitfalls.ts"
   },
   "devDependencies": {
     "@slidev/cli": "catalog:",

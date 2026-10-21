@@ -203,9 +203,6 @@ catalogs:
     eslint-plugin-format:
       specifier: ^2.0.0
       version: 2.0.1
-    esno:
-      specifier: ^4.7.0
-      version: 4.8.0
     execa:
       specifier: ^10.2.0
       version: 10.2.0
@@ -265,9 +262,6 @@ importers:
       eslint-plugin-format:
         specifier: 'catalog:'
         version: 2.0.1(eslint@10.13.0(jiti@2.7.0))
-      esno:
-        specifier: 'catalog:'
-        version: 4.8.0
       execa:
         specifier: 'catalog:'
         version: 10.2.0
@@ -3936,10 +3930,6 @@ packages:
     peerDependenciesMeta:
       jiti:
         optional: true
-
-  esno@4.8.0:
-    resolution: {integrity: sha512-acMtooReAQGzLU0zcuEDHa8S62meh5aIyi8jboYxyvAePdmuWx2Mpwmt0xjwO0bs9/SXf+dvXJ0QJoDWw814Iw==}
-    hasBin: true
 
   espree@10.4.0:
     resolution: {integrity: sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==}
@@ -10618,10 +10608,6 @@ snapshots:
       jiti: 2.7.0
     transitivePeerDependencies:
       - supports-color
-
-  esno@4.8.0:
-    dependencies:
-      tsx: 4.23.15
 
   espree@10.4.0:
     dependencies:
