@@ -16,7 +16,7 @@ These are the presentations from the _Lightning Talks_ series by @PhyberApex.
 | Indexed Types                                      | 2024-11-28 | [Live](https://phyberapex.github.io/lightning-talks/07-indexed-types/)                   | TypeScript     |
 | Don't use shorthand syntax                         | 2024-12-06 | [Live](https://phyberapex.github.io/lightning-talks/08-dont-use-shorthand-syntax/)       | TypeScript     |
 | Return type of object functions                    | 2025-01-31 | [Live](https://phyberapex.github.io/lightning-talks/09-return-type-of-object-functions/) | TypeScript     |
-| Discriminated Unions & Exhaustiveness Checking     | 2025-06-05 | [Live](https://phyberapex.github.io/lightning-talks/10-discriminated-unions/)            | TypeScript     |
+| Type Guards & User-Defined Type Predicates         | 2025-06-05 | [Live](https://phyberapex.github.io/lightning-talks/10-discriminated-unions/)            | TypeScript     |
 | What is Vue                                        | 2025-12-18 | [Live](https://phyberapex.github.io/lightning-talks/11-what-is-vue/)                     | Vue            |
 | Computed with getter and setter                    | 2026-01-15 | [Live](https://phyberapex.github.io/lightning-talks/12-computed-getter-setter/)          | Vue            |
 | Provide Inject                                     | 2026-01-23 | [Live](https://phyberapex.github.io/lightning-talks/13-provide-inject/)                  | Vue            |
