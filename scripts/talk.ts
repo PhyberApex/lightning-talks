@@ -4,7 +4,7 @@ import prompts from 'prompts'
 import { isTalkCommand, runSlidev, TALK_COMMANDS } from './slidev.ts'
 import { listDeckSlugs, repoRoot } from './talks.ts'
 
-const BUILD_CONCURRENCY = 4
+const CONCURRENCY: Record<TalkCommand, number> = { dev: 1, build: 4, export: 2 }
 
 async function runPool<T>(items: T[], limit: number, worker: (item: T) => Promise<void>) {
   const queue = [...items]
@@ -44,6 +44,5 @@ if (!isTalkCommand(command)) {
   process.exit(1)
 }
 
-const concurrency = command === 'build' ? BUILD_CONCURRENCY : 1
 const slugs = await resolveSlugs(target, skipPrompt)
-await runPool(slugs, concurrency, slug => runSlidev(command as TalkCommand, slug))
+await runPool(slugs, CONCURRENCY[command], slug => runSlidev(command, slug))

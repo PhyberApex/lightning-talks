@@ -7,3 +7,4 @@ dist
 pdfs
 .cursor
 .agents
+*.pdf

@@ -3,7 +3,7 @@ theme: lightning-talks
 background: /cover.jpg
 drawings:
   enabled: false
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/12-computed-getter-setter/12-computed-getter-setter.pdf
+download: https://phyberapex.github.io/lightning-talks/12-computed-getter-setter/12-computed-getter-setter.pdf
 info: |
   ## Computed Properties: Beyond Read-Only
   Understanding writable computed properties with getters and setters in Vue

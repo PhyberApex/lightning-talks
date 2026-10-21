@@ -3,7 +3,7 @@ theme: lightning-talks
 background: /cover.jpg
 drawings:
   enabled: false
-download: https://raw.githubusercontent.com/PhyberApex/lightning-talks/main/14-openclaw-copilot/14-openclaw-copilot.pdf
+download: https://phyberapex.github.io/lightning-talks/14-openclaw-copilot/14-openclaw-copilot.pdf
 info: |
   ## Claw & Order — Lobsters never sleep
   OpenClaw 101
