@@ -1,5 +1,5 @@
 <!-- Generated from talk.json by `pnpm run readme`. Edit talk.json instead of this file. -->
-# Discriminated Unions & Exhaustiveness Checking
+# Type Guards & User-Defined Type Predicates
 
 Type guards and user-defined type predicates let TypeScript narrow unknown data, such as API responses, into safe types. This talk builds up from unsafe property access to custom type guards, discriminated unions and exhaustive checks with never.
 
