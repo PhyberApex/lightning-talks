@@ -43,7 +43,9 @@ const seed = computed<string>(() => (frontmatter.value.glowSeed === 'false' || f
 )
 const glowColors = computed<GlowColors>(() => {
   const colors = frontmatter.value.glowColors
-  return Array.isArray(colors) && colors.length === 3 ? colors as GlowColors : defaultGlowColors
+  return Array.isArray(colors) && colors.length === 3
+    ? colors as GlowColors
+    : defaultGlowColors
 })
 const overflow = 0.3
 const disturb = 0.3
@@ -56,7 +58,10 @@ function distributionToLimits(distribution: Distribution) {
   let y: Range = [min, max]
 
   function intersection(a: Range, b: Range): Range {
-    return [Math.max(a[0], b[0]), Math.min(a[1], b[1])]
+    return [
+      Math.max(a[0], b[0]),
+      Math.min(a[1], b[1]),
+    ]
   }
 
   const limits = distribution.split('-')
@@ -110,7 +115,9 @@ function usePoly(number = 16) {
     }
     function applyOverflow(random: number, overflow: number) {
       random = random * (1 + overflow * 2) - overflow
-      return rng() < disturbChance ? random + (rng() - 0.5) * disturb : random
+      return rng() < disturbChance
+        ? random + (rng() - 0.5) * disturb
+        : random
     }
     return Array.from({ length: number })
       .fill(0)

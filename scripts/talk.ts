@@ -11,7 +11,9 @@ const CONCURRENCY: Record<TalkCommand, number> = { dev: 1, build: 4, export: 1 }
 
 async function runPool<T>(items: T[], limit: number, worker: (item: T) => Promise<void>) {
   const queue = [...items]
-  const workers = Array.from({ length: Math.min(limit, queue.length) }, async () => {
+  const workers = Array.from({
+    length: Math.min(limit, queue.length),
+  }, async () => {
     while (queue.length > 0)
       await worker(queue.shift()!)
   })
@@ -35,8 +37,12 @@ async function resolveSlugs(target: string | undefined, skipPrompt: boolean): Pr
   if (target)
     return [target]
   const newestFirst = slugs.toReversed()
-  const picked = skipPrompt ? newestFirst[0] : await pickSlug(newestFirst)
-  return picked ? [picked] : []
+  const picked = skipPrompt
+    ? newestFirst[0]
+    : await pickSlug(newestFirst)
+  return picked
+    ? [picked]
+    : []
 }
 
 const skipPrompt = process.argv.includes('-y')

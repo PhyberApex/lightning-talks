@@ -15,9 +15,20 @@ export function slidevArgs(command: TalkCommand, slug: string): string[] {
     case 'dev':
       return []
     case 'build':
-      return ['build', '--base', `${SITE_BASE}${slug}/`, '--out', `../../dist/${slug}`]
+      return [
+        'build',
+        '--base',
+        `${SITE_BASE}${slug}/`,
+        '--out',
+        `../../dist/${slug}`,
+      ]
     case 'export':
-      return ['export', '--per-slide', '--output', `../../dist/${slug}/${slug}.pdf`]
+      return [
+        'export',
+        '--per-slide',
+        '--output',
+        `../../dist/${slug}/${slug}.pdf`,
+      ]
   }
 }
 
@@ -25,7 +36,11 @@ export async function runSlidev(command: TalkCommand, slug: string) {
   // slidev export writes the PDF without creating its parent directory.
   if (command === 'export')
     fs.mkdirSync(path.join(repoRoot, 'dist', slug), { recursive: true })
-  await execa('pnpm', ['exec', 'slidev', ...slidevArgs(command, slug)], {
+  await execa('pnpm', [
+    'exec',
+    'slidev',
+    ...slidevArgs(command, slug),
+  ], {
     cwd: path.join(repoRoot, slug, 'src'),
     stdio: 'inherit',
   })

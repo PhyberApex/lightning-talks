@@ -6,8 +6,14 @@ import { readTalks, renderReadme, renderTalkReadme, repoRoot } from './talks.ts'
 const talks = readTalks(repoRoot)
 const rootReadme = path.join(repoRoot, 'README.md')
 const readmes = [
-  { target: rootReadme, content: renderReadme(fs.readFileSync(rootReadme, 'utf8'), talks) },
-  ...talks.map(talk => ({ target: path.join(repoRoot, talk.slug, 'README.md'), content: renderTalkReadme(talk) })),
+  {
+    target: rootReadme,
+    content: renderReadme(fs.readFileSync(rootReadme, 'utf8'), talks),
+  },
+  ...talks.map(talk => ({
+    target: path.join(repoRoot, talk.slug, 'README.md'),
+    content: renderTalkReadme(talk),
+  })),
 ]
 const stale = readmes.filter(({ target, content }) => !fs.existsSync(target) || fs.readFileSync(target, 'utf8') !== content)
 
