@@ -7,7 +7,9 @@ const theme = ref('dark')
 provide(ThemeKey, theme)
 
 function toggleTheme(): void {
-  theme.value = theme.value === 'dark' ? 'light' : 'dark'
+  theme.value = theme.value === 'dark'
+    ? 'light'
+    : 'dark'
 }
 </script>
 

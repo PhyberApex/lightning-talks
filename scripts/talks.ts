@@ -52,7 +52,12 @@ export function readTalks(rootDir: string): Talk[] {
   return listDeckSlugs(rootDir)
     .map((slug) => {
       const raw = JSON.parse(fs.readFileSync(path.join(rootDir, slug, 'talk.json'), 'utf8'))
-      return { slug, ...parseTalkMeta(slug, raw), link: `${SITE_URL}${slug}/`, pdf: downloadUrl(slug) }
+      return {
+        slug,
+        ...parseTalkMeta(slug, raw),
+        link: `${SITE_URL}${slug}/`,
+        pdf: downloadUrl(slug),
+      }
     })
 }
 
@@ -76,7 +81,11 @@ function renderTalksTable(talks: Talk[]) {
   const renderRow = (cells: string[]) =>
     `| ${cells.map((cell, column) => cell.padEnd(widths[column])).join(' | ')} |`
   const separator = `|${widths.map(width => '-'.repeat(width + 2)).join('|')}|`
-  return [renderRow(header), separator, ...rows.map(renderRow)].join('\n')
+  return [
+    renderRow(header),
+    separator,
+    ...rows.map(renderRow),
+  ].join('\n')
 }
 
 export function renderReadme(readme: string, talks: Talk[]) {
@@ -92,7 +101,9 @@ export function renderReadme(readme: string, talks: Talk[]) {
 export function renderTalkReadme(talk: Talk) {
   const facts = [
     `- **Date:** ${talk.date}`,
-    ...talk.tags.length > 0 ? [`- **Tags:** ${talk.tags.join(', ')}`] : [],
+    ...talk.tags.length > 0
+      ? [`- **Tags:** ${talk.tags.join(', ')}`]
+      : [],
     `- **Live:** ${talk.link}`,
     `- **PDF:** ${talk.pdf}`,
   ]

@@ -16,8 +16,18 @@ function tempRepo(decks: Record<string, unknown>) {
 
 it('readTalks collects talk.json from NN-* folders in order', () => {
   const root = tempRepo({
-    '02-second': { title: 'Second', date: '2024-08-08', tags: ['TypeScript'], abstract: 'About the second.' },
-    '01-first': { title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'], abstract: 'About the first.' },
+    '02-second': {
+      title: 'Second',
+      date: '2024-08-08',
+      tags: ['TypeScript'],
+      abstract: 'About the second.',
+    },
+    '01-first': {
+      title: 'First',
+      date: '2024-08-01',
+      tags: ['TypeScript', 'Basics'],
+      abstract: 'About the first.',
+    },
   })
 
   expect(readTalks(root)).toEqual([
@@ -49,12 +59,22 @@ it('readTalks rejects a talk.json with missing or malformed fields, naming the f
   expect(() => readTalks(root)).toThrow(/01-no-tags[\s\S]*tags/)
 
   const badDate = tempRepo({
-    '01-bad-date': { title: 'Bad date', date: 'August 1st', tags: [], abstract: 'x' },
+    '01-bad-date': {
+      title: 'Bad date',
+      date: 'August 1st',
+      tags: [],
+      abstract: 'x',
+    },
   })
   expect(() => readTalks(badDate)).toThrow(/01-bad-date[\s\S]*date/)
 
   const blankAbstract = tempRepo({
-    '01-blank-abstract': { title: 'Blank', date: '2024-08-01', tags: [], abstract: '  ' },
+    '01-blank-abstract': {
+      title: 'Blank',
+      date: '2024-08-01',
+      tags: [],
+      abstract: '  ',
+    },
   })
   expect(() => readTalks(blankAbstract)).toThrow(/01-blank-abstract[\s\S]*abstract/)
 })
@@ -65,8 +85,24 @@ it('readTalks fails when a deck folder has no talk.json', () => {
 })
 
 const talks = [
-  { slug: '01-first', title: 'First', date: '2024-08-01', tags: ['TypeScript', 'Basics'], abstract: 'About the first.', link: 'https://example.test/01-first/', pdf: 'https://example.test/01-first/01-first.pdf' },
-  { slug: '02-second', title: 'Second | Part 2', date: '2024-08-08', tags: [], abstract: 'About the second.', link: 'https://example.test/02-second/', pdf: 'https://example.test/02-second/02-second.pdf' },
+  {
+    slug: '01-first',
+    title: 'First',
+    date: '2024-08-01',
+    tags: ['TypeScript', 'Basics'],
+    abstract: 'About the first.',
+    link: 'https://example.test/01-first/',
+    pdf: 'https://example.test/01-first/01-first.pdf',
+  },
+  {
+    slug: '02-second',
+    title: 'Second | Part 2',
+    date: '2024-08-08',
+    tags: [],
+    abstract: 'About the second.',
+    link: 'https://example.test/02-second/',
+    pdf: 'https://example.test/02-second/02-second.pdf',
+  },
 ]
 
 it('renderReadme replaces everything between the talks markers with the table', () => {
@@ -120,7 +156,15 @@ it('renderReadme refuses a README without markers', () => {
 it('renderIndexHtml fills the template with one escaped card per talk', () => {
   const template = '<main>\n{{TALKS}}\n</main>'
   const html = renderIndexHtml(template, [
-    { slug: '14-claw', title: 'Claw & Order <3', date: '2026-02-13', tags: ['Automation', 'AI'], abstract: 'Lobsters.', link: 'https://example.test/14-claw/', pdf: 'https://example.test/14-claw/14-claw.pdf' },
+    {
+      slug: '14-claw',
+      title: 'Claw & Order <3',
+      date: '2026-02-13',
+      tags: ['Automation', 'AI'],
+      abstract: 'Lobsters.',
+      link: 'https://example.test/14-claw/',
+      pdf: 'https://example.test/14-claw/14-claw.pdf',
+    },
   ])
 
   expect(html).toBe(`<main>
@@ -136,8 +180,18 @@ it('renderIndexHtml fills the template with one escaped card per talk', () => {
 
 it('listDeckSlugs returns NN-* folders sorted ascending and ignores everything else', () => {
   const root = tempRepo({
-    '02-second': { title: 'Second', date: '2024-08-08', tags: [], abstract: 'x' },
-    '01-first': { title: 'First', date: '2024-08-01', tags: [], abstract: 'x' },
+    '02-second': {
+      title: 'Second',
+      date: '2024-08-08',
+      tags: [],
+      abstract: 'x',
+    },
+    '01-first': {
+      title: 'First',
+      date: '2024-08-01',
+      tags: [],
+      abstract: 'x',
+    },
     'scripts': undefined,
   })
   expect(listDeckSlugs(root)).toEqual(['01-first', '02-second'])
